@@ -1,8 +1,8 @@
 # Free hosting decision and conversion checklist
 
-Researched October 24, 2026. **Status: opt-in Vercel/Supabase conversion implemented and locally tested; not deployed.** Local SQLite remains the default. See the [deployment runbook](../docs/operations/VERCEL_SUPABASE.md) and [environment template](../deploy/vercel.env.example).
+Researched October 24, 2026. **Status: Vercel/Supabase production deployment is running; live inference remains locked pending spending-ledger cutover.** Local SQLite remains the default. See the [deployment runbook](../docs/operations/VERCEL_SUPABASE.md) and [environment template](../deploy/vercel.env.example).
 
-The user chose **Vercel + Supabase** after the comparison. See [Render versus Vercel](../docs/operations/FREE_HOSTING_COMPARISON.md), including current quotas and a real 512 MiB startup probe. Account readiness and real cloud acceptance checks are still outstanding.
+The user chose **Vercel + Supabase** after the comparison. See [Render versus Vercel](../docs/operations/FREE_HOSTING_COMPARISON.md), including current quotas and a real 512 MiB startup probe. Account setup, actual container deployment, HTTPS authentication and worker ownership checks passed. End-to-end council/storage/restart acceptance and spending-ledger cutover remain outstanding.
 
 ## Preferred cloud route: Vercel and Supabase
 
@@ -39,7 +39,7 @@ Use the existing explicit hosted access behavior before exposing any endpoint. D
 - [x] Add an opt-in remote database configuration; preserve SQLite as the local default.
 - [x] Port schema and direct SQL to Postgres deliberately. Preserve record IDs, ordering, event sequence, idempotency, source versions, job states and financial amounts.
 - [x] Preserve atomic reservation/dispatch admission and unknown-charge retention. Protect concurrent API mutations; do not weaken transaction isolation to make a driver fit.
-- [ ] Select and test an IPv4-capable Supabase connection option and its transaction/session semantics. Worker ownership must not rely on a session lock through a transaction-pooling connection. [Connection options](https://supabase.com/docs/guides/database/connecting-to-postgres)
+- [x] Verify actual Supabase IPv4 Session pooler on port 5432 with TLS, schema creation and exclusive Daemon ownership. Worker ownership uses session affinity rather than transaction pooling. [Connection options](https://supabase.com/docs/guides/database/connecting-to-postgres)
 - [x] Move readiness and startup checks behind the storage interface so they query the remote authority, never create a new local ledger as fallback.
 - [x] Keep credentials server-side. A remote outage must never activate fixture replies as if they were live models or silently create an empty chat store.
 
@@ -64,25 +64,25 @@ Use the existing explicit hosted access behavior before exposing any endpoint. D
 - [x] Prepare a dry-run migration with a complete record/blob inventory and hashes. No production migration has been run.
 - [x] Preserve the same aggregate spent/held/unknown amounts. Migration disables the old authority first; cloud dispatch requires a ledger-import marker and explicit reauthorization. No new $24 allowance is created.
 - [x] Exclude private personal chats/documents from a judge instance unless explicitly intended. Migration defaults to ledger/settings only; history requires an explicit option. A shared director code is not multi-user isolation.
-- [ ] Add and test the chosen host's deployment configuration: Vercel Services plus one Daemon on Hobby if verified available, or Render Free as the alternative. No paid service, disk, add-on or custom-domain purchase.
-- [x] Document exact Free account setup and server-secret names, including private-bucket access. No signup, purchase or external deployment was performed.
+- [x] Deploy the root container configuration on Vercel Hobby: one web Service and one council-worker Daemon in iad1. Production health/readiness and worker ownership passed; no paid upgrade or custom-domain purchase.
+- [x] Document exact Free account setup and server-secret names, including private-bucket access. All 15 Production settings are saved; actual deployment passed its initial health/authentication checks. No purchase was made.
 - [ ] Verify external HTTPS login, refresh/logout, shared search, complete answers, original-reply access and multiple review cycles.
 
 ## Acceptance gates
 
 - [x] Existing local mode still passes its relevant regression suite: 75 targeted regressions. The broad run had 728 passes and one presentation-versus-storage assertion mismatch, corrected and covered by the targeted rerun.
 - [x] Real Postgres integration tests cover transaction rollback, ordering, idempotent API operations and concurrent admission.
-- [x] Storage adapter tests with an HTTP transport double cover upload, cache removal, re-download, integrity mismatch and unavailable responses. Real Supabase bucket verification is pending.
+- [x] Storage adapter tests with an HTTP transport double cover upload, cache removal, re-download, integrity mismatch and unavailable responses. Actual Supabase server-key access and private bucket metadata passed; real blob round-trip verification remains pending.
 - [x] Two successive scripted council cycles survive destruction of API-local runtime files and creation of a replacement instance.
 - [x] Chat/source/export persistence, original public replies and monetary reservations are covered by integration tests.
 - [x] Unknown charged requests remain counted and are not automatically retried.
 - [ ] Host memory/startup tests pass at the actual Free resource limits.
 - [ ] Actual Vercel Hobby (or Render Free) and Supabase Free accounts/quotas are verified; model-credit availability covers judging through December 15, 2026.
 
-The [cloud container report](../docs/validation/cloud-container.json) records 24 passing integration checks in the Linux image at a 1 GiB limit, a real temporary Postgres 17 database, a Storage HTTP transport double and matching application source hashes. This includes complete large-response streaming, new/legacy Supabase key headers and the actual background executor wake/ownership path. The private Supabase bucket and actual Vercel deployment remain unverified external gates.
+The [cloud container report](../docs/validation/cloud-container.json) records 24 passing integration checks in the Linux image at a 1 GiB limit, a real temporary Postgres 17 database, a Storage HTTP transport double and matching application source hashes. This includes complete large-response streaming, new/legacy Supabase key headers and the actual background executor wake/ownership path. The actual private bucket metadata, Vercel container deployment, HTTPS authentication and worker ownership passed. Blob round trips, streamed councils, restart/recovery and ledger cutover remain external acceptance gates.
 
 ## Information needed to activate the cloud route
 
 The preferred route needs Vercel Hobby and Supabase Free accounts, one Supabase project and a private bucket. Render is needed only if the alternative is chosen. Exact host and server-secret configuration comes after the adapters and migration are ready. Save credentials in ignored environment files/provider secrets, not in chat or frontend code. No additional GPU, OpenRouter or LangSmith account is required.
 
-The user confirmed the app must work while the developer computer is off, and selected Vercel + Supabase. External credentials and production cutover remain pending.
+The user confirmed the app must work while the developer computer is off, and selected Vercel + Supabase. External credentials and initial deployment are complete. Production spending-ledger cutover and full council acceptance remain pending.

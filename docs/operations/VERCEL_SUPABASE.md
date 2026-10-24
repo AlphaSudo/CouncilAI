@@ -2,7 +2,9 @@
 
 The opt-in cloud implementation uses one Vercel container Service for the existing built React UI and FastAPI, one Vercel Daemon for council execution, and Supabase Postgres plus a private Storage bucket. Keeping the UI and API together retains the existing paths, cookies and access-code flow. Long model calls run in the Daemon, outside HTTP request lifetimes. Local mode still uses SQLite and local files.
 
-Implemented and tested locally; **not deployed or certified against an actual Vercel/Supabase account yet**. No paid inference or hosting subscription has been used for this conversion.
+Deployed on October 24, 2026 at [the production council](https://web-mu-weld-26.vercel.app). The container Service and one `council-worker` Daemon are running. Actual HTTPS health/readiness, hosted authentication, secure session persistence/logout, Supabase session-pooler connectivity, private bucket metadata and exclusive worker ownership passed. All 15 Production variables are configured. No model inference was dispatched during setup.
+
+**Live inference remains locked:** the existing local spending ledger has not been imported. The remote database has no conversations or reservations. Ledger cutover, real Storage upload/re-download, multiple council cycles and restart/recovery checks remain before declaring the hosted council fully accepted. No paid hosting subscription was used.
 
 ## Free accounts and platform gate
 
@@ -74,4 +76,4 @@ For a repeatable local Linux check, start a **disposable** Postgres 17 container
 - Replace the Service and Daemon, then verify the same history, source bytes, originals and ledger. Check unknown paid attempts remain counted and un-replayed.
 - Only after cutover verification, authorize a small live test under the existing $24 aggregate cap. Check provider availability, Tavily search, latency and actual dashboard usage. No such live test is part of the offline conversion.
 
-Actual Vercel account eligibility, beta build/routing behavior, Supabase TLS/pooler behavior, private Storage access and public HTTPS checks remain deployment gates. Local container tests are evidence of the implementation, not evidence that these external gates have passed.
+Actual Vercel build/routing, Supabase TLS/session pooling, private bucket metadata and public HTTPS authentication passed on October 24, 2026. Actual Storage blob round trips, proxy streaming during council execution, restart/recovery, ledger cutover and a bounded live test remain acceptance gates. Local container tests cover these implementation paths but do not substitute for the remaining hosted checks.

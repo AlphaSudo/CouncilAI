@@ -29,7 +29,7 @@ Updated October 24, 2026. See the [release/hosting assessment](RELEASE_READINESS
 - [ ] Provide setup/login/testing instructions permitting free judging access through December 15, 2026.
 - [ ] Confirm usable credit and expiry extend through judging, or arrange funded access without additional personal payment. Historical trial screenshots do not prove December availability.
 - [ ] Preserve the $24 aggregate cap and $0 additional-payment rule; do not reset the allowance for a deployment or visitor.
-- [ ] If hosting: configure public hosts/origins, HTTPS cookies and explicit remote authentication. Ensure a loopback proxy cannot grant visitors a local director session or expose private conversations/paid controls.
+- [x] Configure actual public origin and HTTPS authentication. Production health/readiness, secure HttpOnly session cookies, session persistence and logout passed; hosted mode reports local entry disabled. Private local conversations have not been migrated.
 - [ ] If hosting the current backend: persist SQLite/financial state, artifacts, sources and tokenizer assets; retain one executor per data directory and test restart/recovery.
 - [ ] Test final access outside the developer browser session. Label any saved replay; do not imply it supplies fresh inference.
 

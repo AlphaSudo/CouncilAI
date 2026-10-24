@@ -1,10 +1,10 @@
 # ZeroWall release and hosting assessment
 
-Assessed October 24, 2026, against the repository and [official rules](https://nebiusglobalaihackathon.devpost.com/rules). Reviewed source is published at [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI), initially at commit `e5b3d98`. Cloud deployment and hackathon submission are not completed.
+Assessed October 24, 2026, against the repository and [official rules](https://nebiusglobalaihackathon.devpost.com/rules). Reviewed source is published at [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI), initially at commit `e5b3d98`. The initial Vercel/Supabase deployment is running; spending-ledger cutover, full hosted council acceptance and hackathon submission remain incomplete.
 
 ## Recommendation
 
-Freeze the current council for a focused demonstration. Prepare a public repository and reproducible downloadable test build, and record the 2:50 video. The user selected **Vercel + Supabase** so the app can run while their computer is off. The opt-in code conversion is now implemented; deployment and the production ledger cutover remain pending. The rules accept a working demo, hosted application or test build, and define Token Factory use as a runtime inference call. The frontend need not be hosted on Nebius.
+Freeze the current council for a focused demonstration. Prepare a public repository and reproducible downloadable test build, and record the 2:50 video. The user selected **Vercel + Supabase** so the app can run while their computer is off. The opt-in cloud conversion is deployed. HTTPS health/readiness, login/session/logout, private bucket metadata and worker ownership passed; production ledger cutover and end-to-end council acceptance remain pending. The rules accept a working demo, hosted application or test build, and define Token Factory use as a runtime inference call. The frontend need not be hosted on Nebius.
 
 The chosen cloud shape is one Vercel container Service serving React/FastAPI, one Vercel Daemon running the council, and Supabase Postgres/private Storage. See the [runbook](../operations/VERCEL_SUPABASE.md). No paid host, subscription, GPU or additional payment is authorized. A labelled public replay can supplement the live app but cannot be presented as fresh execution.
 
