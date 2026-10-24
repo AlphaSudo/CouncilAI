@@ -1,6 +1,6 @@
 # External release and submission checklist
 
-Updated October 24, 2026. See the [release/hosting assessment](RELEASE_READINESS.md) and [2:50 video script](DEMO_SCRIPT.md). Checked boxes describe local evidence, not a published submission.
+Updated October 24, 2026. See the [release/hosting assessment](RELEASE_READINESS.md) and [2:50 video script](DEMO_SCRIPT.md). Checked boxes describe the stated software/publication evidence, not a submitted hackathon entry.
 
 ## Local baseline
 
@@ -16,12 +16,12 @@ Updated October 24, 2026. See the [release/hosting assessment](RELEASE_READINESS
 
 - [ ] Choose one complete genuine council and one same-chat follow-up; inspect every shown answer, source and synthesis.
 - [ ] Select scrubbed Token Factory receipts and actual Tavily query/extraction evidence for that run.
-- [ ] Audit publishable files for secrets, account/session data, private prompts, screenshots and third-party content permissions. Ignoring `.env.local` alone is not a complete publication audit.
+- [x] Audit the Git publication set for configured secrets, credential patterns and private/generated files; exclude local data, internal screenshots and runtime traces. Third-party notices are included. Raw demo receipts/footage still need their own audit before publication.
 - [ ] Replace credentials previously exposed in chat before external deployment; keep replacements only in local/server secrets.
 - [ ] Refresh the source/test-build archive and checksums; inspect its contents before publication.
 - [ ] Verify setup, demo mode, assets, tokenizers and instructions from a fresh extraction without existing data.
-- [ ] Create the first reviewed Git commit and remote; publish under the entrant's account. Currently there are no commits or configured remote.
-- [ ] Check the public repository signed out and confirm GitHub detects MIT.
+- [x] Publish the first reviewed Git commit and configured remote under [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI), on `main`, initial commit `e5b3d98`.
+- [x] Check the repository and setup instructions signed out (HTTP 200) and confirm GitHub reports MIT.
 
 ## Working access and budget
 

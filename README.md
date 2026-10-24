@@ -180,7 +180,7 @@ $env:ZEROWALL_DATA_DIR = (Resolve-Path data-restored)
 
 Restore verifies every file, generates a new local director token at startup and clears live billing authorization. It preserves reservations; restart marks unresolved dispatched attempts unknown. Never automatically replay an interrupted paid operation.
 
-`python scripts/package_release.py` creates a credential-free source/test-build ZIP with a built UI and checksums. It excludes local state and the private source brainstorming documents. Distribution is free to run locally. A public repository/download URL, independent operator check, real NVIDIA runtime evidence, YouTube video and Devpost submission remain release requirements; they are not claimed complete by this local build. Preserve the judged snapshot and access instructions through December 15, 2026.
+`python scripts/package_release.py` creates a source/test-build ZIP with a built UI and checksums and checks for configured credentials. Inspect the archive for private working evidence before publishing it. Public source is available at [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI). A published downloadable build, independent operator check, scrubbed NVIDIA runtime evidence, YouTube video and Devpost submission remain release requirements. Preserve the judged snapshot and access instructions through December 15, 2026.
 
 ## Architecture and implementation evidence
 

@@ -1,6 +1,6 @@
 # ZeroWall release and hosting assessment
 
-Assessed October 24, 2026, against the repository and [official rules](https://nebiusglobalaihackathon.devpost.com/rules). Publication, deployment and submission are not completed.
+Assessed October 24, 2026, against the repository and [official rules](https://nebiusglobalaihackathon.devpost.com/rules). Reviewed source is published at [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI), initially at commit `e5b3d98`. Cloud deployment and hackathon submission are not completed.
 
 ## Recommendation
 
@@ -16,8 +16,8 @@ The chosen cloud shape is one Vercel container Service serving React/FastAPI, on
 | Tavily | Collective queries/search, deduplication, extraction, shared source snapshots, contributor attribution | Capture evidence from the same genuine council used in the video |
 | UI | Simple/Explain, Compare, source/full-response inspection, usage totals, thinking/context controls | Recording readability check and release smoke test |
 | Runtime | Local records show completed Token Factory calls for current models, including Nemotron | Export scrubbed receipts tied to the demo; never publish the private runtime database |
-| Checks | Cloud conversion: 22 Linux/Postgres integration checks at 1 GiB, 75 targeted local regressions, 33 final API/streaming checks. Broad local run: 728 passes plus one stored-record/API-presentation assertion mismatch, corrected and covered by rerun. Earlier browser register: 28 cases | Actual Vercel/Supabase acceptance and public-browser checks; no claim that the final complete repository suite was rerun |
-| Distribution | Source, lockfiles, MIT, setup and archive scripts | Publication audit, fresh build verification, first Git commit and remote; currently no commits or remote |
+| Checks | Cloud conversion: 24 Linux/Postgres integration checks at 1 GiB, 75 targeted local regressions, 33 final API/streaming checks. Broad local run: 728 passes plus one stored-record/API-presentation assertion mismatch, corrected and covered by rerun. Earlier browser register: 28 cases | Actual Vercel/Supabase acceptance and public-browser checks; no claim that the final complete repository suite was rerun |
+| Distribution | Reviewed source, lockfiles, MIT, setup and archive scripts published on `main`; exact index bytes passed the configured-secret and credential-pattern audit. Local data, secrets and internal validation traces excluded | Fresh-clone installation check, audited downloadable build and final demo receipts |
 | Hosting | Vercel/Supabase adapters, private file outbox, separate worker ownership, migration inventory and Linux/Postgres integration checks; local mode retained | Set up the actual free accounts and verify TLS/proxy, private bucket, session pooler, ledger cutover and judge access; see [cloud operations](../operations/VERCEL_SUPABASE.md) |
 | Submission | Current description, final checklist, 2:50 script | Actual repository/build/video links, example outcome, entrant confirmation and submitted entry |
 
