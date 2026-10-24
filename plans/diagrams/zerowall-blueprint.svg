@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1160" viewBox="0 0 1600 1160" role="img" aria-labelledby="title desc">
+  <title id="title">ZeroWall formal system blueprint</title>
+  <desc id="desc">A human director controls a local research application. Four research seats use NVIDIA models through Nebius Token Factory. Approved calculations and API trials execute locally under a shared budget. Real evidence feeds deterministic gates and reframing. Free hardware experiments are optional later work.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#456277"/></marker>
+    <style>
+      text { font-family: 'Segoe UI', Arial, sans-serif; fill: #182d3d; }
+      .title { font-size: 38px; font-weight: 700; }
+      .subtitle { font-size: 20px; fill: #527084; }
+      .section { font-size: 17px; font-weight: 700; letter-spacing: 1.3px; fill: #527084; }
+      .head { font-size: 23px; font-weight: 600; }
+      .body { font-size: 18px; fill: #456277; }
+      .small { font-size: 16px; fill: #527084; }
+      .box { fill: #ffffff; stroke: #b8cbd8; stroke-width: 1.5; rx: 12; }
+      .zone { fill: #f0f5f8; stroke: #d5e0e7; stroke-width: 1.5; rx: 18; }
+      .line { stroke: #456277; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .evidence { fill: #eaf5ee; stroke: #8fb99c; stroke-width: 1.5; rx: 12; }
+    </style>
+  </defs>
+  <rect width="1600" height="1160" fill="#fbfcfd"/>
+  <text x="60" y="68" class="title">ZeroWall system blueprint</text>
+  <text x="60" y="106" class="subtitle">Human-directed cross-layer research, controlled experiments, and evidence-led decisions</text>
+  <text x="60" y="143" class="small">Release 1.00 plan  |  October 18, 2026  |  Core: hosted inference and local tools  |  Hardware experiments optional</text>
+
+  <rect x="60" y="178" width="1480" height="110" class="box"/>
+  <text x="90" y="216" class="head">Human research director</text>
+  <text x="90" y="250" class="body">Freeze mission and gates  /  raise concerns  /  approve bounded experiments  /  pause, reframe, or reopen</text>
+  <path d="M800 288 V326" class="line"/>
+
+  <rect x="60" y="332" width="460" height="389" class="zone"/>
+  <text x="85" y="367" class="section">COUNCIL INFERENCE</text>
+  <rect x="85" y="389" width="410" height="88" class="box"/>
+  <text x="106" y="422" class="head">Four independent research seats</text>
+  <text x="106" y="452" class="body">Hardware  /  runtime  /  engine  /  algorithms</text>
+  <path d="M290 478 V505" class="line"/>
+  <rect x="85" y="513" width="410" height="88" class="box"/>
+  <text x="106" y="546" class="head">Model router and context snapshots</text>
+  <text x="106" y="576" class="body">Declared model identity, capabilities, and cost</text>
+  <path d="M290 601 V628" class="line"/>
+  <rect x="85" y="636" width="410" height="62" class="box"/>
+  <text x="106" y="674" class="head">NVIDIA models on Token Factory</text>
+
+  <rect x="560" y="332" width="480" height="389" class="zone"/>
+  <text x="585" y="367" class="section">DURABLE CONTROL PLANE</text>
+  <rect x="585" y="389" width="430" height="88" class="box"/>
+  <text x="606" y="422" class="head">Research workspace and API</text>
+  <text x="606" y="452" class="body">Mission, Council, Experiments, Findings</text>
+  <path d="M800 478 V505" class="line"/>
+  <rect x="585" y="513" width="430" height="88" class="box"/>
+  <text x="606" y="546" class="head">Non-voting council state machine</text>
+  <text x="606" y="576" class="body">Commit-Reveal, review, approval, and reframe</text>
+  <path d="M800 601 V628" class="line"/>
+  <rect x="585" y="636" width="430" height="62" class="box"/>
+  <text x="606" y="674" class="head">SQLite research memory and budget</text>
+
+  <rect x="1080" y="332" width="460" height="389" class="zone"/>
+  <text x="1105" y="367" class="section">LOCAL EXPERIMENT EXECUTION</text>
+  <rect x="1105" y="389" width="410" height="88" class="box"/>
+  <text x="1126" y="422" class="head">Approved typed experiment queue</text>
+  <text x="1126" y="452" class="body">Approved plans and reserved request cost</text>
+  <path d="M1310 478 V505" class="line"/>
+  <rect x="1105" y="513" width="410" height="88" class="box"/>
+  <text x="1126" y="546" class="head">Local tool and API executor</text>
+  <text x="1126" y="576" class="body">Typed calculations and bounded API trials</text>
+  <path d="M1310 601 V628" class="line"/>
+  <rect x="1105" y="636" width="410" height="62" class="box"/>
+  <text x="1126" y="674" class="head">Raw responses, usage, and evidence</text>
+
+  <path d="M585 557 H495" class="line"/>
+  <path d="M1015 433 H1105" class="line"/>
+  <path d="M1310 698 V774 H1090" class="line"/>
+  <path d="M800 698 V742" class="line"/>
+  <rect x="560" y="750" width="530" height="118" class="evidence"/>
+  <text x="585" y="791" class="head">Deterministic evidence analysis</text>
+  <text x="585" y="823" class="body">Raw artifacts, metrics, uncertainty, and hard gates</text>
+  <text x="585" y="850" class="small">Fail or unknown cannot be voted into a confirmed result.</text>
+  <path d="M560 809 H290 V721" class="line"/>
+  <text x="80" y="850" class="small">Evidence returns to the council</text>
+  <text x="80" y="876" class="small">and changes the next hypothesis.</text>
+
+  <path d="M825 868 V902" class="line"/>
+  <rect x="60" y="910" width="1480" height="112" class="box"/>
+  <text x="90" y="949" class="head">Bounded finding and reproducibility pack</text>
+  <text x="90" y="982" class="body">Research map  /  decision ledger  /  concerns and assumptions  /  minority report  /  negative results  /  raw evidence</text>
+  <text x="60" y="1070" class="subtitle">First experiment: baseline  /  packed context  /  model routing  /  context and routing combined</text>
+  <text x="60" y="1106" class="small">All inference uses Token Factory. No dedicated GPU is required. Optional hardware work needs real evidence and verified free access.</text>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "C00": {"context": "full", "route": "fixed-first-verified-enabled-model"},
+  "C10": {"context": "exact-duplicate-facts-v1", "route": "fixed-first-verified-enabled-model"},
+  "C01": {"context": "full", "route": "explicitly-approved-fast-first-one-escalation"},
+  "C11": {"context": "exact-duplicate-facts-v1", "route": "explicitly-approved-fast-first-one-escalation"},
+  "max_completion_tokens": 768,
+  "routing_checks": "Visible output schema and source-ID presence only; hidden answer keys are excluded.",
+  "sampling": "Provider defaults held the same across cells; exact requests preserved.",
+  "optional_models_enabled": false
+}

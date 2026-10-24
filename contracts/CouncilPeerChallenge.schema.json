@@ -1,0 +1,40 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Claim Id",
+      "type": "string"
+    },
+    "claim_revision": {
+      "minimum": 1,
+      "title": "Claim Revision",
+      "type": "integer"
+    },
+    "objection": {
+      "minLength": 3,
+      "title": "Objection",
+      "type": "string"
+    },
+    "decision_impact": {
+      "minLength": 3,
+      "title": "Decision Impact",
+      "type": "string"
+    },
+    "candidate_test": {
+      "minLength": 3,
+      "title": "Candidate Test",
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_id",
+    "claim_revision",
+    "objection",
+    "decision_impact",
+    "candidate_test"
+  ],
+  "title": "CouncilPeerChallenge",
+  "type": "object"
+}

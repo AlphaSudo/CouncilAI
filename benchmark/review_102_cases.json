@@ -1,0 +1,173 @@
+{
+  "version": "scoped-review-cases-v2",
+  "cases": [
+    {
+      "id": "C102-01",
+      "scenario": "A broad reliability assertion becomes a genuinely narrower functional claim.",
+      "expected": "Recheck compares exact scope and may close the original objection as assessed; empirical superiority stays unverified.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-02",
+      "scenario": "Repair adds checksums but still promises that no files can be omitted.",
+      "expected": "Completeness defect remains; the new condition does not justify the absolute promise.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-03",
+      "scenario": "A critic attacks timestamped copies by saying users may ignore the stated timestamping condition.",
+      "expected": "Distinguish condition fulfillment from a contradiction of the conditional claim.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-04",
+      "scenario": "A supposed residual risk violates an explicit hard requirement.",
+      "expected": "Preserve the requirement as a blocker; no risk-label bypass.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-05",
+      "scenario": "A source sentence combines setup time, versioning and restore reproducibility.",
+      "expected": "Split material propositions within the budget; preserve qualifiers and flag omitted assertions.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-06",
+      "scenario": "The selected passage is JSON/Markdown scaffolding around a claim.",
+      "expected": "Preserve raw source but display a faithful normalized assertion, not the scaffolding as the claim.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-07",
+      "scenario": "Two authors make the same scoped assertion.",
+      "expected": "Compact group permitted; separate provenance, repairs and support remain.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-08",
+      "scenario": "Similar claims differ by quantifier, assumptions or success criterion.",
+      "expected": "Do not merge equivalence; show relatedness or conflict.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-09",
+      "scenario": "One member of a group changes its claim after repair.",
+      "expected": "Old membership becomes stale or split; support does not transfer.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-10",
+      "scenario": "An omitted paragraph claims personal tests took 30, 5 and 3 seconds.",
+      "expected": "Visible unsupported-result alert linked to the original passage; not an observed council result.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-11",
+      "scenario": "A supplied document quotes someone else's experiment.",
+      "expected": "Keep external attribution and relevance limits; do not call it a new local execution.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-12",
+      "scenario": "A hypothetical says \u201cif restore took 3 seconds.\u201d",
+      "expected": "Preserve hypothetical origin; avoid treating every number as a claimed observation.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-13",
+      "scenario": "A model invents a trace ID or pastes a tool-looking log.",
+      "expected": "No tool-origin evidence or support promotion without the real scoped record.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-14",
+      "scenario": "A candidate test demands an unexplained 80% timing improvement.",
+      "expected": "Flag unsupported threshold and whether speed measures the requested outcome.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-15",
+      "scenario": "A test confirms copied-file hashes but not missing source files.",
+      "expected": "Distinguish content presence/integrity from completeness; test remains a proposal.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-16",
+      "scenario": "A comparison uses unequal datasets, baselines or assumptions.",
+      "expected": "Mark comparability limits and require a fair basis before generalizing.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-17",
+      "scenario": "A definition or supplied-premise deduction needs no performance experiment.",
+      "expected": "Use the relevant source/logical check and scoped model reasoning label; no fabricated measurement requirement.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-18",
+      "scenario": "A causal or universal assertion relies on one success.",
+      "expected": "Retain its stronger evidence obligation; no type-label shortcut.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-19",
+      "scenario": "A recommendation says \u201cbetter\u201d with no director criterion.",
+      "expected": "State an explicit proposed criterion or keep the choice conditional; no invented user preference.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-20",
+      "scenario": "Repair resolves the original issue but recheck raises a different material concern.",
+      "expected": "Original issue and new unreviewed concern remain distinct; no infinite automatic cycle.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-21",
+      "scenario": "A model marks all concerns resolved without new evidence.",
+      "expected": "Model review may close attacks; unsupported measurements and required evidence do not become verified.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-22",
+      "scenario": "A director accepts a risk or a final answer.",
+      "expected": "Record human judgment separately; no evidence promotion, billing unlock or stale acceptance.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-23",
+      "scenario": "Claim/alert/context limits are exceeded.",
+      "expected": "Preserve source and explicit coverage/incomplete state; no silent omission presented as complete review.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-24",
+      "scenario": "A reviewer is unavailable, restarts, truncates or returns invalid references.",
+      "expected": "Existing bounded recovery, raw-output retention and honest partial state; no hidden audit or fallback.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-25",
+      "scenario": "A current claim or dependency changes after publication.",
+      "expected": "Invalidate affected decisions and final freshness; preserve prior publication replay.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-26",
+      "scenario": "An old v1 pack is replayed after installing 1.02.",
+      "expected": "Exact original policy selection, decisions and hashes reproduce.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-27",
+      "scenario": "None of the candidates supports the requested decision.",
+      "expected": "Directly explain the limitation and useful next check; no forced winner or blanket fabricated certainty.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    },
+    {
+      "id": "C102-28",
+      "scenario": "Scoped support is adequate for one recommendation despite ordinary operational risk.",
+      "expected": "Retain a useful conditional recommendation and show its basis, conditions and limits.",
+      "origin": "developer-authored regression target, not independent human semantic gold"
+    }
+  ]
+}

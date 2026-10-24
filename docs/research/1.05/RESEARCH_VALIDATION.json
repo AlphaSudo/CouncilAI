@@ -1,0 +1,20 @@
+{
+  "scope": "Read-only planning and in-memory dependency probe; no application migration, provider inference or paid search",
+  "sqlite_version": "3.40.1",
+  "fts5_available": true,
+  "calculator_fixture_decimal_examples_checked": 4,
+  "model_inference_calls": 0,
+  "paid_tool_calls": 0,
+  "runtime_code_changed": false,
+  "plan_features": 20,
+  "feature_checklist_sections": 20,
+  "open_checklist_items": 90,
+  "acceptance_scenarios": 28,
+  "pinned_repositories": 13,
+  "downloaded_reference_files": 71,
+  "local_document_links": "passed",
+  "research_copy_hashes": "passed",
+  "current_frontend_source_hashes": "unchanged",
+  "plan_sha256": "b6b4141e1927ab173f5abed31f83bab4d1b4b857dc4a2832e712454872a6c518",
+  "backend_and_provider_config_files_unchanged": 41
+}

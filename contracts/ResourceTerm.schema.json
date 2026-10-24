@@ -1,0 +1,53 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "direction": {
+      "enum": [
+        "input",
+        "output",
+        "maintenance",
+        "static_requirement"
+      ],
+      "title": "Direction",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "maxLength": 80,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Value"
+    },
+    "unit": {
+      "default": "unknown",
+      "maxLength": 30,
+      "title": "Unit",
+      "type": "string"
+    },
+    "basis": {
+      "maxLength": 160,
+      "minLength": 3,
+      "title": "Basis",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "direction",
+    "basis"
+  ],
+  "title": "ResourceTerm",
+  "type": "object"
+}

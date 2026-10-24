@@ -1,0 +1,22 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "family_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Family Id",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_id",
+    "reason"
+  ],
+  "title": "CouncilRankedApproach",
+  "type": "object"
+}

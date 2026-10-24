@@ -1,0 +1,31 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "message_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Message Id",
+      "type": "string"
+    },
+    "assessment": {
+      "enum": [
+        "complete_as_assessed",
+        "partial"
+      ],
+      "title": "Assessment",
+      "type": "string"
+    },
+    "omitted_material": {
+      "maxLength": 1500,
+      "title": "Omitted Material",
+      "type": "string"
+    }
+  },
+  "required": [
+    "message_id",
+    "assessment",
+    "omitted_material"
+  ],
+  "title": "ExtractionCoverage",
+  "type": "object"
+}

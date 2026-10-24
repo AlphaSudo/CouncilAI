@@ -1,0 +1,10 @@
+{
+  "version": "research-corpus/1",
+  "quality_status": "Mechanical passage coverage only; independent semantic answer quality is not assessed.",
+  "cases": [
+    {"id": "software", "title": "Queue design", "query": "queue ordering", "passage": "Queue ordering is guaranteed only within one partition; cross-partition order is not established.", "must_retain": "only within one partition"},
+    {"id": "document", "title": "Document comparison", "query": "warranty duration", "passage": "The warranty duration is two years only for domestic purchases; imported units are excluded.", "must_retain": "imported units are excluded"},
+    {"id": "planning", "title": "Delivery schedule", "query": "delivery deadline", "passage": "The delivery deadline is Friday provided the accessibility review finishes on Wednesday; that review is still pending.", "must_retain": "review is still pending"},
+    {"id": "quantitative", "title": "Efficiency measurement", "query": "efficiency denominator", "passage": "The efficiency denominator includes auxiliary power: output 80 W, primary input 100 W, auxiliary input 10 W; 80/110 is the relevant ratio.", "must_retain": "auxiliary input 10 W"}
+  ]
+}

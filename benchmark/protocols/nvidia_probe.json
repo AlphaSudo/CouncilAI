@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "state": "not_executed_live_locked",
+  "model": "nvidia/Nemotron-3.5-Super-VL",
+  "capability": "inference.run_trial",
+  "request_count": 1,
+  "max_completion_tokens": 64,
+  "prompt": "Return JSON with a concise research question about measuring complete workflow cost. Do not assert any new measurement.",
+  "maximum_cost": "Calculated and reserved from current verified prices and the conservative input/output envelope before dispatch; unknown prerequisites block dispatch.",
+  "automatic_retries": 0,
+  "requires": ["existing-credit-only billing verified", "automatic payments disabled", "current exact-model price and all billed categories bounded", "director-approved live mission and experiment"],
+  "output": ["raw request/response artifact", "actual model identity", "usage or retained unknown reservation", "request latency; TTFT remains unknown"]
+}

@@ -1,0 +1,41 @@
+{
+  "version": "tokenizers/2",
+  "checked_at": "2026-10-23",
+  "models": {
+    "nvidia/Nemotron-3.5-Super-VL": {
+      "repository": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "revision": "1f8953f7f0935358e3605150d22bc15df062061c",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16/resolve/1f8953f7f0935358e3605150d22bc15df062061c/tokenizer.json",
+      "sha256": "d0432ad8b1c2984a2e2dca82e1933e3fd5628df6e95c51fba4c3ee9950dce299",
+      "bytes": 17077366
+    },
+    "zai-org/GLM-5.3-Flash": {
+      "repository": "zai-org/GLM-5.3-Flash",
+      "revision": "46a050bec13002ad29ee795c16e61cf4fa3c4a9c",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash/resolve/46a050bec13002ad29ee795c16e61cf4fa3c4a9c/tokenizer.json",
+      "sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+      "bytes": 20217442
+    },
+    "nvidia/Nemotron-3_5-Lightning": {
+      "repository": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "revision": "a9904d24bcc1d289a1950fa9d2b978c47cf903b9",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/resolve/a9904d24bcc1d289a1950fa9d2b978c47cf903b9/tokenizer.json",
+      "sha256": "623c34567aebb18582765289fbe23d901c62704d6518d71866e0e58db892b5b7",
+      "bytes": 17077484
+    },
+    "deepseek-ai/DeepSeek-V4-Flash-0731": {
+      "repository": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "revision": "7872f01b1d1fe23eabc4c98b48bffcef5a386062",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731/resolve/7872f01b1d1fe23eabc4c98b48bffcef5a386062/tokenizer.json",
+      "sha256": "8f9f37ca37fdc4f5fd36d5cf4d3b0e8392edb4e894fd10cc0d70b4957c8633cf",
+      "bytes": 6367146
+    },
+    "reflection/beam": {
+      "repository": "reflection/Beam-1.0-501B-A23B",
+      "revision": "50a18f8ccf28c75cfdfd9cfe602451c5c81acaef",
+      "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B/resolve/50a18f8ccf28c75cfdfd9cfe602451c5c81acaef/tokenizer.json",
+      "sha256": "0327721d51d744a802ba638105e92adf603f1f9cd7ce7b3a3defc7c518c708c1",
+      "bytes": 5971238
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120" role="img" aria-labelledby="title desc">
+  <title id="title">ZeroWall roadmap from version 0.1 to 1.00</title>
+  <desc id="desc">Ten releases progress from October 16 to October 29, 2026. Each has an engineering outcome and an acceptance gate. October 30 is the buffer before the 19:00 Cairo deadline.</desc>
+  <defs><style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; fill: #182d3d; }
+    .title { font-size: 38px; font-weight: 700; }
+    .sub { font-size: 20px; fill: #527084; }
+    .label { font-size: 17px; font-weight: 700; letter-spacing: 1px; fill: #527084; }
+    .version { font-size: 24px; font-weight: 700; fill: #126e58; }
+    .date { font-size: 19px; fill: #527084; }
+    .head { font-size: 22px; font-weight: 600; }
+    .gate { font-size: 18px; fill: #456277; }
+  </style></defs>
+  <rect width="1600" height="1120" fill="#fbfcfd"/>
+  <text x="60" y="68" class="title">ZeroWall release roadmap</text>
+  <text x="60" y="106" class="sub">Build the experimental loop first, then prove it, make it usable, and submit it.</text>
+  <text x="60" y="145" class="sub">72-92 focused engineering hours plus contingency  |  All dates in Africa/Cairo</text>
+  <text x="75" y="197" class="label">RELEASE</text>
+  <text x="200" y="197" class="label">TARGET DATE</text>
+  <text x="410" y="197" class="label">ENGINEERING OUTCOME</text>
+  <text x="935" y="197" class="label">ACCEPTANCE GATE</text>
+  <path d="M60 215 H1540" stroke="#b8cbd8" stroke-width="1.5"/>
+
+  <rect x="60" y="225" width="1480" height="70" rx="8" fill="#eef4f7"/>
+  <text x="80" y="270" class="version">0.1</text><text x="200" y="270" class="date">Oct 18</text>
+  <text x="410" y="270" class="head">Freeze mission and API feasibility</text><text x="935" y="270" class="gate">Verified credit, bounded call, and frozen protocol</text>
+
+  <text x="80" y="345" class="version">0.2</text><text x="200" y="345" class="date">Oct 19</text>
+  <text x="410" y="345" class="head">Local persistence and budget guard</text><text x="935" y="345" class="gate">State survives restart; real model call is traceable</text>
+
+  <rect x="60" y="375" width="1480" height="70" rx="8" fill="#eef4f7"/>
+  <text x="80" y="420" class="version">0.3</text><text x="200" y="420" class="date">Oct 20</text>
+  <text x="410" y="420" class="head">Independent Commit-Reveal</text><text x="935" y="420" class="gate">Four valid submissions; no early answer access</text>
+
+  <text x="80" y="495" class="version">0.4</text><text x="200" y="495" class="date">Oct 21</text>
+  <text x="410" y="495" class="head">Cross-examination and governance</text><text x="935" y="495" class="gate">Concerns, dissent, and stale approvals handled</text>
+
+  <rect x="60" y="525" width="1480" height="70" rx="8" fill="#eef4f7"/>
+  <text x="80" y="570" class="version">0.5</text><text x="200" y="570" class="date">Oct 22</text>
+  <text x="410" y="570" class="head">Hypotheses and experiment queue</text><text x="935" y="570" class="gate">Falsifiable, bounded, capability-valid plans</text>
+
+  <text x="80" y="645" class="version">0.6</text><text x="200" y="645" class="date">Oct 23-24</text>
+  <text x="410" y="645" class="head">Execute local tools and API trials</text><text x="935" y="645" class="gate">Real raw evidence and bounded request spend</text>
+
+  <rect x="60" y="675" width="1480" height="70" rx="8" fill="#eaf5ee"/>
+  <text x="80" y="720" class="version">0.7</text><text x="200" y="720" class="date">Oct 25</text>
+  <text x="410" y="720" class="head">Evaluate, adjudicate, and reframe</text><text x="935" y="720" class="gate">Evidence changes the research direction</text>
+
+  <text x="80" y="795" class="version">0.8</text><text x="200" y="795" class="date">Oct 26</text>
+  <text x="410" y="795" class="head">Product experience and reports</text><text x="935" y="795" class="gate">Complete user journey and reproducibility pack</text>
+
+  <rect x="60" y="825" width="1480" height="70" rx="8" fill="#eef4f7"/>
+  <text x="80" y="870" class="version">0.9</text><text x="200" y="870" class="date">Oct 27-28</text>
+  <text x="410" y="870" class="head">Reproduce and package the test build</text><text x="935" y="870" class="gate">Independent confirmation; working judge access</text>
+
+  <text x="80" y="945" class="version">1.00</text><text x="200" y="945" class="date">Oct 29</text>
+  <text x="410" y="945" class="head">Public release and submission</text><text x="935" y="945" class="gate">Licensed repo, demo, video, and complete entry</text>
+
+  <path d="M60 978 H1540" stroke="#b8cbd8" stroke-width="1.5"/>
+  <text x="60" y="1020" class="sub">Internal submission target: Oct 29 at 18:00 Cairo. Official deadline: Oct 30 at 19:00 Cairo.</text>
+  <text x="60" y="1056" class="sub">Oct 30 is a buffer. Keep working access available through Dec 15, 2026.</text>
+  <text x="60" y="1090" class="gate">Core releases need Token Factory and local tools. Free GPU experiments are optional later work and never block release.</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "version": "direct-council-v1",
+  "daily_attempt_cap": 100,
+  "fallbacks": [
+    {
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "name": "Groq · GPT OSS 20B",
+      "fallback_for": "groq::openai/gpt-oss-120b",
+      "base_url": "https://api.groq.com/openai/v1",
+      "key_env": "GROQ_API_KEY",
+      "pricing_source": "https://console.groq.com/docs/rate-limits"
+    }
+  ],
+  "models": [
+    {"provider": "zai", "model": "glm-4.7-flash", "name": "Z.ai · GLM 4.7 Flash", "base_url": "https://api.z.ai/api/paas/v4", "key_env": "ZAI_API_KEY", "pricing_source": "https://docs.z.ai/guides/overview/pricing"},
+    {"provider": "gemini", "model": "gemini-3.5-flash-lite", "name": "Gemini · Flash Lite", "base_url": "https://generativelanguage.googleapis.com/v1beta", "key_env": "GEMINI_API_KEY", "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing"},
+    {"provider": "nvidia_nim", "model": "nvidia/nemotron-3-super-120b-a12b", "name": "NVIDIA · Nemotron Super", "base_url": "https://integrate.api.nvidia.com/v1", "key_env": "NVIDIA_NIM_API_KEY", "pricing_source": "https://build.nvidia.com"},
+    {"provider": "groq", "model": "openai/gpt-oss-120b", "name": "Groq · GPT OSS 120B", "base_url": "https://api.groq.com/openai/v1", "key_env": "GROQ_API_KEY", "pricing_source": "https://console.groq.com/docs/rate-limits"}
+  ]
+}

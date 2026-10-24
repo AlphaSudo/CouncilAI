@@ -1,0 +1,63 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "enum": [
+        "cosmetic",
+        "annotation_quarantine",
+        "sidecar_unavailable",
+        "provider_unavailable",
+        "action_boundary"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "source_message_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Message Id"
+    },
+    "path": {
+      "items": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "integer"
+          }
+        ]
+      },
+      "title": "Path",
+      "type": "array"
+    },
+    "consequence": {
+      "title": "Consequence",
+      "type": "string"
+    },
+    "public_note": {
+      "title": "Public Note",
+      "type": "string"
+    },
+    "grants_authority": {
+      "const": false,
+      "default": false,
+      "title": "Grants Authority",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "category",
+    "consequence",
+    "public_note"
+  ],
+  "title": "ReviewWarning",
+  "type": "object"
+}

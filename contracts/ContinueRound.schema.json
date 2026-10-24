@@ -1,0 +1,20 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "authorize_retry_with_unknown_charge": {
+      "default": false,
+      "title": "Authorize Retry With Unknown Charge",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "expected_revision"
+  ],
+  "title": "ContinueRound",
+  "type": "object"
+}

@@ -1,0 +1,211 @@
+{
+  "status": "planning fixtures; calculator not implemented",
+  "currency": "USD",
+  "reference_date": "2026-10-19",
+  "prices": "Public reference tariffs for named cases; synthetic cache-write rates are explicitly hypothetical. No account charge or cache hit is asserted.",
+  "cases": [
+    {
+      "id": "V01",
+      "name": "Groq cached input is a prompt subset",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "raw_usage": {
+        "prompt_tokens": 12000,
+        "completion_tokens": 1000,
+        "total_tokens": 13000,
+        "prompt_tokens_details": {
+          "cached_tokens": 9000
+        }
+      },
+      "expected": {
+        "input_uncached": 3000,
+        "cache_read": 9000,
+        "cache_write_state": "not_applicable",
+        "billable_output": 1000,
+        "reference_estimate_usd": "0.001725"
+      }
+    },
+    {
+      "id": "V02",
+      "name": "Explicitly reported cache zero",
+      "raw_usage": {
+        "prompt_tokens": 12000,
+        "completion_tokens": 1000,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "expected": {
+        "cache_read": 0,
+        "cache_read_state": "known",
+        "reference_estimate_usd": "0.0024"
+      }
+    },
+    {
+      "id": "V03",
+      "name": "Missing cache split is not zero",
+      "raw_usage": {
+        "prompt_tokens": 12000,
+        "completion_tokens": 1000
+      },
+      "expected": {
+        "cache_read": null,
+        "cache_read_state": "not_reported",
+        "input_uncached": null,
+        "estimate_state": "partial_estimate",
+        "known_output_cost_usd": "0.000600",
+        "complete_total_usd": null
+      }
+    },
+    {
+      "id": "V04",
+      "name": "Reported amount zero is distinct from missing tokens",
+      "raw_usage": {
+        "cost": 0
+      },
+      "expected": {
+        "provider_reported_amount_usd": "0",
+        "usage_state": "not_reported",
+        "invoice_verified": false
+      }
+    },
+    {
+      "id": "V05",
+      "name": "Impossible cached subset is invalid",
+      "raw_usage": {
+        "prompt_tokens": 1000,
+        "prompt_tokens_details": {
+          "cached_tokens": 2000
+        }
+      },
+      "expected": {
+        "normalization_state": "invalid",
+        "complete_total_usd": null,
+        "silent_clamping_allowed": false
+      }
+    },
+    {
+      "id": "V06",
+      "name": "Gemini separate candidate and thought output",
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "raw_usage": {
+        "promptTokenCount": 10000,
+        "cachedContentTokenCount": 0,
+        "candidatesTokenCount": 500,
+        "thoughtsTokenCount": 200,
+        "totalTokenCount": 10700
+      },
+      "expected": {
+        "billable_output": 700,
+        "reference_estimate_usd": "0.00475",
+        "applicable_free_account_amount": "not established by this fixture"
+      }
+    },
+    {
+      "id": "V07",
+      "name": "Explicit writes are their own disjoint billing category",
+      "provider": "synthetic_adapter_not_an_added_provider",
+      "counts": {
+        "input_uncached": 1000,
+        "cache_read": 2000,
+        "cache_write": 500,
+        "billable_output": 100
+      },
+      "hypothetical_rates_per_million": {
+        "input_uncached": "1",
+        "cache_read": "0.10",
+        "cache_write": "1.25",
+        "billable_output": "2"
+      },
+      "expected": {
+        "reference_estimate_usd": "0.002025",
+        "cache_write_inferred_from_cold_input": false
+      }
+    },
+    {
+      "id": "V08",
+      "name": "Known and unknown attempts produce a partial chat total",
+      "attempts": [
+        {
+          "id": "a",
+          "state": "completed",
+          "known_estimate_usd": "0.001725"
+        },
+        {
+          "id": "b",
+          "state": "unknown_outcome",
+          "known_estimate_usd": null
+        }
+      ],
+      "expected": {
+        "physical_attempts": 2,
+        "known_subtotal_usd": "0.001725",
+        "total_state": "partial_estimate",
+        "unknown_outcomes": 1
+      }
+    },
+    {
+      "id": "V09",
+      "name": "Shared research is summed once",
+      "attribution": {
+        "research_event_ids": [
+          "search_1"
+        ],
+        "seat_read_receipts": [
+          "r1",
+          "r2",
+          "r3",
+          "r4"
+        ]
+      },
+      "expected": {
+        "charged_search_events": 1,
+        "seat_read_receipts": 4,
+        "financial_allocation_multiplier": 1
+      }
+    },
+    {
+      "id": "V10",
+      "name": "Present reasoning subset is not added twice",
+      "synthetic_output": {
+        "completion_includes_reasoning": true,
+        "completion_tokens": 1000,
+        "reasoning_tokens": 300
+      },
+      "expected": {
+        "output_visible": 700,
+        "output_reasoning": 300,
+        "billable_output": 1000
+      }
+    },
+    {
+      "id": "V11",
+      "name": "Cache lifecycle fee is not a model cache-miss count",
+      "cache_lifecycle": {
+        "reported_write_tokens": null,
+        "storage_token_hours": 1500000,
+        "rate_per_million_token_hours": "1"
+      },
+      "expected": {
+        "storage_reference_usd": "1.5",
+        "cache_write_tokens": null,
+        "derive_writes_from_uncached_input": false
+      }
+    },
+    {
+      "id": "V12",
+      "name": "Four-seat research envelope",
+      "limits": {
+        "base_final_contributions": 12,
+        "extra_research_calls": 5,
+        "shared_recovery_attempts": 3,
+        "optional_exchange_added_on_top": 0
+      },
+      "expected": {
+        "maximum_model_attempts": 20,
+        "new_automatic_allowance": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "version": "token-factory-generation/10",
+  "checked_at": "2026-10-23",
+  "opening_profile": "raw_opening",
+  "context_tokens": 262144,
+  "reasoning_budget_tokens": 4000,
+  "review_output_tokens": 32768,
+  "stage_output_targets": {
+    "extraction": 3000,
+    "scrutiny": 3000
+  },
+  "sources": {
+    "context": "https://tokenfactory.nebius.com/api/public/models_info",
+    "api": "https://docs.tokenfactory.nebius.com/api-reference/inference/create-chat-completion",
+    "glm": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+    "super": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16#text-and-reasoning",
+    "lightning": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+    "deepseek": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731",
+    "beam": "https://developers.reflection.ai/reasoning"
+  },
+  "models": {
+    "nvidia/Nemotron-3.5-Super-VL": {
+      "context_tokens": 1048576,
+      "opening_reasoning": "medium",
+      "opening_controls": {
+        "chat_template_kwargs": {
+          "enable_thinking": true,
+          "medium_effort": true
+        }
+      },
+      "review_reasoning": "medium",
+      "review_controls": {
+        "chat_template_kwargs": {
+          "enable_thinking": true,
+          "medium_effort": true
+        }
+      },
+      "answer_now_controls": {
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      }
+    },
+    "zai-org/GLM-5.3-Flash": {
+      "context_tokens": 1024000,
+      "reasoning_budget_tokens": 1000,
+      "fixed_reasoning_effort": "low",
+      "native_reasoning_budget_status": "advisory_request_observed_overshoot",
+      "opening_reasoning": "low",
+      "opening_controls": {
+        "thinking_token_budget": 1000,
+        "reasoning_effort": "low",
+        "chat_template_kwargs": {
+          "reasoning_effort": "low",
+          "clear_thinking": true
+        }
+      },
+      "review_reasoning": "low",
+      "review_controls": {
+        "thinking_token_budget": 1000,
+        "reasoning_effort": "low",
+        "chat_template_kwargs": {
+          "reasoning_effort": "low",
+          "clear_thinking": true
+        }
+      },
+      "answer_now_controls": {
+        "thinking_token_budget": 1000,
+        "reasoning_effort": "low",
+        "chat_template_kwargs": {
+          "reasoning_effort": "low",
+          "clear_thinking": true
+        }
+      }
+    },
+    "nvidia/Nemotron-3_5-Lightning": {
+      "context_tokens": 1048576,
+      "opening_reasoning": "enabled",
+      "opening_controls": {
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "review_reasoning": "enabled",
+      "review_controls": {
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "answer_now_reasoning": "enabled",
+      "answer_now_controls": {
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "read_idle_timeout_seconds": 90
+    },
+    "deepseek-ai/DeepSeek-V4-Flash-0731": {
+      "context_tokens": 1024000,
+      "opening_reasoning": "low",
+      "opening_controls": {
+        "reasoning_effort": "low",
+        "chat_template_kwargs": {
+          "reasoning_effort": "low"
+        }
+      },
+      "review_reasoning": "low",
+      "review_controls": {
+        "reasoning_effort": "low",
+        "chat_template_kwargs": {
+          "reasoning_effort": "low"
+        }
+      },
+      "answer_now_controls": {
+        "reasoning_effort": "low",
+        "chat_template_kwargs": {
+          "reasoning_effort": "low"
+        }
+      }
+    },
+    "reflection/beam": {
+      "context_tokens": 1048576,
+      "opening_reasoning": "low",
+      "opening_controls": {
+        "reasoning_effort": "low",
+        "temperature": 0.7,
+        "top_p": 0.99
+      },
+      "review_reasoning": "low",
+      "review_controls": {
+        "reasoning_effort": "low",
+        "temperature": 0.7,
+        "top_p": 0.99
+      },
+      "answer_now_reasoning": "low",
+      "answer_now_controls": {
+        "reasoning_effort": "low",
+        "temperature": 0.7,
+        "top_p": 0.99
+      },
+      "continuation_mode": "fresh_public_context",
+      "read_idle_timeout_seconds": 90
+    }
+  },
+  "control_validation": "Reasoning controls follow model-author documentation; the 4,000-token system instruction is not a hard provider limit. Two explicitly approved bounded Lightning probes on 2026-10-22 completed with 63.97- and 87.36-second header waits, motivating the restored 90-second read timeout. Hosted latency and budget adherence remain observations, not guarantees."
+}

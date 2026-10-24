@@ -1,0 +1,60 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_]{0,23}$",
+      "title": "Name",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "maxLength": 80,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Value"
+    },
+    "unit": {
+      "default": "1",
+      "maxLength": 30,
+      "title": "Unit",
+      "type": "string"
+    },
+    "quantity_kind": {
+      "default": "number",
+      "maxLength": 40,
+      "title": "Quantity Kind",
+      "type": "string"
+    },
+    "basis": {
+      "maxLength": 160,
+      "minLength": 3,
+      "title": "Basis",
+      "type": "string"
+    },
+    "uncertainty": {
+      "anyOf": [
+        {
+          "maxLength": 80,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uncertainty"
+    }
+  },
+  "required": [
+    "name",
+    "basis"
+  ],
+  "title": "AuditQuantity",
+  "type": "object"
+}

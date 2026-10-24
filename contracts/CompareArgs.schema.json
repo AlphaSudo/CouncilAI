@@ -1,0 +1,97 @@
+{
+  "$defs": {
+    "TrialObservation": {
+      "additionalProperties": false,
+      "properties": {
+        "task_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Task Id",
+          "type": "string"
+        },
+        "cell": {
+          "enum": [
+            "C00",
+            "C10",
+            "C01",
+            "C11"
+          ],
+          "title": "Cell",
+          "type": "string"
+        },
+        "cost_usd": {
+          "maximum": 25,
+          "minimum": 0,
+          "title": "Cost Usd",
+          "type": "number"
+        },
+        "latency_ms": {
+          "maximum": 10000000.0,
+          "minimum": 0,
+          "title": "Latency Ms",
+          "type": "number"
+        },
+        "valid": {
+          "title": "Valid",
+          "type": "boolean"
+        },
+        "split": {
+          "default": "exploration",
+          "enum": [
+            "exploration",
+            "confirmation"
+          ],
+          "title": "Split",
+          "type": "string"
+        },
+        "repeat": {
+          "default": 0,
+          "maximum": 20,
+          "minimum": 0,
+          "title": "Repeat",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "task_id",
+        "cell",
+        "cost_usd",
+        "latency_ms",
+        "valid"
+      ],
+      "title": "TrialObservation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "observations": {
+      "items": {
+        "$ref": "#/$defs/TrialObservation"
+      },
+      "maxItems": 1000,
+      "minItems": 1,
+      "title": "Observations",
+      "type": "array"
+    },
+    "material_saving": {
+      "default": 0.1,
+      "exclusiveMaximum": 1,
+      "minimum": 0,
+      "title": "Material Saving",
+      "type": "number"
+    },
+    "latency_limit_ms": {
+      "default": 60000,
+      "exclusiveMinimum": 0,
+      "maximum": 10000000.0,
+      "title": "Latency Limit Ms",
+      "type": "number"
+    }
+  },
+  "required": [
+    "observations"
+  ],
+  "title": "CompareArgs",
+  "type": "object"
+}

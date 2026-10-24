@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "disposition": {
+      "maxLength": 3000,
+      "minLength": 10,
+      "title": "Disposition",
+      "type": "string"
+    },
+    "status": {
+      "default": "resolved",
+      "enum": [
+        "resolved",
+        "accepted_bounded_risk",
+        "deferred",
+        "blocked"
+      ],
+      "title": "Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "disposition"
+  ],
+  "title": "ConcernDisposition",
+  "type": "object"
+}

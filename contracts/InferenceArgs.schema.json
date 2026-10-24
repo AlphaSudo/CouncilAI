@@ -1,0 +1,38 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "prompt": {
+      "maxLength": 16000,
+      "minLength": 1,
+      "title": "Prompt",
+      "type": "string"
+    },
+    "source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "title": "Source Ids",
+      "type": "array"
+    },
+    "max_output_tokens": {
+      "default": 1024,
+      "maximum": 4096,
+      "minimum": 32,
+      "title": "Max Output Tokens",
+      "type": "integer"
+    },
+    "task_id": {
+      "default": "director-trial",
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Task Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "prompt"
+  ],
+  "title": "InferenceArgs",
+  "type": "object"
+}

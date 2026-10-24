@@ -1,0 +1,154 @@
+{
+  "version": "council-n4-candidates-v1",
+  "origin": "agent_curated_development_material",
+  "source_file": "n4.txt",
+  "source_sha256": "8dcdc7cb294bced53707051270295226d986329bfb8e14883cd4c0999f892ee1",
+  "independent_labels": false,
+  "primary_context_sources": [
+    "https://www.nature.com/articles/lsa20131",
+    "https://energyzhao.github.io/pdf/Park%20et%20al.%202022%20Nano%20Letters.pdf",
+    "https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=12211&tabname=Optical+Isolators"
+  ],
+  "cases": [
+    {
+      "id": "N4-01",
+      "reviewer_candidate_target": "Boundary/application claim versus arithmetic validity",
+      "source_span": {
+        "start": 5641,
+        "end": 6224,
+        "text": "\nhot\n​\n \nT \ncold\n​\n \n​\n \n\nWith \nT\nhot\n=\n6000\n K\nT \nhot\n​\n =6000 K and \nT\ncold\n=\n300\n K\nT \ncold\n​\n =300 K, this yields an efficiency of:\n\nη\n≈\n1\n−\n300\n6000\n=\n95\n%\nη≈1− \n6000\n300\n​\n =95%\n\nThis represents a significant improvement over the standard Landsberg limit of 86.8%, demonstrating the potential of non-reciprocal, anisotropic photonic structures.\n\n3. Analysis of Feasibility and Trade-offs\nPhysical Feasibility\nThis mechanism is physically plausible. Magneto-optical effects are well-established, and photonic crystals allow for precise control of optical density of states. The ",
+        "sha256": "4e464eb8dd8f3fc70c4b39178da8cedf4168570e7b41615cddb9b073364b3fd1"
+      },
+      "matched_valid_control": "A Carnot calculation can be valid in its own declared boundary; applicability needs separate support.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-02",
+      "reviewer_candidate_target": "Entropy sign convention and missing boundary terms",
+      "source_span": {
+        "start": 26133,
+        "end": 26728,
+        "text": " \nΩ \nemission\n​\n \n​\n )\n\nIn the proposed mechanism, we engineer the outgoing photon flux to carry an effective chemical potential \nμ\nph\nμ \nph\n​\n  that offsets this entropy. The net entropy balance per photon becomes:\n\nΔ\nS\n=\ns\nin\n−\ns\nout\n=\nk\nB\nln\n⁡\n(\nΩ\nemission\nΩ\nsun\n)\n−\nμ\nph\nk\nB\nT\nΔS=s \nin\n​\n −s \nout\n​\n =k \nB\n​\n ln( \nΩ \nsun\n​\n \nΩ \nemission\n​\n \n​\n )− \nk \nB\n​\n T\nμ \nph\n​\n \n​\n \n\nTo achieve reversibility (\nΔ\nS\n→\n0\nΔS→0), we select:\n\nμ\nph\n=\nk\nB\nT\nln\n⁡\n(\nΩ\nemission\nΩ\nsun\n)\nμ \nph\n​\n =k \nB\n​\n Tln( \nΩ \nsun\n​\n \nΩ \nemission\n​\n \n​\n )\n\nThis demonstrates that a positive chemical potential can mathematica",
+        "sha256": "c8e72e7df11c798906c9d0c8b344b0358526bb77e2d6cc20b4fb3177394e237b"
+      },
+      "matched_valid_control": "A declared balance with explicit ports and convention can be valid; rendered formula alone is insufficient.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-03",
+      "reviewer_candidate_target": "Quantity kind: angle versus refractive-index change",
+      "source_span": {
+        "start": 12427,
+        "end": 13013,
+        "text": " \nΩ\nemission\n→\nΩ\nsun\nΩ \nemission\n​\n →Ω \nsun\n​\n , \nΔ\nS\nangular\n→\n0\nΔS \nangular\n​\n →0.\nMathematical Sketch\nThe non-reciprocal shift per layer: \nΔ\nn\n=\nV\nB\nd\nΔn=VBd, where \nV\nV is the Verdet constant.\nFor a stack of \nN\nN layers, the transmission asymmetry is:\nT\nforward\n(\nν\n,\nθ\n)\nT\nbackward\n(\nν\n,\nθ\n)\n≈\nexp\n⁡\n(\n2\nN\nω\nc\nℑ\n(\nΔ\nn\n)\n)\n≫\n1\nfor\nθ\n<\nθ\nsun\n.\nT \nbackward\n​\n (ν,θ)\nT \nforward\n​\n (ν,θ)\n​\n ≈exp(2N \nc\nω\n​\n ℑ(Δn))≫1forθ<θ \nsun\n​\n .\nEmission outside the sun’s cone is suppressed by the bandgap: \nϵ\n(\nθ\n>\nθ\nsun\n,\nν\n)\n≈\n0\nϵ(θ>θ \nsun\n​\n ,ν)≈0.\nDetailed balance violation enables a photon ch",
+        "sha256": "bcd2dccd06ddd9b2e191284b1953cf5b3d74ed1fa623e3c2e5441fe5ddf42407"
+      },
+      "matched_valid_control": "A correctly declared rotation-angle relation is not rejected because radians are dimensionless in SI.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-04",
+      "reviewer_candidate_target": "Static bias versus operating and maintenance resources",
+      "source_span": {
+        "start": 10546,
+        "end": 11143,
+        "text": "broken: While angular entropy is suppressed locally at the receiver, the total entropy balance is maintained by the energy required to sustain the non-reciprocal bias field (e.g., permanent magnets or dissipative magnetic coils).\nParasitic Absorption: Magneto-optical materials often suffer from free-carrier absorption losses, which can degrade internal quantum efficiency and offset the gains achieved by angular restriction.\nN·\nNVIDIA · Nemotron Super\nIndependent answer\n#4\nnvidia/nemotron-3-super-120b-a12b\n\nProposal: Non-Reciprocal Photonic Bandgap Engineering with Faraday Rotation\nCore Idea",
+        "sha256": "7706887b06660ba4ed344c0c269e5f42962fce40d43e3eb864299434c6272fac"
+      },
+      "matched_valid_control": "A static requirement is not automatically continuous electrical work.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-05",
+      "reviewer_candidate_target": "Chemical-potential sufficiency and angular dilution",
+      "source_span": {
+        "start": 26103,
+        "end": 26703,
+        "text": "lar\n​\n =k \nB\n​\n ln( \nΩ \nsun\n​\n \nΩ \nemission\n​\n \n​\n )\n\nIn the proposed mechanism, we engineer the outgoing photon flux to carry an effective chemical potential \nμ\nph\nμ \nph\n​\n  that offsets this entropy. The net entropy balance per photon becomes:\n\nΔ\nS\n=\ns\nin\n−\ns\nout\n=\nk\nB\nln\n⁡\n(\nΩ\nemission\nΩ\nsun\n)\n−\nμ\nph\nk\nB\nT\nΔS=s \nin\n​\n −s \nout\n​\n =k \nB\n​\n ln( \nΩ \nsun\n​\n \nΩ \nemission\n​\n \n​\n )− \nk \nB\n​\n T\nμ \nph\n​\n \n​\n \n\nTo achieve reversibility (\nΔ\nS\n→\n0\nΔS→0), we select:\n\nμ\nph\n=\nk\nB\nT\nln\n⁡\n(\nΩ\nemission\nΩ\nsun\n)\nμ \nph\n​\n =k \nB\n​\n Tln( \nΩ \nsun\n​\n \nΩ \nemission\n​\n \n​\n )\n\nThis demonstrates that a positive chemical ",
+        "sha256": "93dcf1e468165a04e9b442c4d494bb25cc8f7661a5e32a408173046581d08d85"
+      },
+      "matched_valid_control": "A proposed non-equilibrium mechanism with explicit inputs stays a proposal until its derivation is supported.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-06",
+      "reviewer_candidate_target": "Percentage-point subtraction",
+      "source_span": {
+        "start": 63903,
+        "end": 64486,
+        "text": "\nh\n​\n \nT \nc\n​\n \n​\n − \nT \neff\n​\n \nμ\n​\n + \n≈0\nk \nB\n​\n ln( \nΩ \nsun\n​\n \nΩ \nemit\neff\n​\n \n​\n )\n​\n \n​\n .\n\nWith μ ≈ 0.1 eV and Teff ≈ 500 K, the term μ/Teff ≈ 2 kB, enough to recover the ~0.7 % efficiency gap between 86.8 % and 93.3 % (the Landsberg ceiling).\n\n2.2 Expected thermodynamic performance\nUsing the modified Landsberg formula with μ > 0:\n\nη\n=\n1\n−\n4\n3\nT\nc\nT\nh\n+\n1\n3\n(\nT\nc\nT\nh\n)\n4\n+\nμ\nh\nν\np\ne\na\nk\n,\nη=1− \n3\n4\n​\n  \nT \nh\n​\n \nT \nc\n​\n \n​\n + \n3\n1\n​\n ( \nT \nh\n​\n \nT \nc\n​\n \n​\n ) \n4\n + \nhν \npeak\n​\n \nμ\n​\n ,\n\nwhere νpeak ≈ 5 × 1014 Hz (λ ≈ 600 nm). Substituting μ = 0.1 eV gives an extra ~1 %",
+        "sha256": "c7e9fc31dbba86bf4eb85239f52be830b9e2f66d9dafa931600f68be78034e1d"
+      },
+      "matched_valid_control": "93.3 minus 86.8 is 6.5 percentage points; relative change has a different denominator.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-07",
+      "reviewer_candidate_target": "Unsupported additional term/derivation",
+      "source_span": {
+        "start": 64025,
+        "end": 64631,
+        "text": "f ≈ 500 K, the term μ/Teff ≈ 2 kB, enough to recover the ~0.7 % efficiency gap between 86.8 % and 93.3 % (the Landsberg ceiling).\n\n2.2 Expected thermodynamic performance\nUsing the modified Landsberg formula with μ > 0:\n\nη\n=\n1\n−\n4\n3\nT\nc\nT\nh\n+\n1\n3\n(\nT\nc\nT\nh\n)\n4\n+\nμ\nh\nν\np\ne\na\nk\n,\nη=1− \n3\n4\n​\n  \nT \nh\n​\n \nT \nc\n​\n \n​\n + \n3\n1\n​\n ( \nT \nh\n​\n \nT \nc\n​\n \n​\n ) \n4\n + \nhν \npeak\n​\n \nμ\n​\n ,\n\nwhere νpeak ≈ 5 × 1014 Hz (λ ≈ 600 nm). Substituting μ = 0.1 eV gives an extra ~1 % absolute efficiency, pushing the theoretical limit to ≈ 94 %, marginally exceeding the Landsberg value (the extra term is allowed because the sy",
+        "sha256": "c91cd0b5e2d0d074264f6b3c97f6dabaada9cb670c9112b715e3b7c79e3fd5ef"
+      },
+      "matched_valid_control": "Dimensional consistency alone does not establish the derivation or its boundary.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-08",
+      "reviewer_candidate_target": "Citation identity versus actual claim support",
+      "source_span": {
+        "start": 61511,
+        "end": 62105,
+        "text": "the absorber, where they are re‑absorbed and re‑thermalised, effectively reducing the net emission solid angle.\tDemonstrated in solar‑thermal “photon recycling” experiments (e.g., J. Appl. Phys. 2022, 131, 113103) with > 90 % reflectivity in the stop‑band.\n(b) Chemical‑potential engineering via electro‑chemical photon pumps\tBy maintaining a non‑equilibrium population of electron‑hole pairs (e.g., a biased p‑n junction or a solid‑state electro‑chemical cell) the emitted photons acquire a positive chemical potential μ > 0, altering the Planck distribution to\t\nB\nν\n(\nT\n,\nμ\n)\n=\n2\nh\nν\n3\nc\n2\n1\n",
+        "sha256": "19f303659a96e29771299598ad370a3d0e1e0f6adbd921240ae3d1e2b6f0ff09"
+      },
+      "matched_valid_control": "A genuine reference with narrower support cannot certify a broader performance number.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-09",
+      "reviewer_candidate_target": "Practical efficiency assertion requires exact scope",
+      "source_span": {
+        "start": 17315,
+        "end": 17904,
+        "text": "\nAchieving \nϵ\nr\ne\ns\nt\n≲\n10\n−\n4\nϵ \nrest\n​\n ≲10 \n−4\n  across the solar spectrum is untested; material losses and fabrication tolerances may raise the residual emission, limiting the practical gain to ≈ 5–7 % above 86.8 %.\n\n2.2 Photon‑chemical potential engineering (radiative‑chemical “down‑conversion” with a non‑equilibrium bath)\nIdea: Couple the absorber to a chemical reservoir that stores photon energy as an excitation with a finite chemical potential \nμ\np\nh\n>\n0\nμ \nph\n​\n >0 (e.g., a population‑inverted quantum well or an exciton‑polariton condensate). The emitted photons then carry ",
+        "sha256": "d3770fd59b3539059a14f364741f1b351f3bfd0407bb2383c3564aa009fefb20"
+      },
+      "matched_valid_control": "Reflectivity and component efficiency must not be mistaken for total conversion efficiency.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    },
+    {
+      "id": "N4-10",
+      "reviewer_candidate_target": "Repeated components versus independent mechanisms",
+      "source_span": {
+        "start": 2549,
+        "end": 3145,
+        "text": "s, quantum coherence, or chemical potential modulation (\nμ\nphoton\n>\n0\nμ \nphoton\n​\n >0). Frequency & Spectrum Engineering: Up/down-conversion, multiple exciton generation (MEG), or photon recycling inside non-Lambertian resonant optical cavities. Information-Thermodynamic Schemes: Maxwell's demon-like feedback mechanisms at the nanoscale, landauer-erasure photonics, or fluctuation theorem applications. Deliverables Required from the Agent:\n\nMathematical or conceptual proof showing how the proposed mechanism suppresses angular entropy generation (\nΔ\nS\nangular\n→\n0\nΔS \nangular\n​\n →0). Analysis",
+        "sha256": "dba92b4a6b7b9ab1942967c656ae57041f1fd4db2f2854f4dc56ee8335237f30"
+      },
+      "matched_valid_control": "Two variants can share a component while differing in principal mechanism; assess the actual family criteria.",
+      "label_status": "needs_independent_validation",
+      "expected_scientific_verdict": null,
+      "limitations": "Rendered transcript may duplicate or corrupt formulas; this candidate is not a gold defect label."
+    }
+  ]
+}

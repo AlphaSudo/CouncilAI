@@ -1,0 +1,15 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "scope": {
+      "const": "shared_existing_credit",
+      "title": "Scope",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scope"
+  ],
+  "title": "SharedSpendingInput",
+  "type": "object"
+}

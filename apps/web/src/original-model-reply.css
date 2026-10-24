@@ -1,0 +1,35 @@
+.original-reply-details {
+  margin-block: 1rem;
+}
+.original-reply-details > summary {
+  cursor: pointer;
+  color: var(--text-muted, #a6afa7);
+  font-size: 0.85rem;
+}
+.original-model-reply-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-block: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, #a6afa7);
+}
+.original-model-reply-tools > span {
+  margin-right: auto;
+}
+.original-model-reply-tools button,
+.original-model-reply > p button {
+  color: inherit;
+  background: transparent;
+  border: 1px solid #ffffff24;
+  border-radius: 6px;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+.council-message-content .original-model-reply-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}

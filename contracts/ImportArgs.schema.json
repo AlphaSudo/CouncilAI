@@ -1,0 +1,37 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "content": {
+      "maxLength": 150000,
+      "minLength": 1,
+      "title": "Content",
+      "type": "string"
+    },
+    "source": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Source",
+      "type": "string"
+    },
+    "collected_at": {
+      "maxLength": 80,
+      "minLength": 10,
+      "title": "Collected At",
+      "type": "string"
+    },
+    "method": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Method",
+      "type": "string"
+    }
+  },
+  "required": [
+    "content",
+    "source",
+    "collected_at",
+    "method"
+  ],
+  "title": "ImportArgs",
+  "type": "object"
+}

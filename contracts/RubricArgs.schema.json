@@ -1,0 +1,53 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "scores": {
+      "additionalProperties": {
+        "maximum": 4,
+        "minimum": 0,
+        "type": "number"
+      },
+      "title": "Scores",
+      "type": "object"
+    },
+    "required": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Required",
+      "type": "array"
+    },
+    "minimum": {
+      "default": 3,
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Minimum",
+      "type": "number"
+    },
+    "reviewer": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Reviewer",
+      "type": "string"
+    },
+    "reviewed_evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Reviewed Evidence Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "scores",
+    "required",
+    "reviewer",
+    "reviewed_evidence_ids"
+  ],
+  "title": "RubricArgs",
+  "type": "object"
+}

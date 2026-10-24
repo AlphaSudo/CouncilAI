@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "minLength": 3,
+      "pattern": "^[a-z][a-z_ -]+$",
+      "title": "Category",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "fail",
+        "unknown",
+        "not_applicable"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "category",
+    "status",
+    "reason"
+  ],
+  "title": "CouncilReviewCheck",
+  "type": "object"
+}

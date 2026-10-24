@@ -1,0 +1,35 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "finding_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Finding Id",
+      "type": "string"
+    },
+    "proposed_disposition": {
+      "enum": [
+        "issue_remains",
+        "rebutted_as_assessment",
+        "narrowed",
+        "withdrawn",
+        "no_issue_as_assessed"
+      ],
+      "title": "Proposed Disposition",
+      "type": "string"
+    },
+    "reason": {
+      "maxLength": 1000,
+      "minLength": 3,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "finding_id",
+    "proposed_disposition",
+    "reason"
+  ],
+  "title": "RecheckFinding",
+  "type": "object"
+}

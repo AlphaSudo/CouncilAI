@@ -1,0 +1,51 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "phase": {
+      "enum": [
+        "extraction",
+        "scrutiny",
+        "recheck",
+        "synthesis",
+        "repair"
+      ],
+      "title": "Phase",
+      "type": "string"
+    },
+    "participant_id": {
+      "title": "Participant Id",
+      "type": "string"
+    },
+    "original_author_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Original Author Id"
+    },
+    "reason": {
+      "maxLength": 1000,
+      "minLength": 5,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "phase",
+    "participant_id",
+    "reason"
+  ],
+  "title": "ReviewReassignment",
+  "type": "object"
+}

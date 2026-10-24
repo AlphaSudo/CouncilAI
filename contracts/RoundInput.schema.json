@@ -1,0 +1,24 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "mode": {
+      "default": "fixture",
+      "enum": [
+        "fixture",
+        "live"
+      ],
+      "title": "Mode",
+      "type": "string"
+    }
+  },
+  "required": [
+    "expected_revision"
+  ],
+  "title": "RoundInput",
+  "type": "object"
+}

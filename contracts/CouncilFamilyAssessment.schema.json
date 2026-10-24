@@ -1,0 +1,47 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "family_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Family Id",
+      "type": "string"
+    },
+    "claim_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Claim Ids",
+      "type": "array"
+    },
+    "claim_revisions": {
+      "items": {
+        "type": "integer"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Claim Revisions",
+      "type": "array"
+    },
+    "still_distinct_as_assessed": {
+      "title": "Still Distinct As Assessed",
+      "type": "boolean"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "family_id",
+    "claim_ids",
+    "claim_revisions",
+    "still_distinct_as_assessed",
+    "reason"
+  ],
+  "title": "CouncilFamilyAssessment",
+  "type": "object"
+}

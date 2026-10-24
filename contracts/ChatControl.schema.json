@@ -1,0 +1,48 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "action": {
+      "enum": [
+        "pause",
+        "resume",
+        "stop",
+        "finish",
+        "accept",
+        "recover_output",
+        "continue_without_model"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "authorize_retry_with_unknown_charge": {
+      "default": false,
+      "title": "Authorize Retry With Unknown Charge",
+      "type": "boolean"
+    },
+    "recovery_call_id": {
+      "anyOf": [
+        {
+          "maxLength": 80,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recovery Call Id"
+    },
+    "additional_allowance_usd": {
+      "default": 0,
+      "maximum": 24,
+      "minimum": 0,
+      "title": "Additional Allowance Usd",
+      "type": "number"
+    }
+  },
+  "required": [
+    "action"
+  ],
+  "title": "ChatControl",
+  "type": "object"
+}

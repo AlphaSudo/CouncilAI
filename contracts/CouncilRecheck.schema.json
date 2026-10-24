@@ -1,0 +1,211 @@
+{
+  "$defs": {
+    "CouncilFamilyAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "family_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Family Id",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "claim_revisions": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Claim Revisions",
+          "type": "array"
+        },
+        "still_distinct_as_assessed": {
+          "title": "Still Distinct As Assessed",
+          "type": "boolean"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "family_id",
+        "claim_ids",
+        "claim_revisions",
+        "still_distinct_as_assessed",
+        "reason"
+      ],
+      "title": "CouncilFamilyAssessment",
+      "type": "object"
+    },
+    "CouncilRecheckFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "finding_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "original_revision": {
+          "minimum": 1,
+          "title": "Original Revision",
+          "type": "integer"
+        },
+        "current_revision": {
+          "minimum": 1,
+          "title": "Current Revision",
+          "type": "integer"
+        },
+        "resolution": {
+          "enum": [
+            "resolved_as_assessed",
+            "partly_resolved_as_assessed",
+            "unresolved_as_assessed",
+            "withdrawn"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "closure_basis": {
+          "enum": [
+            "rebuttal",
+            "content_removed",
+            "scope_narrowed",
+            "condition_explicit",
+            "actual_correction",
+            "withdrawal",
+            "no_effective_change"
+          ],
+          "title": "Closure Basis",
+          "type": "string"
+        },
+        "comparison": {
+          "minLength": 1,
+          "title": "Comparison",
+          "type": "string"
+        },
+        "concerns": {
+          "items": {
+            "$ref": "#/$defs/CouncilRemainingConcern"
+          },
+          "maxItems": 2,
+          "title": "Concerns",
+          "type": "array"
+        },
+        "test_assessment": {
+          "enum": [
+            "suitable_as_assessed",
+            "needs_revision",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Test Assessment",
+          "type": "string"
+        },
+        "test_reason": {
+          "minLength": 1,
+          "title": "Test Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "finding_id",
+        "original_revision",
+        "current_revision",
+        "resolution",
+        "closure_basis",
+        "comparison",
+        "test_assessment",
+        "test_reason"
+      ],
+      "title": "CouncilRecheckFinding",
+      "type": "object"
+    },
+    "CouncilRemainingConcern": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "contradiction",
+            "missing_evidence",
+            "condition",
+            "operational_limitation",
+            "residual_risk",
+            "new_issue"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "detail": {
+          "minLength": 3,
+          "title": "Detail",
+          "type": "string"
+        },
+        "affected_scope": {
+          "minLength": 3,
+          "title": "Affected Scope",
+          "type": "string"
+        },
+        "materiality": {
+          "enum": [
+            "decision_changing",
+            "ordinary",
+            "unknown"
+          ],
+          "title": "Materiality",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "detail",
+        "affected_scope",
+        "materiality"
+      ],
+      "title": "CouncilRemainingConcern",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assessments": {
+      "items": {
+        "$ref": "#/$defs/CouncilRecheckFinding"
+      },
+      "maxItems": 24,
+      "minItems": 1,
+      "title": "Assessments",
+      "type": "array"
+    },
+    "limitations": {
+      "minLength": 1,
+      "title": "Limitations",
+      "type": "string"
+    },
+    "families": {
+      "items": {
+        "$ref": "#/$defs/CouncilFamilyAssessment"
+      },
+      "maxItems": 8,
+      "title": "Families",
+      "type": "array"
+    }
+  },
+  "required": [
+    "assessments",
+    "limitations",
+    "families"
+  ],
+  "title": "CouncilRecheck",
+  "type": "object"
+}

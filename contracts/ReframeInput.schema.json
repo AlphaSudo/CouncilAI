@@ -1,0 +1,86 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "reason": {
+      "maxLength": 3000,
+      "minLength": 10,
+      "title": "Reason",
+      "type": "string"
+    },
+    "interpretation": {
+      "maxLength": 3000,
+      "minLength": 10,
+      "title": "Interpretation",
+      "type": "string"
+    },
+    "prediction_comparison": {
+      "maxLength": 3000,
+      "minLength": 10,
+      "title": "Prediction Comparison",
+      "type": "string"
+    },
+    "changed_assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Changed Assumptions",
+      "type": "array"
+    },
+    "alternative_explanations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Alternative Explanations",
+      "type": "array"
+    },
+    "next_action": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Next Action",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "hypothesis_states": {
+      "additionalProperties": {
+        "enum": [
+          "supported",
+          "falsified",
+          "blocked",
+          "superseded"
+        ],
+        "type": "string"
+      },
+      "title": "Hypothesis States",
+      "type": "object"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "reason",
+    "interpretation",
+    "prediction_comparison",
+    "changed_assumptions",
+    "alternative_explanations",
+    "next_action",
+    "evidence_ids"
+  ],
+  "title": "ReframeInput",
+  "type": "object"
+}

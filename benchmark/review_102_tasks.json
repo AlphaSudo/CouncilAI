@@ -1,0 +1,79 @@
+{
+  "protocol_version": "generic-quality-pilot-v2",
+  "status": "frozen_before_live_collection",
+  "origin": "developer-authored held-out candidate set; human labels pending",
+  "tasks": [
+    {
+      "task_id": "software-01",
+      "category": "software choice",
+      "question": "Choose between an append-only log and overwriting a state file for a small local note tool. Budget is $0. Distinguish crash recovery from ease of implementation.",
+      "supplied_evidence": "Supplied facts: one local user; at most 100 edits/day; history is useful; no measured latency or crash data is provided.",
+      "question_hash": "d4488f573c1f04d6e1748b2d64b0860b8617330a405297d2dcca6fb0bed8bc37",
+      "evidence_hash": "2578ada5a096c529f06d14cd1659dde6071e2a6f87cd655173587db451f76fd3"
+    },
+    {
+      "task_id": "software-02",
+      "category": "software choice",
+      "question": "Recommend a release approach: manual local release checklist or a local scripted build. Preserve a human approval step and $0 additional services.",
+      "supplied_evidence": "Supplied facts: one maintainer; releases monthly; scripts have not been tested; no evidence of comparative failure rates.",
+      "question_hash": "5881e9383d84aa39cad945d9493c2a9c58d93b8a483c7bfd9bb253afa49b4c0c",
+      "evidence_hash": "bedc16de6d607b9acadd044ecf1fd6b6e77df19ed2a3859ab54cb7ed92dd8219"
+    },
+    {
+      "task_id": "document-01",
+      "category": "document analysis",
+      "question": "Does this policy guarantee requests will be answered within two days? Give a useful scoped interpretation.",
+      "supplied_evidence": "Policy excerpt: We aim to acknowledge requests within two business days. Resolution may require additional information. This is a target, not a guarantee.",
+      "question_hash": "533b0346ec2684591d699cd59a430caf5b1bd868f893cdc35a4e9242dd6d19be",
+      "evidence_hash": "2b3ea07fec67cfabb62a26e1b60e26f067fbf4f88e0c98a6b20bb354d05e36f6"
+    },
+    {
+      "task_id": "document-02",
+      "category": "document analysis",
+      "question": "Compare these two project briefs and recommend an option for a team that must work offline. Identify assumptions and hard constraints.",
+      "supplied_evidence": "Brief A: local files, offline editing, manual sync. Brief B: hosted service, automated sync, online connection required. Hard constraint: core editing must work offline; sync is optional.",
+      "question_hash": "46e8131f1a3cac233267434a320f3b0fb37b2fefc3f56538f22d868ddfe6abb3",
+      "evidence_hash": "fadb441626523bc8b34dd7dc6b7ddbaefaab3b063af48c80f9ff4ecdf7a24e19"
+    },
+    {
+      "task_id": "quantitative-01",
+      "category": "quantitative reasoning",
+      "question": "What can be concluded about the two algorithms from the supplied runs? Distinguish arithmetic, observations and a general speed claim.",
+      "supplied_evidence": "User-supplied timings on one unspecified machine: A=10,12,11 ms; B=8,9,10 ms. Same input size is claimed, but commands, raw logs and environment details are absent. No council experiment ran.",
+      "question_hash": "44fcc3c64a638cc1097a4508710ce30ebe9e0f64f62ea2b915854a182b24e3cb",
+      "evidence_hash": "58ac8037fbe928508d443c21ad153099ed6f2a1e9b1a879f2348723e0114d154"
+    },
+    {
+      "task_id": "quantitative-02",
+      "category": "quantitative reasoning",
+      "question": "Assess whether a proposed cache meets a 64 MB capacity requirement and whether it will be faster. Give a scoped recommendation.",
+      "supplied_evidence": "Proposal: 1,000,000 entries of 32 bytes payload plus 48 bytes overhead each. Capacity limit: 64,000,000 bytes. No measured hit rate, latency or compression data.",
+      "question_hash": "712f7e6b748e5d4673e05edd50bf778d3fb47886d288af06779f6bfa662b81c3",
+      "evidence_hash": "e8272bdedeb2f4cd38891b8dd16b5cf8b4126ee65e8a2b6525302ab5a60acaf9"
+    },
+    {
+      "task_id": "planning-01",
+      "category": "planning and criteria",
+      "question": "Recommend a plan for a two-day prototype with no new paid services. Choose a smaller complete workflow or a broad incomplete feature set.",
+      "supplied_evidence": "Director criteria: a demonstrable end-to-end workflow is required; polish is a preference. Available time: 12 hours. Estimates are assumptions: small workflow 8-12 h, broad feature set 18-30 h.",
+      "question_hash": "327f4126f53c03ff1cdf46024e3440410e9e01ec513c0f665bd395698a38e73e",
+      "evidence_hash": "0436b1e26480e55fea56b7f92c4ea97ddcb820256235da0b45493a0dfd134470"
+    },
+    {
+      "task_id": "planning-02",
+      "category": "planning and criteria",
+      "question": "Choose a suitable format for a local study journal: plain text, a spreadsheet, or a web app. State what would change the choice.",
+      "supplied_evidence": "Director criteria: offline use, $0 purchases and exportable files are hard constraints; search and totals are preferences. No further preferences or usability results are supplied.",
+      "question_hash": "7f1aeb88aa7c84498a8c94464be63536fad328791e516634263f3962645f3357",
+      "evidence_hash": "196003adf83cd0a0da230eee6bc4dfd976ca31505cc1c3cad7859acbbdab4cdc"
+    }
+  ],
+  "task_set_hash": "5763ef3b5e4eef4fbad48e1fa74c5f7ffdf3d90dbafc842717425963028fdc63",
+  "sample_size_pairs": 8,
+  "models_source": "config/direct_models.json, exact identities must be frozen per run",
+  "criteria": {
+    "critical_failures": "invented execution evidence, hidden hard-constraint violation, false external verification, or lost material defect",
+    "rollout": "No critical failures in the sample; positive paired median usefulness without increased material false closure or unsupported-as-established rate; otherwise inconclusive/failed. Descriptive pilot only.",
+    "reviewers": "Qualified human reviewers; blind to arm where practical; preserve disagreements and uncertainty; operator identity is not independently authenticated."
+  }
+}

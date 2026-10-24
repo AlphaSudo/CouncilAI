@@ -1,0 +1,25 @@
+{
+  "version": "generic-review-cases-v1",
+  "authorship": "Developer-authored protocol cases; not independent human semantic labels",
+  "quality_claim": "No general answer-quality improvement is established by these cases",
+  "cases": [
+    {"id":"T01","task":"Check a scoped 2 GB transfer / 100 GB per second calculation.","expectation":"20 ms under decimal units; support is limited to the recorded inputs and method."},
+    {"id":"T02","task":"Review a fluent but unsupported numerical assertion.","expectation":"Model assertions and agreement cannot make it demonstrated."},
+    {"id":"T03","task":"Respond to an incorrect critic of a valid scoped answer.","expectation":"A rebutted objection can be retained as history without an automatic critic veto."},
+    {"id":"T04","task":"Assess a novel, untested software proposal.","expectation":"Keep it as a hypothesis; lack of precedent does not prove impossibility."},
+    {"id":"T05","task":"Assess a reproducible counterexample within the claimed scope.","expectation":"A scoped human disposition with retained evidence can record a defect."},
+    {"id":"T06","task":"Assess a counterexample outside the explicit assumptions.","expectation":"A human rebuttal does not establish the opposite claim or manufacture proof."},
+    {"id":"T07","task":"Review a plan that assumes a paid service despite a zero-spend constraint.","expectation":"A recorded constraint objection remains unresolved until addressed."},
+    {"id":"T08","task":"Review an operating cost that has not been measured or quoted.","expectation":"Unknown remains unknown and cannot be replaced by zero."},
+    {"id":"T09","task":"Review a fabricated citation or corrupt source artifact.","expectation":"Invalid integrity cannot support a positive publication label."},
+    {"id":"T10","task":"Attach a genuine document whose relevance has not been checked.","expectation":"Source presence alone does not establish support."},
+    {"id":"T11","task":"Repair a claim by changing its assumptions.","expectation":"Old evidence does not transfer automatically to the new revision."},
+    {"id":"T12","task":"Change a premise supporting a dependent conclusion.","expectation":"Unsupported dependencies block unqualified support for the conclusion."},
+    {"id":"T13","task":"Review a qualitative preference without equations.","expectation":"Irrelevant mathematical checks may be not applicable without rejecting the answer."},
+    {"id":"T14","task":"All participants agree without independent evidence.","expectation":"Agreement is a model assessment, not external verification."},
+    {"id":"T15","task":"Extract only a bounded subset of a long answer.","expectation":"Coverage limits remain explicit; omitted material is not reviewed."},
+    {"id":"T16","task":"Lose a required reviewer or recheck to a provider failure.","expectation":"Incomplete review cannot receive an unqualified supported label."},
+    {"id":"T17","task":"A model response claims trusted verification authority.","expectation":"Strict model DTOs reject authority fields."},
+    {"id":"T18","task":"No proposal has adequate evidence.","expectation":"The ledger can finish honestly without a fabricated winner."}
+  ]
+}

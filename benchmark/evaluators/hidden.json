@@ -1,0 +1,185 @@
+{
+  "T01": {
+    "answer": 0.02,
+    "unit": "seconds",
+    "units": [
+      "s",
+      "seconds"
+    ],
+    "tolerance": 2e-08,
+    "required_sources": [
+      "SRC01"
+    ],
+    "finding_terms": [
+      "bound"
+    ]
+  },
+  "T02": {
+    "answer": 120,
+    "unit": "ms",
+    "units": [
+      "ms",
+      "milliseconds"
+    ],
+    "tolerance": 0.00011999999999999999,
+    "required_sources": [
+      "SRC02"
+    ],
+    "finding_terms": [
+      "escalation"
+    ]
+  },
+  "T03": {
+    "answer": 0.012,
+    "unit": "USD",
+    "units": [
+      "usd",
+      "dollars",
+      "$"
+    ],
+    "tolerance": 1.2e-08,
+    "required_sources": [
+      "SRC03"
+    ],
+    "finding_terms": [
+      "valid"
+    ]
+  },
+  "T04": {
+    "answer": 20,
+    "unit": "ms",
+    "units": [
+      "ms",
+      "milliseconds"
+    ],
+    "tolerance": 1.9999999999999998e-05,
+    "required_sources": [
+      "SRC04"
+    ],
+    "finding_terms": [
+      "confound"
+    ]
+  },
+  "T05": {
+    "answer": 0.04,
+    "unit": "seconds",
+    "units": [
+      "s",
+      "seconds"
+    ],
+    "tolerance": 4e-08,
+    "required_sources": [
+      "SRC05"
+    ],
+    "finding_terms": [
+      "bound"
+    ]
+  },
+  "T06": {
+    "answer": 240,
+    "unit": "ms",
+    "units": [
+      "ms",
+      "milliseconds"
+    ],
+    "tolerance": 0.00023999999999999998,
+    "required_sources": [
+      "SRC06"
+    ],
+    "finding_terms": [
+      "escalation"
+    ]
+  },
+  "T07": {
+    "answer": 0.024,
+    "unit": "USD",
+    "units": [
+      "usd",
+      "dollars",
+      "$"
+    ],
+    "tolerance": 2.4e-08,
+    "required_sources": [
+      "SRC07"
+    ],
+    "finding_terms": [
+      "valid"
+    ]
+  },
+  "T08": {
+    "answer": 40,
+    "unit": "ms",
+    "units": [
+      "ms",
+      "milliseconds"
+    ],
+    "tolerance": 3.9999999999999996e-05,
+    "required_sources": [
+      "SRC08"
+    ],
+    "finding_terms": [
+      "confound"
+    ]
+  },
+  "T09": {
+    "answer": 0.06,
+    "unit": "seconds",
+    "units": [
+      "s",
+      "seconds"
+    ],
+    "tolerance": 6e-08,
+    "required_sources": [
+      "SRC09"
+    ],
+    "finding_terms": [
+      "bound"
+    ]
+  },
+  "T10": {
+    "answer": 360,
+    "unit": "ms",
+    "units": [
+      "ms",
+      "milliseconds"
+    ],
+    "tolerance": 0.00035999999999999997,
+    "required_sources": [
+      "SRC10"
+    ],
+    "finding_terms": [
+      "escalation"
+    ]
+  },
+  "T11": {
+    "answer": 0.036000000000000004,
+    "unit": "USD",
+    "units": [
+      "usd",
+      "dollars",
+      "$"
+    ],
+    "tolerance": 3.6000000000000005e-08,
+    "required_sources": [
+      "SRC11"
+    ],
+    "finding_terms": [
+      "valid"
+    ]
+  },
+  "T12": {
+    "answer": 60,
+    "unit": "ms",
+    "units": [
+      "ms",
+      "milliseconds"
+    ],
+    "tolerance": 5.9999999999999995e-05,
+    "required_sources": [
+      "SRC12"
+    ],
+    "finding_terms": [
+      "confound"
+    ]
+  }
+}

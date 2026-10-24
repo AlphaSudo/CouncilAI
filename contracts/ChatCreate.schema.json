@@ -1,0 +1,226 @@
+{
+  "$defs": {
+    "ReviewConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 1000,
+          "minLength": 3,
+          "title": "Text",
+          "type": "string"
+        },
+        "kind": {
+          "default": "hard",
+          "enum": [
+            "hard",
+            "soft"
+          ],
+          "title": "Kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "ReviewConstraint",
+      "type": "object"
+    },
+    "ReviewOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "deliverable": {
+          "default": "A useful answer with explicit assumptions and evidence limits.",
+          "maxLength": 2000,
+          "minLength": 3,
+          "title": "Deliverable",
+          "type": "string"
+        },
+        "constraints": {
+          "items": {
+            "$ref": "#/$defs/ReviewConstraint"
+          },
+          "maxItems": 20,
+          "title": "Constraints",
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "maxItems": 4,
+          "title": "Sources",
+          "type": "array"
+        },
+        "baseline": {
+          "default": "Unspecified",
+          "maxLength": 2000,
+          "title": "Baseline",
+          "type": "string"
+        },
+        "success_criteria": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Success Criteria",
+          "type": "array"
+        },
+        "evidence_requirement": {
+          "default": "model_review",
+          "enum": [
+            "model_review",
+            "supplied_sources",
+            "scoped_tool_result"
+          ],
+          "title": "Evidence Requirement",
+          "type": "string"
+        }
+      },
+      "title": "ReviewOptions",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 16000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "provenance": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "provenance"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "spending_scope": {
+      "default": "conversation",
+      "enum": [
+        "conversation",
+        "shared_existing_credit"
+      ],
+      "title": "Spending Scope",
+      "type": "string"
+    },
+    "thinking_level": {
+      "default": "balanced",
+      "enum": [
+        "quick",
+        "balanced",
+        "deep",
+        "maximum"
+      ],
+      "title": "Thinking Level",
+      "type": "string"
+    },
+    "search_web": {
+      "default": false,
+      "title": "Search Web",
+      "type": "boolean"
+    },
+    "search_query": {
+      "default": "",
+      "maxLength": 400,
+      "title": "Search Query",
+      "type": "string"
+    },
+    "defer_start": {
+      "default": false,
+      "title": "Defer Start",
+      "type": "boolean"
+    },
+    "research_tools": {
+      "default": false,
+      "title": "Research Tools",
+      "type": "boolean"
+    },
+    "prompt": {
+      "maxLength": 8000,
+      "minLength": 3,
+      "title": "Prompt",
+      "type": "string"
+    },
+    "provider": {
+      "default": "fixture",
+      "enum": [
+        "fixture",
+        "openrouter_free",
+        "nebius_token_factory",
+        "direct_council"
+      ],
+      "title": "Provider",
+      "type": "string"
+    },
+    "models": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4,
+      "minItems": 2,
+      "title": "Models",
+      "type": "array"
+    },
+    "max_rounds": {
+      "default": 1,
+      "maximum": 3,
+      "minimum": 1,
+      "title": "Max Rounds",
+      "type": "integer"
+    },
+    "budget_usd": {
+      "default": 0,
+      "maximum": 24,
+      "minimum": 0,
+      "title": "Budget Usd",
+      "type": "number"
+    },
+    "mode": {
+      "default": "reviewed",
+      "enum": [
+        "discussion",
+        "reviewed"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "review_protocol": {
+      "default": "reviewed_v4",
+      "enum": [
+        "reviewed_v1",
+        "reviewed_v2",
+        "reviewed_v3",
+        "reviewed_v4"
+      ],
+      "title": "Review Protocol",
+      "type": "string"
+    },
+    "review_options": {
+      "$ref": "#/$defs/ReviewOptions"
+    }
+  },
+  "required": [
+    "prompt",
+    "models"
+  ],
+  "title": "ChatCreate",
+  "type": "object"
+}

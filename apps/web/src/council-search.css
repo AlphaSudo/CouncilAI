@@ -1,0 +1,75 @@
+.council-search-control {
+  position: relative;
+}
+.council-app .council-search-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  padding: 7px 8px;
+  background: none;
+  border: 1px solid transparent;
+  color: var(--c-muted);
+  border-radius: 8px;
+  font-size: 12px;
+}
+.council-app .council-search-toggle.is-on {
+  color: var(--c-accent);
+}
+.council-app .council-search-toggle:hover {
+  background: var(--c-raised);
+}
+.council-search-state {
+  font-size: 10px;
+}
+.council-search-toggle:disabled {
+  opacity: 0.55;
+}
+.council-search-error {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  padding: 10px;
+  width: 240px;
+  background: var(--c-raised);
+  color: var(--c-text);
+  font-size: 12px;
+  border-radius: 8px;
+}
+.council-reply-search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0;
+  color: var(--c-muted);
+  font-size: 11px;
+}
+.council-reply-search details {
+  margin-left: 8px;
+}
+.council-reply-search summary {
+  cursor: pointer;
+}
+.council-reply-search p {
+  max-width: 640px;
+  line-height: 1.6;
+}
+@media (max-width: 480px) {
+  .council-search-toggle .council-search-state {
+    display: none;
+  }
+  .council-app .council-search-toggle {
+    padding-inline: 4px;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 380px) {
+  .council-search-toggle .council-search-label {
+    display: none;
+  }
+  .council-app .council-composer-actions {
+    gap: 4px;
+  }
+}

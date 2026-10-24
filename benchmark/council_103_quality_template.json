@@ -1,0 +1,16 @@
+{
+  "protocol_version": "generic-quality-pilot-v3",
+  "dataset_frozen_before_labels": true,
+  "task_set_hash": "08ad5ef3af687c4188fcc93ebda57937db4e867bb694a43d55f0be9dedd6cd85",
+  "treatment": "base_schedule",
+  "qualification_notes": "Four authored generic task pairs frozen before study outputs/labels. The separate live smoke is development material and is excluded. No paired study or independent labels have been collected. Extra exchanges are a separate treatment.",
+  "pairs": [],
+  "frozen_models": [
+    "zai::glm-4.7-flash",
+    "gemini::gemini-3.5-flash-lite",
+    "nvidia_nim::nvidia/nemotron-3-super-120b-a12b",
+    "groq::openai/gpt-oss-120b"
+  ],
+  "baseline_prompt_version": "scoped-review-v2",
+  "council_prompt_version": "unified-council-v3"
+}

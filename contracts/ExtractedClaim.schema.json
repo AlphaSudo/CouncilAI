@@ -1,0 +1,75 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ref": {
+      "pattern": "^C[1-9][0-9]?$",
+      "title": "Ref",
+      "type": "string"
+    },
+    "source_message_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Source Message Id",
+      "type": "string"
+    },
+    "quote": {
+      "default": "",
+      "maxLength": 400,
+      "title": "Quote",
+      "type": "string"
+    },
+    "source_unit_id": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Unit Id"
+    },
+    "kind": {
+      "enum": [
+        "factual",
+        "numerical",
+        "proposal",
+        "preference"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "scope": {
+      "maxLength": 500,
+      "minLength": 3,
+      "title": "Scope",
+      "type": "string"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "dependencies": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "title": "Dependencies",
+      "type": "array"
+    }
+  },
+  "required": [
+    "ref",
+    "source_message_id",
+    "kind",
+    "scope"
+  ],
+  "title": "ExtractedClaim",
+  "type": "object"
+}

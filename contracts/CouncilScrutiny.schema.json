@@ -1,0 +1,203 @@
+{
+  "$defs": {
+    "CouncilCandidateTest": {
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "minLength": 3,
+          "title": "Method",
+          "type": "string"
+        },
+        "disconfirming_outcome": {
+          "minLength": 3,
+          "title": "Disconfirming Outcome",
+          "type": "string"
+        },
+        "baseline": {
+          "minLength": 3,
+          "title": "Baseline",
+          "type": "string"
+        },
+        "threshold_basis": {
+          "minLength": 3,
+          "title": "Threshold Basis",
+          "type": "string"
+        },
+        "limitations": {
+          "minLength": 1,
+          "title": "Limitations",
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "disconfirming_outcome",
+        "baseline",
+        "threshold_basis",
+        "limitations"
+      ],
+      "title": "CouncilCandidateTest",
+      "type": "object"
+    },
+    "CouncilFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "claim_revision": {
+          "minimum": 1,
+          "title": "Claim Revision",
+          "type": "integer"
+        },
+        "steelman": {
+          "minLength": 3,
+          "title": "Steelman",
+          "type": "string"
+        },
+        "objection": {
+          "minLength": 3,
+          "title": "Objection",
+          "type": "string"
+        },
+        "candidate_test": {
+          "minLength": 3,
+          "title": "Candidate Test",
+          "type": "string"
+        },
+        "minimum_resolution": {
+          "minLength": 3,
+          "title": "Minimum Resolution",
+          "type": "string"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/CouncilReviewCheck"
+          },
+          "maxItems": 7,
+          "minItems": 1,
+          "title": "Checks",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "target": {
+          "minLength": 3,
+          "title": "Target",
+          "type": "string"
+        },
+        "in_scope_reason": {
+          "minLength": 3,
+          "title": "In Scope Reason",
+          "type": "string"
+        },
+        "concern_kind": {
+          "enum": [
+            "contradiction",
+            "missing_evidence",
+            "condition",
+            "operational_limitation",
+            "residual_risk"
+          ],
+          "title": "Concern Kind",
+          "type": "string"
+        },
+        "test": {
+          "$ref": "#/$defs/CouncilCandidateTest"
+        },
+        "evidence_obligation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Evidence Obligation"
+        }
+      },
+      "required": [
+        "claim_id",
+        "claim_revision",
+        "steelman",
+        "objection",
+        "candidate_test",
+        "minimum_resolution",
+        "checks",
+        "target",
+        "in_scope_reason",
+        "concern_kind",
+        "test"
+      ],
+      "title": "CouncilFinding",
+      "type": "object"
+    },
+    "CouncilReviewCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "minLength": 3,
+          "pattern": "^[a-z][a-z_ -]+$",
+          "title": "Category",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "fail",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "status",
+        "reason"
+      ],
+      "title": "CouncilReviewCheck",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/CouncilFinding"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Findings",
+      "type": "array"
+    },
+    "limitations": {
+      "minLength": 1,
+      "title": "Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "findings",
+    "limitations"
+  ],
+  "title": "CouncilScrutiny",
+  "type": "object"
+}

@@ -1,0 +1,142 @@
+{
+  "version": "council-development-v3",
+  "used_for_development": true,
+  "independent_evaluation": false,
+  "cases": [
+    {
+      "id": "DEV-01",
+      "category": "quantitative",
+      "case_kind": "valid",
+      "source": "93.3 minus 86.8 is 6.5 percentage points.",
+      "candidate_expectation": "Check the declared arithmetic with a percentage-point output.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-02",
+      "category": "quantitative",
+      "case_kind": "defect_candidate",
+      "source": "93.3 minus 86.8 is 0.7 percentage points.",
+      "candidate_expectation": "The declared subtraction differs; this says nothing about physical applicability.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-03",
+      "category": "quantitative",
+      "case_kind": "unknown",
+      "source": "The conversion efficiency is optimal under unspecified reservoirs.",
+      "candidate_expectation": "A derivation and boundary are missing; numerical consistency cannot certify the claim.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-04",
+      "category": "software_resources",
+      "case_kind": "valid",
+      "source": "A static 16 MB lookup table consumes memory; no continuous compute input is claimed.",
+      "candidate_expectation": "Distinguish capacity from throughput and operating consumption.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-05",
+      "category": "software_resources",
+      "case_kind": "defect_candidate",
+      "source": "The new cache has no memory overhead although it stores an additional copy.",
+      "candidate_expectation": "Expose the omitted resource and numerator/denominator before accepting an overhead claim.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-06",
+      "category": "software_resources",
+      "case_kind": "unknown",
+      "source": "The cache size has not been estimated.",
+      "candidate_expectation": "Keep the resource unknown rather than invent a number or declare the approach impossible.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-07",
+      "category": "documents",
+      "case_kind": "valid",
+      "source": "The supplied source supports only active-project access.",
+      "candidate_expectation": "Retain the source scope and exact support passage.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-08",
+      "category": "documents",
+      "case_kind": "defect_candidate",
+      "source": "A source about active projects proves archived projects are editable.",
+      "candidate_expectation": "A genuine document cannot certify an unsupported extension.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-09",
+      "category": "documents",
+      "case_kind": "unknown",
+      "source": "A model supplies a plausible title and DOI without source content.",
+      "candidate_expectation": "Source not checked; identity is separate from support.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-10",
+      "category": "planning",
+      "case_kind": "valid",
+      "source": "A declared 20-hour task fits a 24-hour capacity budget if its stated dependencies are met.",
+      "candidate_expectation": "Keep the conditional plan useful and the dependency explicit.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-11",
+      "category": "planning",
+      "case_kind": "defect_candidate",
+      "source": "One person can complete 32 estimated hours inside a 24-hour budget without changing scope.",
+      "candidate_expectation": "Check the explicit capacity boundary; do not silently add people.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-12",
+      "category": "planning",
+      "case_kind": "unknown",
+      "source": "The critical dependency has no duration estimate.",
+      "candidate_expectation": "The schedule remains conditional; no made-up completion date.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-13",
+      "category": "novel_proposals",
+      "case_kind": "valid",
+      "source": "This new mechanism is hypothetical and depends on an untested assumption.",
+      "candidate_expectation": "Novelty and uncertainty alone are not refutations.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-14",
+      "category": "novel_proposals",
+      "case_kind": "defect_candidate",
+      "source": "I tested the mechanism and measured a 2x gain, with no execution artifact.",
+      "candidate_expectation": "Retain an unsupported-observation warning and prevent evidence promotion.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    },
+    {
+      "id": "DEV-15",
+      "category": "novel_proposals",
+      "case_kind": "unknown",
+      "source": "A proposed discriminating test has not been run.",
+      "candidate_expectation": "A test proposal is not a result; preserve useful next steps.",
+      "label_origin": "authored_development_expectation",
+      "independent_human_label": null
+    }
+  ]
+}

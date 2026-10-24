@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "minLength": 1,
+      "title": "Name",
+      "type": "string"
+    },
+    "direction": {
+      "enum": [
+        "input",
+        "output",
+        "maintenance",
+        "static_requirement"
+      ],
+      "title": "Direction",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Value"
+    },
+    "unit": {
+      "default": "unknown",
+      "title": "Unit",
+      "type": "string"
+    },
+    "basis": {
+      "minLength": 3,
+      "title": "Basis",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "direction",
+    "basis"
+  ],
+  "title": "CouncilResourceTerm",
+  "type": "object"
+}

@@ -1,0 +1,97 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "turn_key": {
+      "title": "Turn Key",
+      "type": "string"
+    },
+    "context_hash": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Context Hash"
+    },
+    "state": {
+      "enum": [
+        "pending",
+        "success",
+        "partial",
+        "degraded",
+        "skipped"
+      ],
+      "title": "State",
+      "type": "string"
+    },
+    "generation_state": {
+      "enum": [
+        "not_requested",
+        "responding",
+        "complete",
+        "partial",
+        "unavailable"
+      ],
+      "title": "Generation State",
+      "type": "string"
+    },
+    "review_state": {
+      "enum": [
+        "pending",
+        "complete",
+        "incomplete",
+        "unavailable"
+      ],
+      "title": "Review State",
+      "type": "string"
+    },
+    "annotation_coverage": {
+      "default": "unknown",
+      "title": "Annotation Coverage",
+      "type": "string"
+    },
+    "warning_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warning Ids",
+      "type": "array"
+    },
+    "call_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Call Id"
+    },
+    "receipt_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Receipt Id"
+    }
+  },
+  "required": [
+    "turn_key",
+    "state",
+    "generation_state",
+    "review_state"
+  ],
+  "title": "StageResult",
+  "type": "object"
+}

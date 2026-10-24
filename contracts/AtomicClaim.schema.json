@@ -1,0 +1,115 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "ref": {
+      "pattern": "^C[1-9][0-9]?$",
+      "title": "Ref",
+      "type": "string"
+    },
+    "source_message_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Source Message Id",
+      "type": "string"
+    },
+    "source_unit_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Source Unit Ids",
+      "type": "array"
+    },
+    "assertion": {
+      "maxLength": 360,
+      "minLength": 3,
+      "title": "Assertion",
+      "type": "string"
+    },
+    "scope": {
+      "maxLength": 180,
+      "minLength": 3,
+      "title": "Scope",
+      "type": "string"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4,
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "dependencies": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4,
+      "title": "Dependencies",
+      "type": "array"
+    },
+    "reasoning_kind": {
+      "enum": [
+        "definition",
+        "deduction",
+        "empirical",
+        "proposal",
+        "evaluation",
+        "unclear"
+      ],
+      "title": "Reasoning Kind",
+      "type": "string"
+    },
+    "properties": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "quantitative",
+          "causal",
+          "comparative",
+          "normative",
+          "existential",
+          "universal"
+        ],
+        "type": "string"
+      },
+      "maxItems": 6,
+      "title": "Properties"
+    },
+    "fidelity": {
+      "enum": [
+        "faithful_as_assessed",
+        "uncertain",
+        "compound_remaining"
+      ],
+      "title": "Fidelity",
+      "type": "string"
+    },
+    "materiality": {
+      "maxLength": 120,
+      "minLength": 3,
+      "title": "Materiality",
+      "type": "string"
+    },
+    "evidence_obligation": {
+      "maxLength": 160,
+      "minLength": 3,
+      "title": "Evidence Obligation",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ref",
+    "source_message_id",
+    "source_unit_ids",
+    "assertion",
+    "scope",
+    "reasoning_kind",
+    "fidelity",
+    "materiality",
+    "evidence_obligation"
+  ],
+  "title": "AtomicClaim",
+  "type": "object"
+}

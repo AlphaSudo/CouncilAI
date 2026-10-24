@@ -1,0 +1,16 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "add_usd": {
+      "exclusiveMinimum": 0,
+      "maximum": 24,
+      "title": "Add Usd",
+      "type": "number"
+    }
+  },
+  "required": [
+    "add_usd"
+  ],
+  "title": "ConversationAllowanceInput",
+  "type": "object"
+}

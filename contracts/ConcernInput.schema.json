@@ -1,0 +1,51 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "text": {
+      "maxLength": 3000,
+      "minLength": 5,
+      "title": "Text",
+      "type": "string"
+    },
+    "severity": {
+      "default": "major",
+      "enum": [
+        "critical",
+        "major",
+        "minor"
+      ],
+      "title": "Severity",
+      "type": "string"
+    },
+    "blocking": {
+      "default": true,
+      "title": "Blocking",
+      "type": "boolean"
+    },
+    "affected_object_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "title": "Affected Object Ids",
+      "type": "array"
+    },
+    "required_response": {
+      "default": "Address the mechanism, controls and remaining uncertainty.",
+      "maxLength": 2000,
+      "title": "Required Response",
+      "type": "string"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "text"
+  ],
+  "title": "ConcernInput",
+  "type": "object"
+}

@@ -1,0 +1,112 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "existing_credit_usd": {
+      "exclusiveMinimum": 0,
+      "maximum": 25,
+      "title": "Existing Credit Usd",
+      "type": "number"
+    },
+    "operational_cap_usd": {
+      "exclusiveMinimum": 0,
+      "maximum": 24,
+      "title": "Operational Cap Usd",
+      "type": "number"
+    },
+    "credit_only_confirmed": {
+      "title": "Credit Only Confirmed",
+      "type": "boolean"
+    },
+    "automatic_payments_disabled": {
+      "title": "Automatic Payments Disabled",
+      "type": "boolean"
+    },
+    "billing_evidence": {
+      "maxLength": 3000,
+      "minLength": 15,
+      "title": "Billing Evidence",
+      "type": "string"
+    },
+    "catalog_model_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Catalog Model Ids",
+      "type": "array"
+    },
+    "prices": {
+      "additionalProperties": {
+        "additionalProperties": {
+          "type": "number"
+        },
+        "type": "object"
+      },
+      "title": "Prices",
+      "type": "object"
+    },
+    "price_source": {
+      "maxLength": 2000,
+      "minLength": 10,
+      "title": "Price Source",
+      "type": "string"
+    },
+    "token_bound_verified": {
+      "title": "Token Bound Verified",
+      "type": "boolean"
+    },
+    "token_bound_evidence": {
+      "maxLength": 3000,
+      "minLength": 15,
+      "title": "Token Bound Evidence",
+      "type": "string"
+    },
+    "all_billing_categories_bounded": {
+      "title": "All Billing Categories Bounded",
+      "type": "boolean"
+    },
+    "additional_billed_output_tokens": {
+      "maximum": 131072,
+      "minimum": 0,
+      "title": "Additional Billed Output Tokens",
+      "type": "integer"
+    },
+    "billed_input_multiplier": {
+      "maximum": 16,
+      "minimum": 1,
+      "title": "Billed Input Multiplier",
+      "type": "number"
+    },
+    "expires_in_hours": {
+      "default": 24,
+      "maximum": 48,
+      "minimum": 1,
+      "title": "Expires In Hours",
+      "type": "integer"
+    },
+    "acknowledgement": {
+      "const": "Use existing credit only; authorize no additional payment.",
+      "title": "Acknowledgement",
+      "type": "string"
+    }
+  },
+  "required": [
+    "existing_credit_usd",
+    "operational_cap_usd",
+    "credit_only_confirmed",
+    "automatic_payments_disabled",
+    "billing_evidence",
+    "catalog_model_ids",
+    "prices",
+    "price_source",
+    "token_bound_verified",
+    "token_bound_evidence",
+    "all_billing_categories_bounded",
+    "additional_billed_output_tokens",
+    "billed_input_multiplier",
+    "acknowledgement"
+  ],
+  "title": "LiveVerification",
+  "type": "object"
+}

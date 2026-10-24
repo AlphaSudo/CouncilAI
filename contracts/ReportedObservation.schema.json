@@ -1,0 +1,48 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_message_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Source Message Id",
+      "type": "string"
+    },
+    "source_unit_id": {
+      "maxLength": 100,
+      "minLength": 1,
+      "title": "Source Unit Id",
+      "type": "string"
+    },
+    "classification": {
+      "enum": [
+        "unsupported_self_report",
+        "externally_attributed",
+        "hypothetical",
+        "quoted",
+        "supplied_reference"
+      ],
+      "title": "Classification",
+      "type": "string"
+    },
+    "trace_reference": {
+      "default": "",
+      "maxLength": 120,
+      "title": "Trace Reference",
+      "type": "string"
+    },
+    "reason": {
+      "maxLength": 180,
+      "minLength": 3,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_message_id",
+    "source_unit_id",
+    "classification",
+    "reason"
+  ],
+  "title": "ReportedObservation",
+  "type": "object"
+}

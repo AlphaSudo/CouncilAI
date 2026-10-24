@@ -1,0 +1,86 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "mechanism": {
+      "maxLength": 6000,
+      "minLength": 10,
+      "title": "Mechanism",
+      "type": "string"
+    },
+    "prediction": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Prediction",
+      "type": "string"
+    },
+    "experiment": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Experiment",
+      "type": "string"
+    },
+    "control": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Control",
+      "type": "string"
+    },
+    "confounders": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Confounders",
+      "type": "array"
+    },
+    "kill_rule": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Kill Rule",
+      "type": "string"
+    },
+    "affected_layers": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Affected Layers",
+      "type": "array"
+    },
+    "source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "title": "Source Ids",
+      "type": "array"
+    },
+    "uncertainty": {
+      "maxLength": 2000,
+      "minLength": 3,
+      "title": "Uncertainty",
+      "type": "string"
+    },
+    "recommendation": {
+      "maxLength": 2000,
+      "minLength": 3,
+      "title": "Recommendation",
+      "type": "string"
+    }
+  },
+  "required": [
+    "mechanism",
+    "prediction",
+    "experiment",
+    "control",
+    "confounders",
+    "kill_rule",
+    "affected_layers",
+    "uncertainty",
+    "recommendation"
+  ],
+  "title": "Submission",
+  "type": "object"
+}

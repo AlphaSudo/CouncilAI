@@ -1,0 +1,38 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+.vercel/
+
+# Local environments and generated files
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+artifacts/
+exports/
+data/
+dist/
+dist-*/
+.vite/
+*.egg-info/
+coverage/
+.coverage
+playwright-report/
+test-results/
+*.log
+*.tsbuildinfo
+# Private user-provided planning inputs; English plans are tracked separately.
+thinking.txt
+th2.txt
+hackathon.txt
+ZeroWall_Vision_Document_AR.docx
+
+# Internal screenshots, runtime traces and generated test logs are kept local.
+# Only scrubbed public model-catalog fixtures and cloud evidence are published.
+docs/validation/*
+!docs/validation/README.md
+!docs/validation/reflection-beam-catalog.json
+!docs/validation/token-factory-model-catalog-2026-10-21.json
+!docs/validation/cloud-container.json

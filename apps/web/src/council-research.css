@@ -1,0 +1,405 @@
+.reply-usage,
+.conversation-usage {
+  font-size: 0.78rem;
+  color: var(--council-muted, #a7b3aa);
+  margin: 1.1rem 0;
+}
+.reply-usage summary,
+.conversation-usage summary {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: baseline;
+  padding: 0.35rem 0;
+}
+.reply-usage summary span,
+.conversation-usage summary span {
+  opacity: 0.8;
+  font-size: 0.72rem;
+}
+.reply-usage[open],
+.conversation-usage[open] {
+  border-top: 1px solid #ffffff18;
+  padding-top: 0.5rem;
+}
+.conversation-usage {
+  margin: 0.5rem 0 1.8rem;
+}
+.usage-attempt {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #ffffff18;
+}
+.research-table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  border-radius: 3px;
+}
+.research-table-scroll table {
+  border-collapse: collapse;
+  min-width: 480px;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.75rem;
+}
+.research-table-scroll th,
+.research-table-scroll td {
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid #ffffff12;
+  text-align: right;
+  white-space: nowrap;
+}
+.research-table-scroll th:first-child {
+  text-align: left;
+}
+.research-table-scroll thead {
+  color: #e6ebe7;
+}
+.research-muted {
+  opacity: 0.75;
+  font-size: 0.76rem;
+  line-height: 1.65;
+}
+.usage-money {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+}
+.usage-money div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.usage-money dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.response-timing-summary,
+.response-elapsed {
+  font-variant-numeric: tabular-nums;
+}
+.response-timing-detail {
+  margin: 0.8rem 0 1rem;
+}
+.active-response-timing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.8rem;
+  flex-basis: 100%;
+  padding-left: 20px;
+}
+.active-response-timing small {
+  flex-basis: 100%;
+  opacity: 0.8;
+  overflow-wrap: anywhere;
+}
+.unfinished-requests {
+  margin: 0.75rem 0;
+}
+.reply-usage pre,
+.conversation-usage pre,
+.research-panel pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+.council-sources-trigger {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  border: 0;
+  padding: 0.65rem 0.8rem;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.council-research-strip {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  padding: 0.2rem 1.4rem;
+  border-bottom: 1px solid #ffffff12;
+}
+.council-research-strip .conversation-usage {
+  flex: 1;
+  margin: 0.3rem 0;
+  min-width: 0;
+}
+.council-research-strip.has-review-action {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas: "sources usage review";
+  align-items: center;
+}
+.has-review-action .council-sources-trigger {
+  grid-area: sources;
+}
+.has-review-action .conversation-usage {
+  grid-area: usage;
+}
+.council-inline-review {
+  grid-area: review;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--c-text);
+  font: inherit;
+  font-size: 11px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.council-inline-review:hover {
+  background: #ffffff06;
+}
+.council-research-strip.has-review-action:has(.conversation-usage[open]) {
+  grid-template-areas: "sources . review" "usage usage usage";
+}
+@media (max-width: 520px) {
+  .council-research-strip.has-review-action,
+  .council-research-strip.has-review-action:has(.conversation-usage[open]) {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "sources review" "usage usage";
+    row-gap: 0;
+  }
+  .has-review-action .council-sources-trigger {
+    justify-self: start;
+  }
+}
+.research-panel {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  width: min(620px, 100vw);
+  height: 100dvh;
+  max-height: 100dvh;
+  max-width: 100vw;
+  box-sizing: border-box;
+  border: 0;
+  border-left: 1px solid #ffffff18;
+  padding: 1.6rem;
+  background: #18211e;
+  color: #e7eae4;
+  overflow-y: auto;
+  color-scheme: dark;
+}
+.research-panel::backdrop {
+  background: #0008;
+  backdrop-filter: blur(3px);
+}
+.research-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.research-panel header small {
+  color: #b5c7b8;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+.research-panel h2 {
+  font-size: 1.7rem;
+  margin: 0.5rem 0;
+}
+.research-panel button,
+.research-panel input {
+  font: inherit;
+  color: inherit;
+}
+.research-panel button {
+  background: #d3e5d313;
+  border: 1px solid #ffffff18;
+  border-radius: 5px;
+  padding: 0.55rem 0.75rem;
+  cursor: pointer;
+}
+.research-panel input {
+  box-sizing: border-box;
+  border: 1px solid #ffffff26;
+  background: #ffffff05;
+  padding: 0.6rem 0.7rem;
+  border-radius: 4px;
+  min-width: 0;
+  width: 100%;
+}
+.research-panel label {
+  display: block;
+  font-size: 0.78rem;
+  margin: 0.6rem 0;
+}
+.research-panel form > div {
+  display: flex;
+  gap: 0.5rem;
+}
+.source-import,
+.source-search {
+  border-bottom: 1px solid #ffffff18;
+  padding: 0.8rem 0 1.3rem;
+}
+.source-upload {
+  display: flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  min-height: 38px;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #ffffff26;
+  border-radius: 5px;
+}
+.source-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.source-list {
+  list-style: none;
+  padding: 0;
+}
+.source-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ffffff18;
+}
+.source-list li > button,
+.source-result {
+  display: block;
+  border: 0;
+  background: transparent;
+  padding: 0.3rem 0;
+  width: 100%;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.source-list span,
+.source-result span {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.75;
+  margin: 0.45rem 0;
+}
+.source-list a {
+  font-size: 0.75rem;
+  color: #b6d5bb;
+}
+.source-passage {
+  margin-top: 1rem;
+  border-top: 1px solid #ffffff18;
+  padding-top: 0.75rem;
+}
+.research-error {
+  color: #f2b5a2;
+  padding: 0.7rem 0;
+}
+.source-citation {
+  font: inherit;
+  font-size: 0.78em;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #adc9b288;
+  padding: 0.1rem;
+  color: #b6d5bb;
+  cursor: pointer;
+}
+.research-panel .research-setting,
+.research-setting {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.8rem 0;
+}
+.research-setting input[type="checkbox"] {
+  accent-color: #afceaf;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+.research-query {
+  display: grid;
+  gap: 0.55rem;
+  padding: 0 0 1rem;
+  font-size: 0.8rem;
+}
+.research-query input {
+  min-width: 0;
+  border: 1px solid #ffffff26;
+  padding: 0.7rem;
+  background: #ffffff04;
+  color: inherit;
+  border-radius: 5px;
+}
+.research-query small {
+  opacity: 0.65;
+  font-size: 0.72rem;
+}
+.composer-source-upload {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.7rem;
+  color: #b5c4b9;
+  width: fit-content;
+  min-height: 36px;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ffffff26;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.composer-source-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.composer-source-upload:focus-within,
+.source-upload:focus-within {
+  outline: 2px solid #afceaf;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .research-panel {
+    padding: 1.1rem;
+  }
+  .council-research-strip {
+    padding: 0.3rem 1rem;
+    gap: 0.4rem;
+  }
+  .council-research-strip summary {
+    font-size: 0.72rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .research-panel[open] {
+    animation: source-arrival 0.16s ease-out;
+  }
+  @keyframes source-arrival {
+    from {
+      opacity: 0.3;
+      transform: translateX(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

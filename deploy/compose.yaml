@@ -1,0 +1,22 @@
+services:
+  council:
+    build:
+      context: ..
+    image: zerowall:hosted
+    env_file:
+      - ../.env.hosted
+    environment:
+      ZEROWALL_MODE: hosted
+      ZEROWALL_DATA_DIR: /var/lib/zerowall
+      ZEROWALL_PERSISTENT_STORAGE_CONFIRMED: "true"
+      PORT: "8000"
+    ports:
+      - "127.0.0.1:8080:8000"
+    volumes:
+      - council-data:/var/lib/zerowall
+    restart: unless-stopped
+    stop_grace_period: 90s
+    init: true
+
+volumes:
+  council-data:

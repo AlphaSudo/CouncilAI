@@ -1,0 +1,160 @@
+{
+  "$defs": {
+    "RemainingConcern": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "contradiction",
+            "missing_evidence",
+            "condition",
+            "operational_limitation",
+            "residual_risk",
+            "new_issue"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "detail": {
+          "maxLength": 180,
+          "minLength": 3,
+          "title": "Detail",
+          "type": "string"
+        },
+        "affected_scope": {
+          "maxLength": 120,
+          "minLength": 3,
+          "title": "Affected Scope",
+          "type": "string"
+        },
+        "materiality": {
+          "enum": [
+            "decision_changing",
+            "ordinary",
+            "unknown"
+          ],
+          "title": "Materiality",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "detail",
+        "affected_scope",
+        "materiality"
+      ],
+      "title": "RemainingConcern",
+      "type": "object"
+    },
+    "ScopedRecheckFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "finding_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "original_revision": {
+          "minimum": 1,
+          "title": "Original Revision",
+          "type": "integer"
+        },
+        "current_revision": {
+          "minimum": 1,
+          "title": "Current Revision",
+          "type": "integer"
+        },
+        "resolution": {
+          "enum": [
+            "resolved_as_assessed",
+            "partly_resolved_as_assessed",
+            "unresolved_as_assessed",
+            "withdrawn"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "closure_basis": {
+          "enum": [
+            "rebuttal",
+            "content_removed",
+            "scope_narrowed",
+            "condition_explicit",
+            "actual_correction",
+            "withdrawal",
+            "no_effective_change"
+          ],
+          "title": "Closure Basis",
+          "type": "string"
+        },
+        "comparison": {
+          "maxLength": 240,
+          "minLength": 3,
+          "title": "Comparison",
+          "type": "string"
+        },
+        "concerns": {
+          "items": {
+            "$ref": "#/$defs/RemainingConcern"
+          },
+          "maxItems": 2,
+          "title": "Concerns",
+          "type": "array"
+        },
+        "test_assessment": {
+          "enum": [
+            "suitable_as_assessed",
+            "needs_revision",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Test Assessment",
+          "type": "string"
+        },
+        "test_reason": {
+          "maxLength": 160,
+          "minLength": 3,
+          "title": "Test Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "finding_id",
+        "original_revision",
+        "current_revision",
+        "resolution",
+        "closure_basis",
+        "comparison",
+        "test_assessment",
+        "test_reason"
+      ],
+      "title": "ScopedRecheckFinding",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assessments": {
+      "items": {
+        "$ref": "#/$defs/ScopedRecheckFinding"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Assessments",
+      "type": "array"
+    },
+    "limitations": {
+      "maxLength": 500,
+      "minLength": 3,
+      "title": "Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "assessments",
+    "limitations"
+  ],
+  "title": "ScopedRecheck",
+  "type": "object"
+}

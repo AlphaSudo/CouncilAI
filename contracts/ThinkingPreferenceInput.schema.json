@@ -1,0 +1,20 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "level": {
+      "enum": [
+        "quick",
+        "balanced",
+        "deep",
+        "maximum"
+      ],
+      "title": "Level",
+      "type": "string"
+    }
+  },
+  "required": [
+    "level"
+  ],
+  "title": "ThinkingPreferenceInput",
+  "type": "object"
+}

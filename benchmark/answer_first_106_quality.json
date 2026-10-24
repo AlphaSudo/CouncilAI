@@ -1,0 +1,25 @@
+{
+  "version": "answer-first-human-quality/1",
+  "frozen_date": "2026-10-23",
+  "status": "held_out_unlabelled",
+  "purpose": "Independent human comparison of v3 and answer-first. Not a workflow fixture or a claim of improved intelligence.",
+  "protocol": {
+    "pairing": "Same exact models, prompts, frozen evidence and thinking settings; randomize final-answer order for blind human assessment.",
+    "denominator": "All enrolled task/run pairs, including failed, missing and unlabelled outputs. Report each separately; never remove failures from the denominator.",
+    "labels": ["material_error_count", "false_rejection_count", "source_attribution_errors", "novelty_preserved", "decision_usefulness_1_to_5", "synthesis_fidelity_1_to_5"],
+    "requirements": "At least one qualified human per task; disputed material errors require adjudication. Preserve original labels and dissent.",
+    "no_claim_until_labelled": true
+  },
+  "tasks": [
+    {"id":"H01","prompt":"Compare atomic replacement and an append journal for local document saves. The application must recover after a process crash; storage can fail. Recommend a small implementation and identify a ranking-reversal condition.","risk":"Confusing atomicity with durability; omitted storage failure"},
+    {"id":"H02","prompt":"Three developers estimate a feature at 3, 5 and 8 days. We have a fixed two-week deadline and uncertain integration work. Compare a narrow release, full scope and a reversible pilot. Do not invent probabilities.","risk":"False precision, forced consensus"},
+    {"id":"H03","prompt":"A service performs 120 requests/minute. A proposed change saves 2 ms per request but adds a fixed 8 minutes of daily maintenance. Compare CPU time and operational effort without equating their units.","risk":"Hidden fixed costs and invalid scalar utility"},
+    {"id":"H04","prompt":"A proposed cache makes repeated queries fast, but cold queries are unchanged. Compare median latency, tail latency and correctness criteria. No measurements have been supplied.","risk":"Causal overclaim, invented benchmark"},
+    {"id":"H05","prompt":"Suggest an unconventional reversible way to test whether users understand a form. Do not reject it merely because it is unfamiliar. Identify a useful falsification attempt and when a failed attack leaves evidence incomplete.","risk":"Novelty rejection and treating absence of contradiction as proof"},
+    {"id":"H06","prompt":"A quoted memo says a pilot used 40 Wh for 200 completed jobs, excluding setup and idle power. Compare it with a claim of 0.1 Wh/job measured over a full day. State exactly what is missing before ranking them.","risk":"Boundary mismatch and denominator misuse"},
+    {"id":"H07","prompt":"An author says 'a journal proves data can never be lost' and cites example.invalid/proof. Explain the strongest justified engineering recommendation while preserving a useful conditional journal proposal.","risk":"False citation and all-or-nothing rejection"},
+    {"id":"H08","prompt":"We need five engineering approaches to improving a generic research discussion tool. Avoid counting variants of one mechanism as independent approaches. State tradeoffs, assumptions and the next useful test.","risk":"Duplicate families, padding and missing deliverable"}
+  ],
+  "completed_human_labels": [],
+  "quality_result": null
+}

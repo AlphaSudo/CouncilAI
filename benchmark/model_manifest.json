@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "reference_checked_on": "2026-10-23",
+  "rate_unit": "USD_per_1000000_tokens",
+  "rate_status": "published_reference_only",
+  "requires_revalidation_before_dispatch": true,
+  "account_catalog_checked": false,
+  "account_billing_checked": false,
+  "inference_tested": false,
+  "models": [
+    {
+      "id": "nvidia/Nemotron-3.5-Super-VL",
+      "exact_id_documented": true,
+      "input_rate": 0.3,
+      "output_rate": 0.9,
+      "source": "https://nebius.com/blog/posts/three-new-open-weight-models-from-us-companies-give-builders-more-choice"
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "exact_id_documented": true,
+      "input_rate": 0.15,
+      "output_rate": 0.5,
+      "source": "https://nebius.com/services/token-factory/models/glm-models-inference"
+    },
+    {
+      "id": "nvidia/Nemotron-3_5-Lightning",
+      "exact_id_documented": true,
+      "input_rate": 0.06,
+      "output_rate": 0.24,
+      "source": "https://nebius.com/services/token-factory/models/nvidia-nemotron-models-inference"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "exact_id_documented": false,
+      "input_rate": null,
+      "output_rate": null,
+      "source": "https://nebius.com/release-notes/posts/q3-2026",
+      "verification_note": "The release notes name DeepSeek V4.1 Flash; the exact case-sensitive API ID and prices remain unverified. The model is disabled in the selection policy."
+    },
+    {
+      "id": "reflection/beam",
+      "exact_id_documented": true,
+      "input_rate": 0.25,
+      "cached_input_rate": 0.05,
+      "output_rate": 1.0,
+      "source": "https://tokenfactory.nebius.com/api/public/models_info",
+      "verification_note": "Account catalogue and one bounded software-integration request verified; hosted hard reasoning cap not established."
+    }
+  ],
+  "limitations": [
+    "Public prices are references, not proof of account-specific billing or access.",
+    "Reasoning, cached-token, multimodal, and other billed categories require verification before request bounds are considered complete.",
+    "Only text requests are planned initially; vision or other modalities need separate capability and cost validation.",
+    "No application router or budget enforcement is implemented by these configuration files."
+  ]
+}

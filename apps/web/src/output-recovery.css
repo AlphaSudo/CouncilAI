@@ -1,0 +1,65 @@
+.output-recovery {
+  margin: 24px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+  color: var(--c-text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.output-recovery > strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+.output-recovery p {
+  margin: 10px 0;
+  color: var(--c-muted);
+}
+.output-recovery-tokens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  margin: 16px 0;
+}
+.output-recovery-tokens dt {
+  color: var(--c-muted);
+  font-size: 11px;
+}
+.output-recovery-tokens dd {
+  margin: 0;
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+.output-recovery summary {
+  cursor: pointer;
+  color: var(--c-text);
+}
+.output-recovery-draft {
+  max-height: 320px;
+  overflow: auto;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.output-recovery button {
+  margin-top: 6px;
+  margin-right: 8px;
+  border: 1px solid var(--c-line);
+  border-radius: 7px;
+  padding: 9px 14px;
+  color: var(--c-text);
+  background: var(--c-surface);
+  font: inherit;
+  cursor: pointer;
+}
+.output-recovery button:hover:not(:disabled) {
+  border-color: var(--c-accent);
+}
+.output-recovery button:focus-visible,
+.output-recovery summary:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 4px;
+}
+.output-recovery button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

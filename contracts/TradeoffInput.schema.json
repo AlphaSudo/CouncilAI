@@ -1,0 +1,103 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "category": {
+      "enum": [
+        "synergy",
+        "conflict",
+        "constraint_conversion",
+        "hidden_cost_removal",
+        "adaptive_hybrid",
+        "new_operating_point"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "title": {
+      "maxLength": 200,
+      "minLength": 3,
+      "title": "Title",
+      "type": "string"
+    },
+    "expected_pros": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Expected Pros",
+      "type": "array"
+    },
+    "expected_cons": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Expected Cons",
+      "type": "array"
+    },
+    "observed_pros": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Observed Pros",
+      "type": "array"
+    },
+    "observed_cons": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Observed Cons",
+      "type": "array"
+    },
+    "hidden_costs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Hidden Costs",
+      "type": "array"
+    },
+    "mitigations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Mitigations",
+      "type": "array"
+    },
+    "operating_region": {
+      "title": "Operating Region",
+      "type": "string"
+    },
+    "complexity": {
+      "title": "Complexity",
+      "type": "string"
+    },
+    "rejection_rule": {
+      "title": "Rejection Rule",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Evidence Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "category",
+    "title",
+    "expected_pros",
+    "expected_cons",
+    "hidden_costs",
+    "mitigations",
+    "operating_region",
+    "complexity",
+    "rejection_rule"
+  ],
+  "title": "TradeoffInput",
+  "type": "object"
+}

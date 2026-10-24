@@ -1,0 +1,62 @@
+{
+  "$defs": {
+    "RecheckFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "finding_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Finding Id",
+          "type": "string"
+        },
+        "proposed_disposition": {
+          "enum": [
+            "issue_remains",
+            "rebutted_as_assessment",
+            "narrowed",
+            "withdrawn",
+            "no_issue_as_assessed"
+          ],
+          "title": "Proposed Disposition",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 1000,
+          "minLength": 3,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "finding_id",
+        "proposed_disposition",
+        "reason"
+      ],
+      "title": "RecheckFinding",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "assessments": {
+      "items": {
+        "$ref": "#/$defs/RecheckFinding"
+      },
+      "maxItems": 16,
+      "title": "Assessments",
+      "type": "array"
+    },
+    "limitations": {
+      "maxLength": 1500,
+      "minLength": 3,
+      "title": "Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "assessments",
+    "limitations"
+  ],
+  "title": "RecheckOutput",
+  "type": "object"
+}

@@ -1,0 +1,97 @@
+.collective-research {
+  padding: 18px 0;
+  margin: 0 0 20px;
+  border-block: 1px solid var(--c-line);
+  font-size: 13px;
+}
+.collective-research > header,
+.collective-research summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: var(--c-text);
+}
+.collective-research summary {
+  cursor: pointer;
+}
+.collective-research summary > span,
+.collective-research header > span {
+  color: var(--c-muted);
+  font-size: 11px;
+}
+.collective-purpose,
+.collective-limitation {
+  color: var(--c-muted);
+  line-height: 1.6;
+  font-size: 12px;
+}
+.collective-members,
+.collective-library ul {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+}
+.collective-members li {
+  padding: 12px 0;
+  border-bottom: 1px solid #ffffff0a;
+}
+.collective-members li > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.collective-members li > div > span {
+  color: var(--c-muted);
+  font-size: 11px;
+}
+.collective-members li > div > svg {
+  margin-left: auto;
+  color: var(--c-accent);
+}
+.collective-members p {
+  margin: 7px 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.collective-research small {
+  color: var(--c-muted);
+  font-size: 11px;
+}
+.collective-library {
+  margin-top: 20px;
+}
+.collective-library > strong {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.collective-library li {
+  padding: 9px 0;
+}
+.collective-library li > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.collective-library li > div > small {
+  white-space: nowrap;
+}
+.council-app .collective-library button {
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--c-accent);
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.collective-library a {
+  color: var(--c-accent);
+  overflow-wrap: anywhere;
+}
+.collective-library li > small {
+  display: block;
+  margin-top: 3px;
+}

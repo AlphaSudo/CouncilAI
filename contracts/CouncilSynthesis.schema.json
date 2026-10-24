@@ -1,0 +1,131 @@
+{
+  "$defs": {
+    "CouncilAnswerBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "section": {
+          "enum": [
+            "direct_answer",
+            "supported",
+            "conditional",
+            "unresolved",
+            "withdrawn",
+            "next_tests"
+          ],
+          "title": "Section",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 3,
+          "title": "Text",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "claim_revisions": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Claim Revisions",
+          "type": "array"
+        },
+        "issue_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Issue Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "section",
+        "text",
+        "claim_ids",
+        "claim_revisions"
+      ],
+      "title": "CouncilAnswerBlock",
+      "type": "object"
+    },
+    "CouncilRankedApproach": {
+      "additionalProperties": false,
+      "properties": {
+        "family_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Family Id",
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "family_id",
+        "reason"
+      ],
+      "title": "CouncilRankedApproach",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "answer_disposition": {
+      "enum": [
+        "recommendation",
+        "conditional_choice",
+        "comparison_only",
+        "no_justified_decision"
+      ],
+      "title": "Answer Disposition",
+      "type": "string"
+    },
+    "blocks": {
+      "items": {
+        "$ref": "#/$defs/CouncilAnswerBlock"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Blocks",
+      "type": "array"
+    },
+    "ranked_approaches": {
+      "items": {
+        "$ref": "#/$defs/CouncilRankedApproach"
+      },
+      "maxItems": 8,
+      "title": "Ranked Approaches",
+      "type": "array"
+    },
+    "deliverable_limitations": {
+      "default": "",
+      "title": "Deliverable Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "answer_disposition",
+    "blocks"
+  ],
+  "title": "CouncilSynthesis",
+  "type": "object"
+}

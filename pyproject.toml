@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zerowall"
+version = "1.5.0"
+description = "A human-directed research council with private commits, bounded tools, and reproducible evidence."
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.34,<1", "httpx>=0.28,<1", "pydantic>=2.10,<3", "python-dotenv>=1,<2", "beautifulsoup4==4.15.0", "pypdf==6.21.1", "python-docx==1.2.0", "psutil==7.2.2", "tokenizers==0.23.3", "psycopg[binary]==3.3.6", "psycopg-pool==3.3.3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.14,<1"]
+
+[project.scripts]
+zerowall = "zerowall.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,30 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Id",
+      "type": "string"
+    },
+    "text": {
+      "maxLength": 16000,
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "provenance": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Provenance",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "text",
+    "provenance"
+  ],
+  "title": "Source",
+  "type": "object"
+}

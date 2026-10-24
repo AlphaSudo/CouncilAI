@@ -1,0 +1,77 @@
+.council-copy {
+  /* Keep the hidden announcement inside the button's scroll container. */
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 32px;
+  min-height: 32px;
+  cursor: pointer;
+}
+.council-copy:focus-visible {
+  outline: 2px solid var(--c-accent, #b7ce99);
+  outline-offset: 2px;
+}
+.council-copy.is-copied {
+  color: var(--c-accent, #b7ce99);
+}
+.council-copy:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.council-message-heading > .council-copy {
+  margin-left: auto;
+  align-self: center;
+}
+.council-copy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.council-copy-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #0009;
+}
+.council-copy-dialog {
+  box-sizing: border-box;
+  width: min(680px, 100%);
+  max-height: 90dvh;
+  padding: 24px;
+  color: var(--c-text, #e4e8de);
+  background: var(--c-surface, #191d19);
+  border: 1px solid #ffffff24;
+  border-radius: 10px;
+}
+.council-copy-dialog header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.council-copy-dialog h2 {
+  margin: 0;
+  font-size: 18px;
+}
+.council-copy-dialog p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.council-copy-dialog textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: min(45dvh, 380px);
+  resize: vertical;
+  padding: 14px;
+  border: 1px solid #ffffff24;
+  background: #111511;
+  color: inherit;
+  font: 13px/1.7 monospace;
+}

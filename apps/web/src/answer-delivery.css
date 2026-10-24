@@ -1,0 +1,28 @@
+.review-delivery-note {
+  color: var(--council-muted, #aeb7aa);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  padding: 10px 0;
+}
+.review-delivery-note button {
+  color: inherit;
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-inline-start: 12px;
+  cursor: pointer;
+}
+.review-delivery-note pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.75rem;
+  padding: 12px;
+  border-inline-start: 1px solid currentColor;
+}
+.live-public-answer { border: 0; }
+.live-public-answer .council-message-heading > span { color: #aeb7aa; }
+.message-review-state { color: #aeb7aa; font-size: 0.75rem; }
+.council-phases [data-outcome="skipped"]::before { content: "— "; }
+.council-phases [data-outcome="partial"]::before,
+.council-phases [data-outcome="degraded"]::before { content: "◦ "; }

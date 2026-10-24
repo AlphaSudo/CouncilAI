@@ -1,0 +1,55 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "pattern": "^[A-Za-z][A-Za-z0-9_]{0,23}$",
+      "title": "Name",
+      "type": "string"
+    },
+    "value": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Value"
+    },
+    "unit": {
+      "default": "1",
+      "title": "Unit",
+      "type": "string"
+    },
+    "quantity_kind": {
+      "default": "number",
+      "title": "Quantity Kind",
+      "type": "string"
+    },
+    "basis": {
+      "minLength": 3,
+      "title": "Basis",
+      "type": "string"
+    },
+    "uncertainty": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Uncertainty"
+    }
+  },
+  "required": [
+    "name",
+    "basis"
+  ],
+  "title": "CouncilAuditQuantity",
+  "type": "object"
+}

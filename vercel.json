@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "web": {
+      "root": ".",
+      "runtime": "container",
+      "entrypoint": "Dockerfile",
+      "command": ["env", "ZEROWALL_ROLE=web", "zerowall", "serve"]
+    }
+  },
+  "daemons": {
+    "council-worker": {
+      "root": ".",
+      "entrypoint": "Dockerfile",
+      "command": ["env", "ZEROWALL_ROLE=worker", "python", "-m", "zerowall.cloud_worker"],
+      "instances": {"iad1": 1},
+      "resources": {"requests": {"memory": "1Gi"}},
+      "terminationGracePeriodSeconds": 3600
+    }
+  },
+  "rewrites": [{"source": "/(.*)", "destination": {"service": "web"}}]
+}

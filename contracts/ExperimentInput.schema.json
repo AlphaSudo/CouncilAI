@@ -1,0 +1,138 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "title": {
+      "maxLength": 200,
+      "minLength": 5,
+      "title": "Title",
+      "type": "string"
+    },
+    "hypothesis_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Hypothesis Ids",
+      "type": "array"
+    },
+    "capability": {
+      "title": "Capability",
+      "type": "string"
+    },
+    "args": {
+      "additionalProperties": true,
+      "title": "Args",
+      "type": "object"
+    },
+    "control": {
+      "maxLength": 2000,
+      "minLength": 3,
+      "title": "Control",
+      "type": "string"
+    },
+    "treatment": {
+      "maxLength": 2000,
+      "minLength": 3,
+      "title": "Treatment",
+      "type": "string"
+    },
+    "prediction": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Prediction",
+      "type": "string"
+    },
+    "kill_rule": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Kill Rule",
+      "type": "string"
+    },
+    "information_value": {
+      "default": 3,
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Information Value",
+      "type": "integer"
+    },
+    "impact": {
+      "default": 3,
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Impact",
+      "type": "integer"
+    },
+    "feasibility": {
+      "default": 4,
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Feasibility",
+      "type": "integer"
+    },
+    "cost_score": {
+      "default": 5,
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Cost Score",
+      "type": "integer"
+    },
+    "priority_reason": {
+      "default": "Director-defined priority",
+      "maxLength": 2000,
+      "title": "Priority Reason",
+      "type": "string"
+    },
+    "tradeoff_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Tradeoff Ids",
+      "type": "array"
+    },
+    "refinement_of": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Refinement Of"
+    },
+    "refinement_reason": {
+      "anyOf": [
+        {
+          "maxLength": 2000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Refinement Reason"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "title",
+    "hypothesis_ids",
+    "capability",
+    "args",
+    "control",
+    "treatment",
+    "prediction",
+    "kill_rule"
+  ],
+  "title": "ExperimentInput",
+  "type": "object"
+}

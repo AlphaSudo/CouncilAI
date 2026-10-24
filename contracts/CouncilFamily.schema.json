@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "minLength": 3,
+      "title": "Name",
+      "type": "string"
+    },
+    "mechanism": {
+      "minLength": 3,
+      "title": "Mechanism",
+      "type": "string"
+    },
+    "refs": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Refs",
+      "type": "array"
+    },
+    "assumptions": {
+      "minLength": 3,
+      "title": "Assumptions",
+      "type": "string"
+    },
+    "resources": {
+      "minLength": 3,
+      "title": "Resources",
+      "type": "string"
+    },
+    "distinguishing_test": {
+      "minLength": 3,
+      "title": "Distinguishing Test",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "mechanism",
+    "refs",
+    "assumptions",
+    "resources",
+    "distinguishing_test"
+  ],
+  "title": "CouncilFamily",
+  "type": "object"
+}

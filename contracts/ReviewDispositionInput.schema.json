@@ -1,0 +1,48 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "finding_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Finding Id",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "unresolved",
+        "rebutted",
+        "confirmed_defect",
+        "accepted_risk"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "reason": {
+      "maxLength": 2000,
+      "minLength": 10,
+      "title": "Reason",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 16,
+      "title": "Evidence Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "finding_id",
+    "status",
+    "reason"
+  ],
+  "title": "ReviewDispositionInput",
+  "type": "object"
+}

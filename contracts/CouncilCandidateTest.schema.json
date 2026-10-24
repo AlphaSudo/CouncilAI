@@ -1,0 +1,39 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "minLength": 3,
+      "title": "Method",
+      "type": "string"
+    },
+    "disconfirming_outcome": {
+      "minLength": 3,
+      "title": "Disconfirming Outcome",
+      "type": "string"
+    },
+    "baseline": {
+      "minLength": 3,
+      "title": "Baseline",
+      "type": "string"
+    },
+    "threshold_basis": {
+      "minLength": 3,
+      "title": "Threshold Basis",
+      "type": "string"
+    },
+    "limitations": {
+      "minLength": 1,
+      "title": "Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "method",
+    "disconfirming_outcome",
+    "baseline",
+    "threshold_basis",
+    "limitations"
+  ],
+  "title": "CouncilCandidateTest",
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "token": {
+      "maxLength": 200,
+      "minLength": 32,
+      "title": "Token",
+      "type": "string"
+    }
+  },
+  "required": [
+    "token"
+  ],
+  "title": "SessionInput",
+  "type": "object"
+}

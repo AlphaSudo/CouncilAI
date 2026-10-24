@@ -1,0 +1,25 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "text": {
+      "maxLength": 1000,
+      "minLength": 3,
+      "title": "Text",
+      "type": "string"
+    },
+    "kind": {
+      "default": "hard",
+      "enum": [
+        "hard",
+        "soft"
+      ],
+      "title": "Kind",
+      "type": "string"
+    }
+  },
+  "required": [
+    "text"
+  ],
+  "title": "ReviewConstraint",
+  "type": "object"
+}

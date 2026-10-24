@@ -1,0 +1,42 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {
+      "title": "Claim Id",
+      "type": "string"
+    },
+    "claim_revision": {
+      "minimum": 1,
+      "title": "Claim Revision",
+      "type": "integer"
+    },
+    "outcome": {
+      "enum": [
+        "attack_did_not_defeat_claim",
+        "uncertain"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    },
+    "reason": {
+      "title": "Reason",
+      "type": "string"
+    },
+    "applicable_lenses": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 6,
+      "title": "Applicable Lenses",
+      "type": "array"
+    }
+  },
+  "required": [
+    "claim_id",
+    "claim_revision",
+    "outcome",
+    "reason"
+  ],
+  "title": "FalsificationNote",
+  "type": "object"
+}

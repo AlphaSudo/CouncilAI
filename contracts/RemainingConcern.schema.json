@@ -1,0 +1,46 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "enum": [
+        "contradiction",
+        "missing_evidence",
+        "condition",
+        "operational_limitation",
+        "residual_risk",
+        "new_issue"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "detail": {
+      "maxLength": 180,
+      "minLength": 3,
+      "title": "Detail",
+      "type": "string"
+    },
+    "affected_scope": {
+      "maxLength": 120,
+      "minLength": 3,
+      "title": "Affected Scope",
+      "type": "string"
+    },
+    "materiality": {
+      "enum": [
+        "decision_changing",
+        "ordinary",
+        "unknown"
+      ],
+      "title": "Materiality",
+      "type": "string"
+    }
+  },
+  "required": [
+    "kind",
+    "detail",
+    "affected_scope",
+    "materiality"
+  ],
+  "title": "RemainingConcern",
+  "type": "object"
+}

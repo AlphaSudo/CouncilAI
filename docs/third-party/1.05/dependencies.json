@@ -1,0 +1,81 @@
+{
+  "scope": "Runtime dependencies adopted for bounded CPU document extraction and process monitoring. Agent repository mechanisms were studied; no agent runtime source code was copied.",
+  "packages": [
+    {
+      "name": "beautifulsoup4",
+      "version": "4.15.0",
+      "license": "MIT License",
+      "source": "https://pypi.org/project/beautifulsoup4/4.15.0/",
+      "notices": [
+        {
+          "path": "docs/third-party/1.05/beautifulsoup4/fe1fe5fc-LICENSE",
+          "sha256": "55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2"
+        }
+      ]
+    },
+    {
+      "name": "pypdf",
+      "version": "6.21.1",
+      "license": "BSD-3-Clause",
+      "source": "https://pypi.org/project/pypdf/6.21.1/",
+      "notices": [
+        {
+          "path": "docs/third-party/1.05/pypdf/10e5ebd2-LICENSE",
+          "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+        }
+      ]
+    },
+    {
+      "name": "python-docx",
+      "version": "1.2.0",
+      "license": "MIT",
+      "source": "https://pypi.org/project/python-docx/1.2.0/",
+      "notices": [
+        {
+          "path": "docs/third-party/1.05/python-docx/5af0446e-LICENSE",
+          "sha256": "7652f271e46d0d533e9dc463f3b5fcbdcacf4d6a9c8d6b554d15efd0f37f6132"
+        }
+      ]
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "license": "BSD-3-Clause",
+      "source": "https://pypi.org/project/psutil/7.2.2/",
+      "notices": [
+        {
+          "path": "docs/third-party/1.05/psutil/7d70cfb6-LICENSE",
+          "sha256": "c7adc4d5d1337a548b967421f1fbe258b93033a0417708fd6f4e38f8ecbceb80"
+        }
+      ]
+    },
+    {
+      "name": "soupsieve",
+      "version": "2.10",
+      "license": "MIT",
+      "source": "https://pypi.org/project/soupsieve/2.10/",
+      "notices": [
+        {
+          "path": "docs/third-party/1.05/soupsieve/b84ec6e0-LICENSE.md",
+          "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a"
+        }
+      ]
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.3",
+      "license": "BSD-3-Clause",
+      "source": "https://pypi.org/project/lxml/6.1.3/",
+      "notices": [
+        {
+          "path": "docs/third-party/1.05/lxml/792e684e-LICENSE.txt",
+          "sha256": "e7c3ce8d76331b0101cc46790ab43958ea90a364bcf962ed8763d5a818340e69"
+        },
+        {
+          "path": "docs/third-party/1.05/lxml/088fcc0a-LICENSES.txt",
+          "sha256": "df682c668de65321677b5e4861dca4128a8bad8067f230956e9da3f985b3d398"
+        }
+      ]
+    }
+  ]
+}

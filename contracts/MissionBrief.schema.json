@@ -1,0 +1,195 @@
+{
+  "$defs": {
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 16000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "provenance": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "provenance"
+      ],
+      "title": "Source",
+      "type": "object"
+    },
+    "StepSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "key": {
+          "maxLength": 60,
+          "minLength": 1,
+          "title": "Key",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "depends_on": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Depends On",
+          "type": "array"
+        }
+      },
+      "required": [
+        "key",
+        "title"
+      ],
+      "title": "StepSpec",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "maxLength": 160,
+      "minLength": 3,
+      "title": "Title",
+      "type": "string"
+    },
+    "goal": {
+      "maxLength": 6000,
+      "minLength": 10,
+      "title": "Goal",
+      "type": "string"
+    },
+    "deliverable": {
+      "maxLength": 2000,
+      "minLength": 5,
+      "title": "Deliverable",
+      "type": "string"
+    },
+    "constraints": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Constraints",
+      "type": "array"
+    },
+    "rubric": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Rubric",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "maxItems": 30,
+      "title": "Sources",
+      "type": "array"
+    },
+    "steps": {
+      "items": {
+        "$ref": "#/$defs/StepSpec"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Steps",
+      "type": "array"
+    },
+    "primary_metric": {
+      "default": "cost_per_valid_task",
+      "title": "Primary Metric",
+      "type": "string"
+    },
+    "budget_usd": {
+      "default": 1,
+      "maximum": 24,
+      "minimum": 0,
+      "title": "Budget Usd",
+      "type": "number"
+    },
+    "latency_limit_ms": {
+      "default": 60000,
+      "exclusiveMinimum": 0,
+      "maximum": 600000,
+      "title": "Latency Limit Ms",
+      "type": "number"
+    },
+    "material_saving": {
+      "default": 0.1,
+      "exclusiveMaximum": 1,
+      "minimum": 0,
+      "title": "Material Saving",
+      "type": "number"
+    },
+    "mode": {
+      "default": "fixture",
+      "enum": [
+        "fixture",
+        "live"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "openrouter_model": {
+      "anyOf": [
+        {
+          "enum": [
+            "nvidia/nemotron-3-super-120b-a12b:free",
+            "nvidia/nemotron-3.5-super-vl:free",
+            "google/gemma-4-31b-it:free",
+            "xingchen-agi/xing4.0-29b-a4b:free",
+            "nvidia/nemotron-3.5-lightning:free"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Openrouter Model"
+    },
+    "provider": {
+      "default": "nebius_token_factory",
+      "enum": [
+        "nebius_token_factory",
+        "openrouter_free",
+        "direct_council"
+      ],
+      "title": "Provider",
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "goal",
+    "deliverable",
+    "constraints",
+    "rubric",
+    "steps"
+  ],
+  "title": "MissionBrief",
+  "type": "object"
+}

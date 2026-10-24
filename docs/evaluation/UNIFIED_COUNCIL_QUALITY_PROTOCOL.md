@@ -1,0 +1,17 @@
+# Unified Council quality evaluation
+
+Protocol: `generic-quality-pilot-v3`. Status: **study frozen; paired outputs and independent human labels pending**.
+
+The [held-out manifest](../../benchmark/council_103_heldout_tasks.json) contains four authored task pairs in software resources, document analysis, quantitative reasoning and planning. Its task-set hash is `08ad5ef3af687c4188fcc93ebda57937db4e867bb694a43d55f0be9dedd6cd85`. Each question and evidence packet has a separate hash. The live queue smoke, N4 candidate excerpts and fifteen development cases are excluded from this held-out study. Do not tune against subsequently collected held-out outputs or labels.
+
+The [study template](../../benchmark/council_103_quality_template.json) freezes exact configured model identities, baseline/current prompt versions and the matched-call treatment. Collect each pair using the same task, supplied evidence and selected model identities. Record actual participation, reassignments, failures, latency, tokens, nullable reported cost and raw exports. Alternate arm order where practical and preserve its record. Changes to frozen models/prompts/tasks require a new declared study version.
+
+The baseline and current base schedules each use `2N + 4` successful calls. Four four-model pairs plan 96 successful calls and up to 24 recovery attempts. Preserve the existing daily 100-attempt limit, prior usage and all upstream/funding gates; spread collection across available daily windows. The scorer dispatches nothing. A smaller pilot must be declared before examining its labels. Optional focused exchanges are a separately declared treatment; their additional calls and latency cannot be attributed solely to better prompts or policy.
+
+Use qualified independent human reviewers and blind arm/model labels where practical. Acknowledge that transcript structure may reveal the arm. Record reviewer qualifications, uncertainty and disagreement. The software can record a human-origin declaration; it cannot authenticate independence. Another model's scores or authored development expectations do not become independent labels.
+
+Retain failed, partial and unlabelled runs. Count material assertions and valid/defective controls before reporting rates. Label source fidelity, coverage, valid proposals retained, unnecessary rejection, material defects missed, false closures, observation provenance, candidate-test validity, final faithfulness and direct usefulness. Critical failures include invented execution, concealed hard-constraint violations, false verification and omission of a material defect from the final answer.
+
+Predeclared descriptive acceptance: no observed critical failure in the labelled sample, positive paired median usefulness, and no increase in unsupported-as-established or material false-closure rates at matched calls. Otherwise report failure or inconclusive evidence. Four pairs do not establish statistical significance or universal superiority. Existing independent-quality gates remain open until the actual evidence exists.
+
+Run `python scripts/summarize_review_quality.py benchmark/council_103_quality_template.json` offline. The empty manifest returns `independent_quality_pending`, zero supplied human records and null accuracy/recall rates. This is missing evaluation, not zero measured accuracy. The scorer does not alter publication permissions, provider settings or budget counters.

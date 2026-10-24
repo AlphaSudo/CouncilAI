@@ -1,0 +1,44 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "method": {
+      "maxLength": 180,
+      "minLength": 3,
+      "title": "Method",
+      "type": "string"
+    },
+    "disconfirming_outcome": {
+      "maxLength": 140,
+      "minLength": 3,
+      "title": "Disconfirming Outcome",
+      "type": "string"
+    },
+    "baseline": {
+      "maxLength": 120,
+      "minLength": 3,
+      "title": "Baseline",
+      "type": "string"
+    },
+    "threshold_basis": {
+      "maxLength": 120,
+      "minLength": 3,
+      "title": "Threshold Basis",
+      "type": "string"
+    },
+    "limitations": {
+      "maxLength": 160,
+      "minLength": 3,
+      "title": "Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "method",
+    "disconfirming_outcome",
+    "baseline",
+    "threshold_basis",
+    "limitations"
+  ],
+  "title": "CandidateTest",
+  "type": "object"
+}

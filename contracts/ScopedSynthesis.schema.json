@@ -1,0 +1,97 @@
+{
+  "$defs": {
+    "ScopedAnswerBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "section": {
+          "enum": [
+            "direct_answer",
+            "supported",
+            "conditional",
+            "unresolved",
+            "withdrawn",
+            "next_tests"
+          ],
+          "title": "Section",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 2000,
+          "minLength": 3,
+          "title": "Text",
+          "type": "string"
+        },
+        "claim_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "minItems": 1,
+          "title": "Claim Ids",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "claim_revisions": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Claim Revisions",
+          "type": "array"
+        },
+        "issue_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Issue Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "section",
+        "text",
+        "claim_ids",
+        "claim_revisions"
+      ],
+      "title": "ScopedAnswerBlock",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "answer_disposition": {
+      "enum": [
+        "recommendation",
+        "conditional_choice",
+        "comparison_only",
+        "no_justified_decision"
+      ],
+      "title": "Answer Disposition",
+      "type": "string"
+    },
+    "blocks": {
+      "items": {
+        "$ref": "#/$defs/ScopedAnswerBlock"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Blocks",
+      "type": "array"
+    }
+  },
+  "required": [
+    "answer_disposition",
+    "blocks"
+  ],
+  "title": "ScopedSynthesis",
+  "type": "object"
+}

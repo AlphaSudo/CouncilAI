@@ -1,0 +1,7 @@
+{
+  "protocol_version": "generic-quality-pilot-v2",
+  "dataset_frozen_before_labels": true,
+  "task_set_hash": "5763ef3b5e4eef4fbad48e1fa74c5f7ffdf3d90dbafc842717425963028fdc63",
+  "qualification_notes": "Eight candidate task pairs are frozen. No outputs or independent human labels have been collected. No inference is dispatched by the scorer.",
+  "pairs": []
+}

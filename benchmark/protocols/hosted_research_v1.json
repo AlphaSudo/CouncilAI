@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "method": "paired-task-v1",
+  "exploration_tasks": 4,
+  "confirmation_tasks": 8,
+  "repeats_default": 1,
+  "repeats_maximum": 3,
+  "seed": 1701,
+  "ordering": "Seeded shuffled task blocks; Latin rotation of four cells within each task.",
+  "client_concurrency": 1,
+  "primary_metric": "cost_per_valid_task",
+  "material_saving_default": 0.1,
+  "latency_limit_ms_default": 60000,
+  "quality": "Required-case non-regression and separate human rubric linked to actual measured evidence.",
+  "uncertainty": "2000 seeded task-cluster bootstrap replicates; intervals only with at least 8 independent tasks.",
+  "confirmation_cost_gate": "The lower 95% task-cluster bootstrap saving bound must meet the frozen materiality threshold; undefined ratios or crossing intervals remain unknown.",
+  "interaction_scale": "log(C11)-log(C10)-log(C01)+log(C00), positive comparable costs only",
+  "missing_cost": "Retain maximum reservation; mark comparison incomplete/invalid.",
+  "missing_blocks": "Invalid comparison; retain all attempted results and do not rerun to obtain a favorable outcome.",
+  "budget": "Reserve the whole worst-case schedule including possible escalations before dispatch.",
+  "live_status": "Locked by director instruction pending actual billing and price verification.",
+  "hardware_metrics": "Unobserved; never infer bandwidth, power, kernels or physical runtime controls from API timings."
+}

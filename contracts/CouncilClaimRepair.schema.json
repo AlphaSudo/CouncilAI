@@ -1,0 +1,74 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "claim_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Claim Id",
+      "type": "string"
+    },
+    "claim_revision": {
+      "minimum": 1,
+      "title": "Claim Revision",
+      "type": "integer"
+    },
+    "finding_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 16,
+      "title": "Finding Ids",
+      "type": "array"
+    },
+    "action": {
+      "enum": [
+        "retain",
+        "rebut",
+        "narrow",
+        "revise",
+        "withdraw"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "response": {
+      "minLength": 3,
+      "title": "Response",
+      "type": "string"
+    },
+    "revised_text": {
+      "title": "Revised Text",
+      "type": "string"
+    },
+    "revised_assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "title": "Revised Assumptions",
+      "type": "array"
+    },
+    "remaining_uncertainty": {
+      "minLength": 1,
+      "title": "Remaining Uncertainty",
+      "type": "string"
+    },
+    "revised_scope": {
+      "minLength": 3,
+      "title": "Revised Scope",
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_id",
+    "claim_revision",
+    "finding_ids",
+    "action",
+    "response",
+    "revised_text",
+    "remaining_uncertainty",
+    "revised_scope"
+  ],
+  "title": "CouncilClaimRepair",
+  "type": "object"
+}

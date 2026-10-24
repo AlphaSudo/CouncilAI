@@ -1,0 +1,137 @@
+{
+  "$defs": {
+    "ReviewConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 1000,
+          "minLength": 3,
+          "title": "Text",
+          "type": "string"
+        },
+        "kind": {
+          "default": "hard",
+          "enum": [
+            "hard",
+            "soft"
+          ],
+          "title": "Kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "ReviewConstraint",
+      "type": "object"
+    },
+    "ReviewOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "deliverable": {
+          "default": "A useful answer with explicit assumptions and evidence limits.",
+          "maxLength": 2000,
+          "minLength": 3,
+          "title": "Deliverable",
+          "type": "string"
+        },
+        "constraints": {
+          "items": {
+            "$ref": "#/$defs/ReviewConstraint"
+          },
+          "maxItems": 20,
+          "title": "Constraints",
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/Source"
+          },
+          "maxItems": 4,
+          "title": "Sources",
+          "type": "array"
+        },
+        "baseline": {
+          "default": "Unspecified",
+          "maxLength": 2000,
+          "title": "Baseline",
+          "type": "string"
+        },
+        "success_criteria": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Success Criteria",
+          "type": "array"
+        },
+        "evidence_requirement": {
+          "default": "model_review",
+          "enum": [
+            "model_review",
+            "supplied_sources",
+            "scoped_tool_result"
+          ],
+          "title": "Evidence Requirement",
+          "type": "string"
+        }
+      },
+      "title": "ReviewOptions",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 16000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "provenance": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Provenance",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "provenance"
+      ],
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "question": {
+      "maxLength": 8000,
+      "minLength": 3,
+      "title": "Question",
+      "type": "string"
+    },
+    "options": {
+      "$ref": "#/$defs/ReviewOptions"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "question",
+    "options"
+  ],
+  "title": "ReviewContractChange",
+  "type": "object"
+}

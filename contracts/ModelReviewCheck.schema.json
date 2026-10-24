@@ -1,0 +1,35 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "maxLength": 40,
+      "minLength": 3,
+      "pattern": "^[a-z][a-z_ -]+$",
+      "title": "Category",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "fail",
+        "unknown",
+        "not_applicable"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "reason": {
+      "maxLength": 700,
+      "minLength": 3,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "category",
+    "status",
+    "reason"
+  ],
+  "title": "ModelReviewCheck",
+  "type": "object"
+}

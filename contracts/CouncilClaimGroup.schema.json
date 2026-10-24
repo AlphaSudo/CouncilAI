@@ -1,0 +1,35 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "refs": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "minItems": 2,
+      "title": "Refs",
+      "type": "array"
+    },
+    "relation": {
+      "enum": [
+        "equivalent_as_assessed",
+        "related",
+        "conflicting"
+      ],
+      "title": "Relation",
+      "type": "string"
+    },
+    "reason": {
+      "minLength": 1,
+      "title": "Reason",
+      "type": "string"
+    }
+  },
+  "required": [
+    "refs",
+    "relation",
+    "reason"
+  ],
+  "title": "CouncilClaimGroup",
+  "type": "object"
+}

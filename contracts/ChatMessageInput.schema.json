@@ -1,0 +1,51 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "text": {
+      "maxLength": 8000,
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "review_protocol": {
+      "anyOf": [
+        {
+          "enum": [
+            "reviewed_v2",
+            "reviewed_v3",
+            "reviewed_v4"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Review Protocol"
+    },
+    "action": {
+      "default": "review",
+      "enum": [
+        "review",
+        "explain",
+        "challenge"
+      ],
+      "title": "Action",
+      "type": "string"
+    },
+    "claim_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 8,
+      "title": "Claim Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "text"
+  ],
+  "title": "ChatMessageInput",
+  "type": "object"
+}

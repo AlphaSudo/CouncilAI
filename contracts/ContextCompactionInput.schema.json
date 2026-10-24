@@ -1,0 +1,16 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "mode": {
+      "default": "compact",
+      "enum": [
+        "adaptive",
+        "compact"
+      ],
+      "title": "Mode",
+      "type": "string"
+    }
+  },
+  "title": "ContextCompactionInput",
+  "type": "object"
+}

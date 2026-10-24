@@ -1,0 +1,49 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "deliverable": {
+      "default": "answer",
+      "enum": [
+        "answer",
+        "explanation",
+        "comparison",
+        "ranked_approaches",
+        "plan"
+      ],
+      "title": "Deliverable",
+      "type": "string"
+    },
+    "requested_count": {
+      "anyOf": [
+        {
+          "maximum": 20,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Requested Count"
+    },
+    "criteria": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "title": "Criteria",
+      "type": "array"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 4,
+      "title": "Assumptions",
+      "type": "array"
+    }
+  },
+  "title": "CouncilOutputContract",
+  "type": "object"
+}

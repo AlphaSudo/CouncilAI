@@ -1,0 +1,33 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "bytes_moved": {
+      "exclusiveMinimum": 0,
+      "maximum": 1e+18,
+      "title": "Bytes Moved",
+      "type": "number"
+    },
+    "bandwidth_gbps": {
+      "exclusiveMinimum": 0,
+      "maximum": 1000000.0,
+      "title": "Bandwidth Gbps",
+      "type": "number"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Assumptions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "bytes_moved",
+    "bandwidth_gbps",
+    "assumptions"
+  ],
+  "title": "BoundArgs",
+  "type": "object"
+}

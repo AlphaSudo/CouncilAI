@@ -1,0 +1,234 @@
+{
+  "$defs": {
+    "CouncilAuditQuantity": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "pattern": "^[A-Za-z][A-Za-z0-9_]{0,23}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "default": "1",
+          "title": "Unit",
+          "type": "string"
+        },
+        "quantity_kind": {
+          "default": "number",
+          "title": "Quantity Kind",
+          "type": "string"
+        },
+        "basis": {
+          "minLength": 3,
+          "title": "Basis",
+          "type": "string"
+        },
+        "uncertainty": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Uncertainty"
+        }
+      },
+      "required": [
+        "name",
+        "basis"
+      ],
+      "title": "CouncilAuditQuantity",
+      "type": "object"
+    },
+    "CouncilResourceTerm": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "direction": {
+          "enum": [
+            "input",
+            "output",
+            "maintenance",
+            "static_requirement"
+          ],
+          "title": "Direction",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "unit": {
+          "default": "unknown",
+          "title": "Unit",
+          "type": "string"
+        },
+        "basis": {
+          "minLength": 3,
+          "title": "Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "direction",
+        "basis"
+      ],
+      "title": "CouncilResourceTerm",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "claim_ref": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Claim Ref",
+      "type": "string"
+    },
+    "source_unit_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Source Unit Ids",
+      "type": "array"
+    },
+    "kind": {
+      "enum": [
+        "calculation",
+        "resource",
+        "citation"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "scope": {
+      "minLength": 3,
+      "title": "Scope",
+      "type": "string"
+    },
+    "expression": {
+      "default": "",
+      "title": "Expression",
+      "type": "string"
+    },
+    "quantities": {
+      "items": {
+        "$ref": "#/$defs/CouncilAuditQuantity"
+      },
+      "maxItems": 8,
+      "title": "Quantities",
+      "type": "array"
+    },
+    "output_unit": {
+      "default": "1",
+      "title": "Output Unit",
+      "type": "string"
+    },
+    "output_kind": {
+      "default": "number",
+      "title": "Output Kind",
+      "type": "string"
+    },
+    "expected_value": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Value"
+    },
+    "absolute_tolerance": {
+      "default": "0",
+      "title": "Absolute Tolerance",
+      "type": "string"
+    },
+    "boundary": {
+      "default": "",
+      "title": "Boundary",
+      "type": "string"
+    },
+    "denominator": {
+      "default": "",
+      "title": "Denominator",
+      "type": "string"
+    },
+    "numerator": {
+      "default": "",
+      "title": "Numerator",
+      "type": "string"
+    },
+    "is_ratio": {
+      "default": false,
+      "title": "Is Ratio",
+      "type": "boolean"
+    },
+    "resources": {
+      "items": {
+        "$ref": "#/$defs/CouncilResourceTerm"
+      },
+      "maxItems": 8,
+      "title": "Resources",
+      "type": "array"
+    },
+    "missing_terms": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "title": "Missing Terms",
+      "type": "array"
+    },
+    "reference": {
+      "default": "",
+      "title": "Reference",
+      "type": "string"
+    },
+    "claimed_support": {
+      "default": "",
+      "title": "Claimed Support",
+      "type": "string"
+    }
+  },
+  "required": [
+    "claim_ref",
+    "source_unit_ids",
+    "kind",
+    "scope"
+  ],
+  "title": "CouncilAuditDescriptor",
+  "type": "object"
+}

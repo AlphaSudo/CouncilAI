@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-23",
+  "policy_source": "user_instruction",
+  "provider": "nebius_token_factory",
+  "base_url": "https://api.tokenfactory.nebius.com/v1/",
+  "priority_order": [
+    "nvidia/Nemotron-3.5-Super-VL",
+    "reflection/beam",
+    "nvidia/Nemotron-3_5-Lightning",
+    "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "zai-org/GLM-5.3-Flash"
+  ],
+  "council_default_models": [
+    "nvidia/Nemotron-3.5-Super-VL",
+    "reflection/beam",
+    "deepseek-ai/DeepSeek-V4-Flash-0731"
+  ],
+  "council_model_notices": {
+    "nvidia/Nemotron-3_5-Lightning": "Optional: observed startup waits exceeded one minute, including requests that timed out. Leave unselected for a faster council."
+  },
+  "optional_models": [
+    {
+      "priority": 4,
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "enabled": true,
+      "activation": "explicit_director_instruction_2026_10_21"
+    }
+  ],
+  "preserve_user_priority": true,
+  "allow_unlisted_models": false,
+  "require_verified_nvidia_runtime_use_for_submission": true,
+  "default_modalities": [
+    "text"
+  ],
+  "council_seat_assignment": null,
+  "pricing_manifest_path": "benchmark/model_manifest.json",
+  "live_inference_enabled": false,
+  "budget": {
+    "max_authorized_existing_credit_usd": 24.0,
+    "max_additional_personal_payments_usd": 0.0,
+    "require_pre_dispatch_reservation": true,
+    "require_verified_credit_and_billing": true,
+    "require_verified_prices_and_request_bounds": true,
+    "reserve_ambiguous_attempts_until_reconciled": true
+  },
+  "retired_council_models": [
+    "zai-org/GLM-5.3-Flash"
+  ],
+  "authorized_model_replacements": {
+    "zai-org/GLM-5.3-Flash": "reflection/beam"
+  },
+  "council_model_names": {
+    "reflection/beam": "Reflection Beam"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "protocol_version": "generic-quality-pilot-v1",
+  "dataset_frozen_before_labels": true,
+  "qualification_notes": "Pending: choose representative unseen tasks, freeze question/source/model identities, and record qualified independent human reviewers before collecting labels. No semantic scores are supplied yet.",
+  "pairs": []
+}

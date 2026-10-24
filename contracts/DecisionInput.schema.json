@@ -1,0 +1,96 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "conclusion": {
+      "maxLength": 5000,
+      "minLength": 10,
+      "title": "Conclusion",
+      "type": "string"
+    },
+    "verdict": {
+      "enum": [
+        "confirmed",
+        "rejected",
+        "inconclusive",
+        "invalid"
+      ],
+      "title": "Verdict",
+      "type": "string"
+    },
+    "agreement": {
+      "enum": [
+        "strong_consensus",
+        "conditional_consensus",
+        "majority_with_dissent",
+        "unresolved"
+      ],
+      "title": "Agreement",
+      "type": "string"
+    },
+    "alternatives": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Alternatives",
+      "type": "array"
+    },
+    "reasons": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Reasons",
+      "type": "array"
+    },
+    "dissent": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Dissent",
+      "type": "array"
+    },
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Assumptions",
+      "type": "array"
+    },
+    "reopen_triggers": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Reopen Triggers",
+      "type": "array"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "conclusion",
+    "verdict",
+    "agreement",
+    "alternatives",
+    "reasons",
+    "assumptions",
+    "reopen_triggers",
+    "evidence_ids"
+  ],
+  "title": "DecisionInput",
+  "type": "object"
+}

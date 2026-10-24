@@ -1,0 +1,53 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_message_id": {
+      "maxLength": 80,
+      "minLength": 1,
+      "title": "Source Message Id",
+      "type": "string"
+    },
+    "source_unit_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Source Unit Ids",
+      "type": "array"
+    },
+    "category": {
+      "enum": [
+        "approach",
+        "quantity",
+        "equation",
+        "citation",
+        "constraint",
+        "other"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "description": {
+      "minLength": 3,
+      "title": "Description",
+      "type": "string"
+    },
+    "claim_refs": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Claim Refs",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source_message_id",
+    "source_unit_ids",
+    "category",
+    "description"
+  ],
+  "title": "CouncilInventoryItem",
+  "type": "object"
+}

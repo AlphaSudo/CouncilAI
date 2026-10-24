@@ -1,0 +1,1057 @@
+{
+  "checked_at": "2026-10-19T20:41:55.516600+00:00",
+  "method": "Read-only GitHub API metadata and recursive tree; no install or repository code execution. File inspection is recorded separately.",
+  "repositories": [
+    {
+      "requested": "anomalyco/opencode",
+      "repository": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "branch": "dev",
+      "commit": "6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685",
+      "license": "MIT",
+      "archived": false,
+      "tree_entries": 9520,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/README.md",
+          "sha256": "977e6c3f56bca4e93c44309dc61fa3988d43913ee8b747a47af2e9717b8b86f6",
+          "lines": 125,
+          "bytes": 5123,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "packages/schema/src/token-usage.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/schema/src/token-usage.ts",
+          "sha256": "37f23386677d5f6e067fbe47ce7a459ab29b8e7486981cea8057e4a964760a5f",
+          "lines": 18,
+          "bytes": 527,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/session/usage.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/core/src/session/usage.ts",
+          "sha256": "5f1170254680925b75239302025e0e84e3c6ea4dcc84294b3e4e6072ceceaf8d",
+          "lines": 56,
+          "bytes": 2195,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/tool/plugin/webfetch.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/core/src/tool/plugin/webfetch.ts",
+          "sha256": "6c3a07060f1b4576200e0a8f1f9fe1e0167cd503c10f3e4bfe964b4948dc5514",
+          "lines": 189,
+          "bytes": 7623,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/tool/plugin/websearch.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/core/src/tool/plugin/websearch.ts",
+          "sha256": "767998167bc3ca1140f86d573e3bd2839068bef9b8c331a4b8ca1421bf503800",
+          "lines": 196,
+          "bytes": 8905,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/ai/src/cache-policy.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/ai/src/cache-policy.ts",
+          "sha256": "3237968fd83c2a1293d9c345106fa0be8165247a34b60be9b512983089d10893",
+          "lines": 199,
+          "bytes": 8749,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/session/compaction.ts",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/core/src/session/compaction.ts",
+          "sha256": "4d54e91499edb8542892df2a7ece6105f7e43c4757e2eaa685fdec5ac294be97",
+          "lines": 1022,
+          "bytes": 47511,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/LICENSE",
+          "sha256": "625f0f619133f89bbbb2abe37369613dfa1885eba1e50d02170deb62bb42cb6b",
+          "lines": 21,
+          "bytes": 1065,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "deepseek-ai/deepseek-harness",
+      "repository": "deepseek-ai/deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "branch": "master",
+      "commit": "687f282e8625c6b8d11ff58211a90524be2e4317",
+      "license": "MIT",
+      "archived": false,
+      "tree_entries": 18758,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/README.md",
+          "sha256": "0f5516be2acde776f05572cbc8c3093c90549afe04ce118e11157d073d5d15f4",
+          "lines": 77,
+          "bytes": 2673,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "packages/compaction/compaction-tool-result-pruner/src/index.ts",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/packages/compaction/compaction-tool-result-pruner/src/index.ts",
+          "sha256": "2890f336ca42f9d8259794eebbc4a9423f69a7394c41796b9981216ed29ed536",
+          "lines": 185,
+          "bytes": 7301,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/web/web-fetch-http/src/policy.ts",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/packages/web/web-fetch-http/src/policy.ts",
+          "sha256": "dd53d2c6d462e53d891da289e5595ebb0563385ec07c6339e6d8ba3a8f38373a",
+          "lines": 118,
+          "bytes": 4840,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/compaction/compaction-basic/src/region.ts",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/packages/compaction/compaction-basic/src/region.ts",
+          "sha256": "295b53cc9e924f7cb2e843e0d0d296e89ead73da2aab9790282db30736e2e063",
+          "lines": 600,
+          "bytes": 23571,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "packages/web/web-search-deepseek/README.md",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/packages/web/web-search-deepseek/README.md",
+          "sha256": "22db47e0aebc75438c19ce58d13e2033e0ef18b9ebb1561f2dd0d6eb29756284",
+          "lines": 177,
+          "bytes": 13799,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/LICENSE",
+          "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+          "lines": 21,
+          "bytes": 1065,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "zai-org/ZCode",
+      "repository": "zai-org/ZCode",
+      "url": "https://github.com/zai-org/ZCode",
+      "branch": "main",
+      "commit": "0a1fc56d279fd1001f78387bd81aec1c26767411",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_entries": 19332,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.en.md",
+          "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/README.en.md",
+          "sha256": "3e8d4528f13877dbc33d3f2b9ece28e19df780f572ff0d17e68fb9dc007249b0",
+          "lines": 221,
+          "bytes": 12815,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "apps/zcode-cli/docs/design/v2/model/token-usage.md",
+          "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/docs/design/v2/model/token-usage.md",
+          "sha256": "20b000e1a586d6b67c763dd8b37a2495eef4999025c5ec361bde504a10509f0f",
+          "lines": 103,
+          "bytes": 5304,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "apps/zcode-cli/packages/core/src/runtime/methods/usage-observability.ts",
+          "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/packages/core/src/runtime/methods/usage-observability.ts",
+          "sha256": "9eac4bf60ce3dc6cf797fa726af7d1b652763ee7848728f32083b8a08efce54b",
+          "lines": 428,
+          "bytes": 14397,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "apps/zcode-cli/packages/core/src/tool/handlers/webfetch-cache.ts",
+          "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/packages/core/src/tool/handlers/webfetch-cache.ts",
+          "sha256": "cddeeeb6404856f20149c7ef433d5209d2a734cbbe7b2de0794063857e646285",
+          "lines": 58,
+          "bytes": 1466,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "apps/zcode-cli/packages/core/src/tool/handlers/webfetch-egress-guard.ts",
+          "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/packages/core/src/tool/handlers/webfetch-egress-guard.ts",
+          "sha256": "c94b5d6d18a945168f6af5dc78bbf30d32af051fb46cca5521d96533f363868e",
+          "lines": 107,
+          "bytes": 4155,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "apps/zcode-cli/docs/design/v2/session-persistence.md",
+          "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/docs/design/v2/session-persistence.md",
+          "sha256": "c90759b285c397f07f54814207a421b633dae1142461289a918173f35698154b",
+          "lines": 616,
+          "bytes": 29827,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/LICENSE",
+          "sha256": "606c36baf38b973227273df12a74930e4b4137280eea835c5cd623aa4553c13b",
+          "lines": 202,
+          "bytes": 11344,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "xai-org/grok-build",
+      "repository": "xai-org/grok-build",
+      "url": "https://github.com/xai-org/grok-build",
+      "branch": "main",
+      "commit": "2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_entries": 5102,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/README.md",
+          "sha256": "322066de9f5bc136295bd0ae4f1752cef3d8dcb1a8f9d88044609e7b6d7abcf7",
+          "lines": 140,
+          "bytes": 5757,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "crates/codegen/xai-chat-state/src/usage.rs",
+          "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-chat-state/src/usage.rs",
+          "sha256": "58c6d484ba570ff8c3b2e8a104a948efb187cbaf1846940dc9a43daa8c8fd7f9",
+          "lines": 202,
+          "bytes": 7494,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "crates/codegen/xai-grok-agent/src/compaction.rs",
+          "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-grok-agent/src/compaction.rs",
+          "sha256": "b7cc13eb2620216e605a02490e2ece645d5c741119b4cd94f09fcbf4337fec20",
+          "lines": 35,
+          "bytes": 1518,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/LICENSE",
+          "sha256": "116f7778b9802e569b7fa3a532b17bd80eb13c67837def01eed093d4ea472f28",
+          "lines": 204,
+          "bytes": 11388,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "MiniMax-AI/Mini-Agent",
+      "repository": "MiniMax-AI/Mini-Agent",
+      "url": "https://github.com/MiniMax-AI/Mini-Agent",
+      "branch": "main",
+      "commit": "d76a4f6389688cabda39c224a6cdfa274215d47c",
+      "license": "MIT",
+      "archived": false,
+      "tree_entries": 430,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/README.md",
+          "sha256": "c009604bae5e5fb03e1b354c5478c21a21d713ee1b0ec083abfbac1820d58c72",
+          "lines": 344,
+          "bytes": 11424,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "mini_agent/agent.py",
+          "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/mini_agent/agent.py",
+          "sha256": "9ccc70cbefd670b36d4fd5d946229bffa9b5c1b4b0f1428f28204517e7ba7c7e",
+          "lines": 523,
+          "bytes": 21719,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "mini_agent/tools/note_tool.py",
+          "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/mini_agent/tools/note_tool.py",
+          "sha256": "13c2d1e43ffdc314193b9f232292579c4d085bcb5332524498fc45f07ddacc80",
+          "lines": 213,
+          "bytes": 6733,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "mini_agent/tools/base.py",
+          "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/mini_agent/tools/base.py",
+          "sha256": "1df6aea00955ea8b4ca0911d3e5f09210db6eb67f8d5b2f28b65887e54b3c1f0",
+          "lines": 55,
+          "bytes": 1378,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "mini_agent/retry.py",
+          "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/mini_agent/retry.py",
+          "sha256": "7fbd03e762f1e799b3c49388528043746b342e1832b32a8c7afc94891ff6cb62",
+          "lines": 138,
+          "bytes": 4365,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/LICENSE",
+          "sha256": "b64291e2472d01b525168e9118243465a0d9bf07315480c69629cfc3eae53025",
+          "lines": 22,
+          "bytes": 1065,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "earendil-works/pi",
+      "repository": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "branch": "main",
+      "commit": "0ed1b0431444f1e9321c5cf3a9e0acd04da11f89",
+      "license": "MIT",
+      "archived": false,
+      "tree_entries": 2168,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/README.md",
+          "sha256": "69cb1e626257bd68d041f05513815e426717a843ddc0e7706802865ec7fd898c",
+          "lines": 206,
+          "bytes": 10635,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "packages/ai/src/types.ts",
+          "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/ai/src/types.ts",
+          "sha256": "2a48985ce8f4c1710f1e107433e8cc23ba32cf03a1bd5e53565137c887a6f7c3",
+          "lines": 898,
+          "bytes": 31972,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/agent/src/agent-loop.ts",
+          "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/agent/src/agent-loop.ts",
+          "sha256": "28a2b03e34a7e32f004aa851e54d3b5be9dad71c392205614cbc9abdf3a9020a",
+          "lines": 949,
+          "bytes": 29513,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/coding-agent/docs/compaction.md",
+          "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/coding-agent/docs/compaction.md",
+          "sha256": "b5b23d10bb86d8ab32b67f80a7e57febd953222c6da6fd422ae91d232ef28faf",
+          "lines": 463,
+          "bytes": 24093,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/coding-agent/src/core/session-manager.ts",
+          "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/coding-agent/src/core/session-manager.ts",
+          "sha256": "450d82c529933214e088b8422f00061815e617f352f6c834689787a314064bff",
+          "lines": 2013,
+          "bytes": 63809,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/LICENSE",
+          "sha256": "0457f5bcec3b3b211605dfb5d1a49042fd638f3686a410fe099c24a25af13c48",
+          "lines": 21,
+          "bytes": 1069,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "can1357/oh-my-pi",
+      "repository": "can1357/oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "branch": "main",
+      "commit": "53a0377db6845e0dae606146130766ec92d407fd",
+      "license": "MIT",
+      "archived": false,
+      "tree_entries": 10063,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/README.md",
+          "sha256": "bb9d21a2896a78856057d87777d0b33a96e869d127dc485486af734be5d5f741",
+          "lines": 714,
+          "bytes": 45819,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "docs/tools/web_search.md",
+          "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/docs/tools/web_search.md",
+          "sha256": "e1caf0eca6e6870683aabda142bb63c331e3477dae8b9e4977e921e367c7c9ef",
+          "lines": 327,
+          "bytes": 46989,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/coding-agent/src/tools/read.ts",
+          "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/packages/coding-agent/src/tools/read.ts",
+          "sha256": "f3cc215a7bb12346538e6604f79fc82001d82b562c1df91d1dbf6074c97aab46",
+          "lines": 2980,
+          "bytes": 120104,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/coding-agent/src/web/response-body.ts",
+          "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/packages/coding-agent/src/web/response-body.ts",
+          "sha256": "0b2316a9db9f929bc8a827502b2786abaa21845a2f83b675d64994fbb7f06b61",
+          "lines": 72,
+          "bytes": 2783,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/LICENSE",
+          "sha256": "16c45f9d667442781f03fa198914cc39abcaa48ec5ed8f644643e554ca2fbf63",
+          "lines": 23,
+          "bytes": 1144,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "google-gemini/gemini-cli",
+      "repository": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "branch": "main",
+      "commit": "76e4d7c046c7dab5727787da378b9c06bf0948cf",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_entries": 3324,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/google-gemini/gemini-cli/blob/76e4d7c046c7dab5727787da378b9c06bf0948cf/README.md",
+          "sha256": "7235196f55461732c246c20ce9996cc56ba2e52641f183ccf4e6493bd93c1c94",
+          "lines": 377,
+          "bytes": 12107,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "docs/cli/token-caching.md",
+          "url": "https://github.com/google-gemini/gemini-cli/blob/76e4d7c046c7dab5727787da378b9c06bf0948cf/docs/cli/token-caching.md",
+          "sha256": "0cd2b222377c8874b7cb4e52fc8f61e198643e716aea987855d0d4780ad54f12",
+          "lines": 20,
+          "bytes": 754,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/tools/web-search.ts",
+          "url": "https://github.com/google-gemini/gemini-cli/blob/76e4d7c046c7dab5727787da378b9c06bf0948cf/packages/core/src/tools/web-search.ts",
+          "sha256": "94ab5ef7ee6af1a1ac3059a9329b1553eb5e4993e1171b9b10163ff00b9b9682",
+          "lines": 261,
+          "bytes": 8175,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/tools/web-fetch.ts",
+          "url": "https://github.com/google-gemini/gemini-cli/blob/76e4d7c046c7dab5727787da378b9c06bf0948cf/packages/core/src/tools/web-fetch.ts",
+          "sha256": "5c052aff02eb6755c96262fd243d16bfd588fab7ef680407d0a5e123213a282a",
+          "lines": 990,
+          "bytes": 30099,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "docs/cli/checkpointing.md",
+          "url": "https://github.com/google-gemini/gemini-cli/blob/76e4d7c046c7dab5727787da378b9c06bf0948cf/docs/cli/checkpointing.md",
+          "sha256": "cb4261f5390134e586459de23a1fef62d2741d9e0c0b3ca1c1372c629e8a89af",
+          "lines": 95,
+          "bytes": 3115,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/google-gemini/gemini-cli/blob/76e4d7c046c7dab5727787da378b9c06bf0948cf/LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "lines": 202,
+          "bytes": 11357,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "QwenLM/qwen-code",
+      "repository": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "branch": "main",
+      "commit": "5dcf7c7cb162e825d95d531081f67ee60da3c0e1",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_entries": 13262,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/README.md",
+          "sha256": "8ad684d5404161d34d879e640d94a5d51ba9243ec9b06f44217d06b8509ec2ef",
+          "lines": 193,
+          "bytes": 12081,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "packages/core/src/managed-runtime/local-managed-tool-result-store.ts",
+          "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/packages/core/src/managed-runtime/local-managed-tool-result-store.ts",
+          "sha256": "a5a1667e60c5ce300cc82a0d4f2cd2ce28ba92f0f893a5605c6ae9125a08df9e",
+          "lines": 1267,
+          "bytes": 38462,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/tools/tool-result-retention.ts",
+          "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/packages/core/src/tools/tool-result-retention.ts",
+          "sha256": "35040abae8f2a1b4e0e39b74f61356d63ad03cf9d37bb8b916561bc01c9464b8",
+          "lines": 145,
+          "bytes": 5536,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "packages/core/src/agents/runtime/workflow-budget.ts",
+          "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/packages/core/src/agents/runtime/workflow-budget.ts",
+          "sha256": "8a699bfd0664fba8a892db91fc1c7047f0e467538b87892613a94e3df698084e",
+          "lines": 268,
+          "bytes": 10540,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/LICENSE",
+          "sha256": "55367b61ccd2a016a0159ad886bd66a3ee6cb5e873d0c75c803c897dd245b075",
+          "lines": 203,
+          "bytes": 11361,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "langchain-ai/deepagents",
+      "repository": "langchain-ai/deepagents",
+      "url": "https://github.com/langchain-ai/deepagents",
+      "branch": "main",
+      "commit": "12f70f27cc2e96ac715f4563e05b205be7adc275",
+      "license": "MIT",
+      "archived": false,
+      "tree_entries": 2188,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/README.md",
+          "sha256": "24666c576b54e1e1ed9793b97971f8cb0e16ebb9d0ab9a887989c6e4dfece4ac",
+          "lines": 112,
+          "bytes": 7043,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "libs/deepagents/deepagents/backends/protocol.py",
+          "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/libs/deepagents/deepagents/backends/protocol.py",
+          "sha256": "467cafdc2e18a628cc09a4cee8318b875201935a804147f947c446a3eea2f018",
+          "lines": 1000,
+          "bytes": 36796,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "libs/deepagents/deepagents/middleware/filesystem.py",
+          "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/libs/deepagents/deepagents/middleware/filesystem.py",
+          "sha256": "61e46cc7ee8fe7bdc1f71bc2a40c66c8579ae3b53bc9451d093e0f7540e1916e",
+          "lines": 3880,
+          "bytes": 170803,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "libs/deepagents/deepagents/middleware/_blob_offload.py",
+          "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/libs/deepagents/deepagents/middleware/_blob_offload.py",
+          "sha256": "b57c337677fb51d5c9f2b17e402c52fa18c3830f57682b8cba2c7bae0940953f",
+          "lines": 276,
+          "bytes": 13167,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "libs/deepagents/deepagents/middleware/summarization.py",
+          "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/libs/deepagents/deepagents/middleware/summarization.py",
+          "sha256": "976c2d1b1e604802a2f05046f188b6b0509be06ba2f14013d9d21b3ad29f7c7f",
+          "lines": 2357,
+          "bytes": 99479,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/LICENSE",
+          "sha256": "4ec67e4ca6e6721dba849b2ca82261597c86a61ee214bbf21416006b7b2d0478",
+          "lines": 21,
+          "bytes": 1067,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "block/goose",
+      "repository": "aaif-goose/goose",
+      "url": "https://github.com/aaif-goose/goose",
+      "branch": "main",
+      "commit": "fb9e3c89b2b4670a0eded99e7567e578ac6e502c",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_entries": 3037,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/aaif-goose/goose/blob/fb9e3c89b2b4670a0eded99e7567e578ac6e502c/README.md",
+          "sha256": "0f1df85a0c457caf1f3c4e1c0370f2da3887fffa588d207862cfc298c1d39755",
+          "lines": 63,
+          "bytes": 3449,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "crates/goose/src/agents/extension_manager/lease.rs",
+          "url": "https://github.com/aaif-goose/goose/blob/fb9e3c89b2b4670a0eded99e7567e578ac6e502c/crates/goose/src/agents/extension_manager/lease.rs",
+          "sha256": "2c94ceb0480b3fb6dda99bf9a2ef800d0f0fe18cfce2eefcab108fc5b0308443",
+          "lines": 858,
+          "bytes": 28155,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "crates/goose/src/agents/state_machine/usage.rs",
+          "url": "https://github.com/aaif-goose/goose/blob/fb9e3c89b2b4670a0eded99e7567e578ac6e502c/crates/goose/src/agents/state_machine/usage.rs",
+          "sha256": "b8117cfe226aa42e07521116d059d4771a5616fe0b01d0b24c72a8541049b411",
+          "lines": 72,
+          "bytes": 2585,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "crates/goose/src/context_mgmt/mod.rs",
+          "url": "https://github.com/aaif-goose/goose/blob/fb9e3c89b2b4670a0eded99e7567e578ac6e502c/crates/goose/src/context_mgmt/mod.rs",
+          "sha256": "746a41636661a41318e9f731be2eaec71254333145bd7d841f01fb8a68939f9b",
+          "lines": 1206,
+          "bytes": 44146,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/aaif-goose/goose/blob/fb9e3c89b2b4670a0eded99e7567e578ac6e502c/LICENSE",
+          "sha256": "44459b86c2e96fdbfd8a6b5c33d30d4b04b5293fcb2ec96fe4dcc4e0f90b8962",
+          "lines": 201,
+          "bytes": 11341,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "OpenHands/OpenHands",
+      "repository": "OpenHands/OpenHands",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "branch": "main",
+      "commit": "8d39305538c1d17a30cbe477e57a0e18fcee7d95",
+      "license": "MIT",
+      "archived": false,
+      "tree_entries": 3078,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/OpenHands/OpenHands/blob/8d39305538c1d17a30cbe477e57a0e18fcee7d95/README.md",
+          "sha256": "ac482568e7b7794340d11a3e615785378f0d53ed04308cef60516e41bd8a7ace",
+          "lines": 179,
+          "bytes": 12877,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "specs/backend-management.md",
+          "url": "https://github.com/OpenHands/OpenHands/blob/8d39305538c1d17a30cbe477e57a0e18fcee7d95/specs/backend-management.md",
+          "sha256": "a2c1ef7083b99254b9c3227da4abed05a1c7664fc76d40b943ebe9b0718454c0",
+          "lines": 15,
+          "bytes": 852,
+          "review_scope": "downloaded_reference_not_feature_evidence"
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/OpenHands/OpenHands/blob/8d39305538c1d17a30cbe477e57a0e18fcee7d95/LICENSE",
+          "sha256": "e1d1fa9f3a8d7bef24449d488fcd8f00f8f272cac297bb9bed161eb6175b876a",
+          "lines": 21,
+          "bytes": 1096,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    },
+    {
+      "requested": "Aider-AI/aider",
+      "repository": "Aider-AI/aider",
+      "url": "https://github.com/Aider-AI/aider",
+      "branch": "main",
+      "commit": "5dc9490bb35f9729ef2c95d00a19ccd30c26339c",
+      "license": "Apache-2.0",
+      "archived": false,
+      "tree_entries": 780,
+      "tree_truncated": false,
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/README.md",
+          "sha256": "e40e05367ceacf7138a2605484bf7d1cb5a262d2dba03f52a5327c023b3cd0dc",
+          "lines": 180,
+          "bytes": 12406,
+          "review_scope": "readme_or_license"
+        },
+        {
+          "path": "aider/repomap.py",
+          "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/repomap.py",
+          "sha256": "a5d4befe70445114b9f62da47b0eeb2a5384f9e84a0c083c77a4b339caf61ecd",
+          "lines": 867,
+          "bytes": 27306,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "aider/website/docs/usage/caching.md",
+          "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/usage/caching.md",
+          "sha256": "50e5e286fd7eb0abe1fb556443ceb556e5e53993e9de165ef751a689971049df",
+          "lines": 49,
+          "bytes": 1439,
+          "review_scope": "selected_feature_evidence"
+        },
+        {
+          "path": "LICENSE.txt",
+          "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "lines": 202,
+          "bytes": 11358,
+          "review_scope": "readme_or_license"
+        }
+      ]
+    }
+  ],
+  "feature_evidence": {
+    "F01": [
+      {
+        "repository": "anomalyco/opencode",
+        "path": "packages/core/src/session/usage.ts",
+        "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/core/src/session/usage.ts",
+        "sha256": "5f1170254680925b75239302025e0e84e3c6ea4dcc84294b3e4e6072ceceaf8d",
+        "lines": 56,
+        "bytes": 2195
+      },
+      {
+        "repository": "earendil-works/pi",
+        "path": "packages/ai/src/types.ts",
+        "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/ai/src/types.ts",
+        "sha256": "2a48985ce8f4c1710f1e107433e8cc23ba32cf03a1bd5e53565137c887a6f7c3",
+        "lines": 898,
+        "bytes": 31972
+      }
+    ],
+    "F02": [
+      {
+        "repository": "anomalyco/opencode",
+        "path": "packages/core/src/session/usage.ts",
+        "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/core/src/session/usage.ts",
+        "sha256": "5f1170254680925b75239302025e0e84e3c6ea4dcc84294b3e4e6072ceceaf8d",
+        "lines": 56,
+        "bytes": 2195
+      }
+    ],
+    "F03": [
+      {
+        "repository": "xai-org/grok-build",
+        "path": "crates/codegen/xai-chat-state/src/usage.rs",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-chat-state/src/usage.rs",
+        "sha256": "58c6d484ba570ff8c3b2e8a104a948efb187cbaf1846940dc9a43daa8c8fd7f9",
+        "lines": 202,
+        "bytes": 7494
+      },
+      {
+        "repository": "zai-org/ZCode",
+        "path": "apps/zcode-cli/packages/core/src/runtime/methods/usage-observability.ts",
+        "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/packages/core/src/runtime/methods/usage-observability.ts",
+        "sha256": "9eac4bf60ce3dc6cf797fa726af7d1b652763ee7848728f32083b8a08efce54b",
+        "lines": 428,
+        "bytes": 14397
+      }
+    ],
+    "F04": [
+      {
+        "repository": "QwenLM/qwen-code",
+        "path": "packages/core/src/agents/runtime/workflow-budget.ts",
+        "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/packages/core/src/agents/runtime/workflow-budget.ts",
+        "sha256": "8a699bfd0664fba8a892db91fc1c7047f0e467538b87892613a94e3df698084e",
+        "lines": 268,
+        "bytes": 10540
+      }
+    ],
+    "F05": [
+      {
+        "repository": "anomalyco/opencode",
+        "path": "packages/ai/src/cache-policy.ts",
+        "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/ai/src/cache-policy.ts",
+        "sha256": "3237968fd83c2a1293d9c345106fa0be8165247a34b60be9b512983089d10893",
+        "lines": 199,
+        "bytes": 8749
+      }
+    ],
+    "F06": [
+      {
+        "repository": "Aider-AI/aider",
+        "path": "aider/website/docs/usage/caching.md",
+        "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/website/docs/usage/caching.md",
+        "sha256": "50e5e286fd7eb0abe1fb556443ceb556e5e53993e9de165ef751a689971049df",
+        "lines": 49,
+        "bytes": 1439
+      },
+      {
+        "repository": "earendil-works/pi",
+        "path": "packages/coding-agent/docs/compaction.md",
+        "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/coding-agent/docs/compaction.md",
+        "sha256": "b5b23d10bb86d8ab32b67f80a7e57febd953222c6da6fd422ae91d232ef28faf",
+        "lines": 463,
+        "bytes": 24093
+      }
+    ],
+    "F07": [
+      {
+        "repository": "langchain-ai/deepagents",
+        "path": "libs/deepagents/deepagents/backends/protocol.py",
+        "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/libs/deepagents/deepagents/backends/protocol.py",
+        "sha256": "467cafdc2e18a628cc09a4cee8318b875201935a804147f947c446a3eea2f018",
+        "lines": 1000,
+        "bytes": 36796
+      },
+      {
+        "repository": "MiniMax-AI/Mini-Agent",
+        "path": "mini_agent/tools/note_tool.py",
+        "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/mini_agent/tools/note_tool.py",
+        "sha256": "13c2d1e43ffdc314193b9f232292579c4d085bcb5332524498fc45f07ddacc80",
+        "lines": 213,
+        "bytes": 6733
+      }
+    ],
+    "F08": [
+      {
+        "repository": "langchain-ai/deepagents",
+        "path": "libs/deepagents/deepagents/middleware/filesystem.py",
+        "url": "https://github.com/langchain-ai/deepagents/blob/12f70f27cc2e96ac715f4563e05b205be7adc275/libs/deepagents/deepagents/middleware/filesystem.py",
+        "sha256": "61e46cc7ee8fe7bdc1f71bc2a40c66c8579ae3b53bc9451d093e0f7540e1916e",
+        "lines": 3880,
+        "bytes": 170803
+      },
+      {
+        "repository": "can1357/oh-my-pi",
+        "path": "packages/coding-agent/src/tools/read.ts",
+        "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/packages/coding-agent/src/tools/read.ts",
+        "sha256": "f3cc215a7bb12346538e6604f79fc82001d82b562c1df91d1dbf6074c97aab46",
+        "lines": 2980,
+        "bytes": 120104
+      }
+    ],
+    "F09": [
+      {
+        "repository": "anomalyco/opencode",
+        "path": "packages/core/src/tool/plugin/websearch.ts",
+        "url": "https://github.com/anomalyco/opencode/blob/6bac3b9ad8a3bed5ac01b8f6a3c30850a4d04685/packages/core/src/tool/plugin/websearch.ts",
+        "sha256": "767998167bc3ca1140f86d573e3bd2839068bef9b8c331a4b8ca1421bf503800",
+        "lines": 196,
+        "bytes": 8905
+      },
+      {
+        "repository": "can1357/oh-my-pi",
+        "path": "docs/tools/web_search.md",
+        "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/docs/tools/web_search.md",
+        "sha256": "e1caf0eca6e6870683aabda142bb63c331e3477dae8b9e4977e921e367c7c9ef",
+        "lines": 327,
+        "bytes": 46989
+      }
+    ],
+    "F10": [
+      {
+        "repository": "zai-org/ZCode",
+        "path": "apps/zcode-cli/packages/core/src/tool/handlers/webfetch-egress-guard.ts",
+        "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/packages/core/src/tool/handlers/webfetch-egress-guard.ts",
+        "sha256": "c94b5d6d18a945168f6af5dc78bbf30d32af051fb46cca5521d96533f363868e",
+        "lines": 107,
+        "bytes": 4155
+      },
+      {
+        "repository": "deepseek-ai/deepseek-harness",
+        "path": "packages/web/web-fetch-http/src/policy.ts",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/packages/web/web-fetch-http/src/policy.ts",
+        "sha256": "dd53d2c6d462e53d891da289e5595ebb0563385ec07c6339e6d8ba3a8f38373a",
+        "lines": 118,
+        "bytes": 4840
+      },
+      {
+        "repository": "can1357/oh-my-pi",
+        "path": "packages/coding-agent/src/web/response-body.ts",
+        "url": "https://github.com/can1357/oh-my-pi/blob/53a0377db6845e0dae606146130766ec92d407fd/packages/coding-agent/src/web/response-body.ts",
+        "sha256": "0b2316a9db9f929bc8a827502b2786abaa21845a2f83b675d64994fbb7f06b61",
+        "lines": 72,
+        "bytes": 2783
+      }
+    ],
+    "F11": [
+      {
+        "repository": "zai-org/ZCode",
+        "path": "apps/zcode-cli/packages/core/src/tool/handlers/webfetch-cache.ts",
+        "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/packages/core/src/tool/handlers/webfetch-cache.ts",
+        "sha256": "cddeeeb6404856f20149c7ef433d5209d2a734cbbe7b2de0794063857e646285",
+        "lines": 58,
+        "bytes": 1466
+      }
+    ],
+    "F12": [
+      {
+        "repository": "google-gemini/gemini-cli",
+        "path": "packages/core/src/tools/web-search.ts",
+        "url": "https://github.com/google-gemini/gemini-cli/blob/76e4d7c046c7dab5727787da378b9c06bf0948cf/packages/core/src/tools/web-search.ts",
+        "sha256": "94ab5ef7ee6af1a1ac3059a9329b1553eb5e4993e1171b9b10163ff00b9b9682",
+        "lines": 261,
+        "bytes": 8175
+      }
+    ],
+    "F13": [],
+    "F14": [
+      {
+        "repository": "QwenLM/qwen-code",
+        "path": "packages/core/src/managed-runtime/local-managed-tool-result-store.ts",
+        "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/packages/core/src/managed-runtime/local-managed-tool-result-store.ts",
+        "sha256": "a5a1667e60c5ce300cc82a0d4f2cd2ce28ba92f0f893a5605c6ae9125a08df9e",
+        "lines": 1267,
+        "bytes": 38462
+      },
+      {
+        "repository": "QwenLM/qwen-code",
+        "path": "packages/core/src/tools/tool-result-retention.ts",
+        "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/packages/core/src/tools/tool-result-retention.ts",
+        "sha256": "35040abae8f2a1b4e0e39b74f61356d63ad03cf9d37bb8b916561bc01c9464b8",
+        "lines": 145,
+        "bytes": 5536
+      },
+      {
+        "repository": "deepseek-ai/deepseek-harness",
+        "path": "packages/compaction/compaction-tool-result-pruner/src/index.ts",
+        "url": "https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/packages/compaction/compaction-tool-result-pruner/src/index.ts",
+        "sha256": "2890f336ca42f9d8259794eebbc4a9423f69a7394c41796b9981216ed29ed536",
+        "lines": 185,
+        "bytes": 7301
+      }
+    ],
+    "F15": [
+      {
+        "repository": "Aider-AI/aider",
+        "path": "aider/repomap.py",
+        "url": "https://github.com/Aider-AI/aider/blob/5dc9490bb35f9729ef2c95d00a19ccd30c26339c/aider/repomap.py",
+        "sha256": "a5d4befe70445114b9f62da47b0eeb2a5384f9e84a0c083c77a4b339caf61ecd",
+        "lines": 867,
+        "bytes": 27306
+      }
+    ],
+    "F16": [
+      {
+        "repository": "earendil-works/pi",
+        "path": "packages/coding-agent/docs/compaction.md",
+        "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/coding-agent/docs/compaction.md",
+        "sha256": "b5b23d10bb86d8ab32b67f80a7e57febd953222c6da6fd422ae91d232ef28faf",
+        "lines": 463,
+        "bytes": 24093
+      },
+      {
+        "repository": "MiniMax-AI/Mini-Agent",
+        "path": "mini_agent/agent.py",
+        "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/mini_agent/agent.py",
+        "sha256": "9ccc70cbefd670b36d4fd5d946229bffa9b5c1b4b0f1428f28204517e7ba7c7e",
+        "lines": 523,
+        "bytes": 21719
+      }
+    ],
+    "F17": [
+      {
+        "repository": "earendil-works/pi",
+        "path": "packages/agent/src/agent-loop.ts",
+        "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/agent/src/agent-loop.ts",
+        "sha256": "28a2b03e34a7e32f004aa851e54d3b5be9dad71c392205614cbc9abdf3a9020a",
+        "lines": 949,
+        "bytes": 29513
+      },
+      {
+        "repository": "MiniMax-AI/Mini-Agent",
+        "path": "mini_agent/tools/base.py",
+        "url": "https://github.com/MiniMax-AI/Mini-Agent/blob/d76a4f6389688cabda39c224a6cdfa274215d47c/mini_agent/tools/base.py",
+        "sha256": "1df6aea00955ea8b4ca0911d3e5f09210db6eb67f8d5b2f28b65887e54b3c1f0",
+        "lines": 55,
+        "bytes": 1378
+      }
+    ],
+    "F18": [
+      {
+        "repository": "aaif-goose/goose",
+        "path": "crates/goose/src/agents/extension_manager/lease.rs",
+        "url": "https://github.com/aaif-goose/goose/blob/fb9e3c89b2b4670a0eded99e7567e578ac6e502c/crates/goose/src/agents/extension_manager/lease.rs",
+        "sha256": "2c94ceb0480b3fb6dda99bf9a2ef800d0f0fe18cfce2eefcab108fc5b0308443",
+        "lines": 858,
+        "bytes": 28155
+      },
+      {
+        "repository": "QwenLM/qwen-code",
+        "path": "packages/core/src/agents/runtime/workflow-budget.ts",
+        "url": "https://github.com/QwenLM/qwen-code/blob/5dcf7c7cb162e825d95d531081f67ee60da3c0e1/packages/core/src/agents/runtime/workflow-budget.ts",
+        "sha256": "8a699bfd0664fba8a892db91fc1c7047f0e467538b87892613a94e3df698084e",
+        "lines": 268,
+        "bytes": 10540
+      }
+    ],
+    "F19": [
+      {
+        "repository": "earendil-works/pi",
+        "path": "packages/coding-agent/src/core/session-manager.ts",
+        "url": "https://github.com/earendil-works/pi/blob/0ed1b0431444f1e9321c5cf3a9e0acd04da11f89/packages/coding-agent/src/core/session-manager.ts",
+        "sha256": "450d82c529933214e088b8422f00061815e617f352f6c834689787a314064bff",
+        "lines": 2013,
+        "bytes": 63809
+      },
+      {
+        "repository": "xai-org/grok-build",
+        "path": "crates/codegen/xai-chat-state/src/usage.rs",
+        "url": "https://github.com/xai-org/grok-build/blob/2bdd1d6a6369de0e8c68132ea4539e9abd9e14a8/crates/codegen/xai-chat-state/src/usage.rs",
+        "sha256": "58c6d484ba570ff8c3b2e8a104a948efb187cbaf1846940dc9a43daa8c8fd7f9",
+        "lines": 202,
+        "bytes": 7494
+      }
+    ],
+    "F20": [
+      {
+        "repository": "zai-org/ZCode",
+        "path": "apps/zcode-cli/packages/core/src/runtime/methods/usage-observability.ts",
+        "url": "https://github.com/zai-org/ZCode/blob/0a1fc56d279fd1001f78387bd81aec1c26767411/apps/zcode-cli/packages/core/src/runtime/methods/usage-observability.ts",
+        "sha256": "9eac4bf60ce3dc6cf797fa726af7d1b652763ee7848728f32083b8a08efce54b",
+        "lines": 428,
+        "bytes": 14397
+      },
+      {
+        "repository": "aaif-goose/goose",
+        "path": "crates/goose/src/agents/state_machine/usage.rs",
+        "url": "https://github.com/aaif-goose/goose/blob/fb9e3c89b2b4670a0eded99e7567e578ac6e502c/crates/goose/src/agents/state_machine/usage.rs",
+        "sha256": "b8117cfe226aa42e07521116d059d4771a5616fe0b01d0b24c72a8541049b411",
+        "lines": 72,
+        "bytes": 2585
+      }
+    ]
+  },
+  "scope": "13 repository trees and licenses; selected implementation files reviewed by topic. This is a source inspection, not execution, integration, security certification, or performance benchmarking."
+}

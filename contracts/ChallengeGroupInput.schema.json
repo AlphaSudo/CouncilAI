@@ -1,0 +1,58 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "expected_revision": {
+      "minimum": 1,
+      "title": "Expected Revision",
+      "type": "integer"
+    },
+    "title": {
+      "maxLength": 200,
+      "minLength": 3,
+      "title": "Title",
+      "type": "string"
+    },
+    "hypothesis_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Hypothesis Ids",
+      "type": "array"
+    },
+    "review_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "title": "Review Ids",
+      "type": "array"
+    },
+    "group_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Group Id"
+    },
+    "group_revision": {
+      "default": 1,
+      "minimum": 1,
+      "title": "Group Revision",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "expected_revision",
+    "title",
+    "hypothesis_ids"
+  ],
+  "title": "ChallengeGroupInput",
+  "type": "object"
+}

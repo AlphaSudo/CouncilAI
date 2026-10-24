@@ -1,0 +1,149 @@
+{
+  "$defs": {
+    "CouncilClaimRepair": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "claim_revision": {
+          "minimum": 1,
+          "title": "Claim Revision",
+          "type": "integer"
+        },
+        "finding_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 16,
+          "title": "Finding Ids",
+          "type": "array"
+        },
+        "action": {
+          "enum": [
+            "retain",
+            "rebut",
+            "narrow",
+            "revise",
+            "withdraw"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "response": {
+          "minLength": 3,
+          "title": "Response",
+          "type": "string"
+        },
+        "revised_text": {
+          "title": "Revised Text",
+          "type": "string"
+        },
+        "revised_assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Revised Assumptions",
+          "type": "array"
+        },
+        "remaining_uncertainty": {
+          "minLength": 1,
+          "title": "Remaining Uncertainty",
+          "type": "string"
+        },
+        "revised_scope": {
+          "minLength": 3,
+          "title": "Revised Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "claim_revision",
+        "finding_ids",
+        "action",
+        "response",
+        "revised_text",
+        "remaining_uncertainty",
+        "revised_scope"
+      ],
+      "title": "CouncilClaimRepair",
+      "type": "object"
+    },
+    "CouncilPeerChallenge": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "claim_revision": {
+          "minimum": 1,
+          "title": "Claim Revision",
+          "type": "integer"
+        },
+        "objection": {
+          "minLength": 3,
+          "title": "Objection",
+          "type": "string"
+        },
+        "decision_impact": {
+          "minLength": 3,
+          "title": "Decision Impact",
+          "type": "string"
+        },
+        "candidate_test": {
+          "minLength": 3,
+          "title": "Candidate Test",
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "claim_revision",
+        "objection",
+        "decision_impact",
+        "candidate_test"
+      ],
+      "title": "CouncilPeerChallenge",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "repairs": {
+      "items": {
+        "$ref": "#/$defs/CouncilClaimRepair"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Repairs",
+      "type": "array"
+    },
+    "explanation": {
+      "minLength": 1,
+      "title": "Explanation",
+      "type": "string"
+    },
+    "peer_challenges": {
+      "items": {
+        "$ref": "#/$defs/CouncilPeerChallenge"
+      },
+      "maxItems": 2,
+      "title": "Peer Challenges",
+      "type": "array"
+    }
+  },
+  "required": [
+    "repairs",
+    "explanation"
+  ],
+  "title": "CouncilDeliberation",
+  "type": "object"
+}

@@ -1,0 +1,70 @@
+{
+  "version": "council-heldout-v3",
+  "origin": "authored_candidate_tasks",
+  "frozen_before_study_outputs": true,
+  "independent_labels": false,
+  "tasks": [
+    {
+      "id": "cache-budget",
+      "category": "software_resources",
+      "question": "Choose a cache eviction approach for an offline editor. Compare bounded LRU with segmented LRU under the supplied limits; separate RAM cost, disk persistence and assumptions.",
+      "evidence": [
+        {
+          "id": "constraints",
+          "text": "Cache budget: 48 decimal MB. Interactive documents require at most 16 MB; background indexing can request 40 MB. Cache entries are reconstructible. Saved user documents must survive restart. No latency measurements exist.",
+          "provenance": "Authored hypothetical evaluation scenario"
+        }
+      ],
+      "question_hash": "0e636e9043cd3a65f1a625bfbfc19c2692895a58f023195d60ea0997345bb762",
+      "evidence_hash": "7dc701a84100d98c1c40352d56255fbbfa4893e979f81454c1f0f907bb9bce1e"
+    },
+    {
+      "id": "source-scope",
+      "category": "document_analysis",
+      "question": "Explain which users may edit an archived project according to these excerpts. Identify any unresolved conflict without inventing an override rule.",
+      "evidence": [
+        {
+          "id": "A",
+          "text": "Project editors may change active projects. Archived projects are read-only unless an owner reopens them.",
+          "provenance": "Authored policy excerpt A"
+        },
+        {
+          "id": "B",
+          "text": "Support staff can correct project metadata on request. The excerpt does not distinguish active from archived projects.",
+          "provenance": "Authored policy excerpt B"
+        }
+      ],
+      "question_hash": "5c632d364541270ea02951fefae15ba3967efd0653871cfa0070e9bf058fdb1b",
+      "evidence_hash": "d0c0ad01a0963b639c5506266e70d326f80b9edd300f0615ff83c95c4b5a848a"
+    },
+    {
+      "id": "throughput-boundary",
+      "category": "quantitative_reasoning",
+      "question": "Compare two batch strategies under the given assumptions. Calculate their stated throughput and discuss whether that alone establishes interactive latency.",
+      "evidence": [
+        {
+          "id": "inputs",
+          "text": "Hypothetical batch A processes 12 items in 0.4 seconds; batch B processes 24 items in 0.6 seconds. Arrival pattern, waiting time and per-item latency distribution are unknown. No benchmark was executed.",
+          "provenance": "Explicit hypothetical arithmetic inputs"
+        }
+      ],
+      "question_hash": "7ea40cff081fd172b32fab278472d197ff7599fed9c9344fa3195567805ffc7f",
+      "evidence_hash": "5a07959c8a48372bccf8b1f5b3f1e0fc72e42903224ce2f5c7b5f25dd93a0fc8"
+    },
+    {
+      "id": "schedule-feasibility",
+      "category": "planning",
+      "question": "Recommend a delivery sequence that fits the team budget. Explain dependencies, parallel work and missing estimates rather than assume unlimited people.",
+      "evidence": [
+        {
+          "id": "plan",
+          "text": "One engineer has 30 hours available this week. Task A requires 8 hours. B requires 12 hours after A. C requires 8 hours and can start immediately. Release review requires 4 hours after B and C. All durations are estimates; no outsourcing or additional payment is allowed.",
+          "provenance": "Authored hypothetical project brief"
+        }
+      ],
+      "question_hash": "c09f74bdfded3e8e02334cfb54c991ed89e1e697297ab794b5a956177c0228f2",
+      "evidence_hash": "07c89efe3c14586f93c441d5b4a91402fa07198640fbf98dccbd543af2f9228d"
+    }
+  ],
+  "task_set_hash": "08ad5ef3af687c4188fcc93ebda57937db4e867bb694a43d55f0be9dedd6cd85"
+}

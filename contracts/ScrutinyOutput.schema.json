@@ -1,0 +1,131 @@
+{
+  "$defs": {
+    "ModelReviewCheck": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "maxLength": 40,
+          "minLength": 3,
+          "pattern": "^[a-z][a-z_ -]+$",
+          "title": "Category",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "fail",
+            "unknown",
+            "not_applicable"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "reason": {
+          "maxLength": 700,
+          "minLength": 3,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "status",
+        "reason"
+      ],
+      "title": "ModelReviewCheck",
+      "type": "object"
+    },
+    "ScrutinyFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Claim Id",
+          "type": "string"
+        },
+        "claim_revision": {
+          "minimum": 1,
+          "title": "Claim Revision",
+          "type": "integer"
+        },
+        "steelman": {
+          "maxLength": 500,
+          "minLength": 3,
+          "title": "Steelman",
+          "type": "string"
+        },
+        "objection": {
+          "maxLength": 1000,
+          "minLength": 3,
+          "title": "Objection",
+          "type": "string"
+        },
+        "candidate_test": {
+          "maxLength": 700,
+          "minLength": 3,
+          "title": "Candidate Test",
+          "type": "string"
+        },
+        "minimum_resolution": {
+          "maxLength": 700,
+          "minLength": 3,
+          "title": "Minimum Resolution",
+          "type": "string"
+        },
+        "checks": {
+          "items": {
+            "$ref": "#/$defs/ModelReviewCheck"
+          },
+          "maxItems": 7,
+          "minItems": 1,
+          "title": "Checks",
+          "type": "array"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Evidence Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "claim_id",
+        "claim_revision",
+        "steelman",
+        "objection",
+        "candidate_test",
+        "minimum_resolution",
+        "checks"
+      ],
+      "title": "ScrutinyFinding",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/ScrutinyFinding"
+      },
+      "maxItems": 16,
+      "minItems": 1,
+      "title": "Findings",
+      "type": "array"
+    },
+    "limitations": {
+      "maxLength": 1500,
+      "minLength": 3,
+      "title": "Limitations",
+      "type": "string"
+    }
+  },
+  "required": [
+    "findings",
+    "limitations"
+  ],
+  "title": "ScrutinyOutput",
+  "type": "object"
+}

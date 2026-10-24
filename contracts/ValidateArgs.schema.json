@@ -1,0 +1,29 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Ids",
+      "type": "array"
+    },
+    "claims": {
+      "items": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "type": "object"
+      },
+      "maxItems": 100,
+      "title": "Claims",
+      "type": "array"
+    }
+  },
+  "required": [
+    "source_ids",
+    "claims"
+  ],
+  "title": "ValidateArgs",
+  "type": "object"
+}
