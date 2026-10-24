@@ -25,10 +25,10 @@ Updated October 24, 2026. See the [release/hosting assessment](RELEASE_READINESS
 
 ## Working access and budget
 
-- [ ] Choose a downloadable test build or appropriately persistent hosted application. A static-only page is not the current live backend.
+- [x] Deploy the working Vercel/Supabase backend and worker; two synthetic and two real same-chat councils, collective search, originals and private Storage round trips passed. See [production acceptance](../operations/PRODUCTION_ACCEPTANCE.md).
 - [ ] Provide setup/login/testing instructions permitting free judging access through December 15, 2026.
 - [ ] Confirm usable credit and expiry extend through judging, or arrange funded access without additional personal payment. Historical trial screenshots do not prove December availability.
-- [ ] Preserve the $24 aggregate cap and $0 additional-payment rule; do not reset the allowance for a deployment or visitor.
+- [x] Activate the fresh $24 cloud cap explicitly authorized by the user on October 24; disable local paid inference and retain its old ledger/history. Additional-payment authorization remains $0. Never reset the cloud ledger for a deployment or visitor.
 - [x] Configure actual public origin and HTTPS authentication. Production health/readiness, secure HttpOnly session cookies, session persistence and logout passed; hosted mode reports local entry disabled. Private local conversations have not been migrated.
 - [ ] If hosting the current backend: persist SQLite/financial state, artifacts, sources and tokenizer assets; retain one executor per data directory and test restart/recovery.
 - [ ] Test final access outside the developer browser session. Label any saved replay; do not imply it supplies fresh inference.

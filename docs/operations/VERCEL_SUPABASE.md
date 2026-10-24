@@ -4,7 +4,9 @@ The opt-in cloud implementation uses one Vercel container Service for the existi
 
 Deployed on October 24, 2026 at [the production council](https://web-mu-weld-26.vercel.app). The container Service and one `council-worker` Daemon are running. Actual HTTPS health/readiness, hosted authentication, secure session persistence/logout, Supabase session-pooler connectivity, private bucket metadata and exclusive worker ownership passed. All 15 Production variables are configured. No model inference was dispatched during setup.
 
-**Live inference remains locked:** the existing local spending ledger has not been imported. The remote database has no conversations or reservations. Ledger cutover, real Storage upload/re-download, multiple council cycles and restart/recovery checks remain before declaring the hosted council fully accepted. No paid hosting subscription was used.
+**Production activation:** the user explicitly requested a fresh $24 cloud cap on October 24, 2026 instead of importing local spending. The cloud ledger was initialized at zero committed usage with that new authorization. Local Token Factory inference was disabled atomically after confirming no queued/running requests; its old ledger and private conversations remain intact, with a verified local database backup. No private history was uploaded. Additional-payment authority remains $0. This was an explicit operator action, never an automatic allowance reset on deployment.
+
+Two synthetic hosted review cycles, original-response access, export download, live event delivery and an actual private Storage upload/download hash check passed. Two real Super/Beam/DeepSeek review cycles with collective search also completed in the same chat. All originals remained readable, earlier messages were unchanged and there were no unknown outcomes. See [production acceptance](PRODUCTION_ACCEPTANCE.md) for scope, usage and replacement-deployment verification; no paid hosting subscription was used.
 
 ## Free accounts and platform gate
 
@@ -31,7 +33,7 @@ Generate a fresh random director access code of 32–200 ASCII characters withou
 
 ## Spending-ledger cutover
 
-A new cloud database is **not** a new $24 allowance. Inference remains locked until the existing ledger is imported. No migration or publication of the developer's history is performed automatically.
+By default, a new cloud database grants **no allowance**. Import the existing ledger to retain the old aggregate spending scope. The current production instance instead uses the user's separately and explicitly authorized fresh $24 cloud cap described above. Do not repeat that initialization on redeploy, import the old reservations into this new scope, or re-enable the old local authority. No migration or publication of the developer's history happens automatically.
 
 1. Inspect an inventory without changing any data:
 
@@ -76,4 +78,4 @@ For a repeatable local Linux check, start a **disposable** Postgres 17 container
 - Replace the Service and Daemon, then verify the same history, source bytes, originals and ledger. Check unknown paid attempts remain counted and un-replayed.
 - Only after cutover verification, authorize a small live test under the existing $24 aggregate cap. Check provider availability, Tavily search, latency and actual dashboard usage. No such live test is part of the offline conversion.
 
-Actual Vercel build/routing, Supabase TLS/session pooling, private bucket metadata and public HTTPS authentication passed on October 24, 2026. Actual Storage blob round trips, proxy streaming during council execution, restart/recovery, ledger cutover and a bounded live test remain acceptance gates. Local container tests cover these implementation paths but do not substitute for the remaining hosted checks.
+Actual Vercel build/routing, Supabase TLS/session pooling, private bucket metadata and public HTTPS authentication passed on October 24, 2026. Actual Storage blob round trips, live event streaming, two synthetic cycles and two real cycles with collective search passed. The user explicitly chose a fresh $24 cloud cap instead of a ledger import. See [production acceptance](PRODUCTION_ACCEPTANCE.md) for replacement-deployment checks and remaining release work. Local container tests cover these implementation paths but do not substitute for the remaining hosted checks.

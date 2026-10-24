@@ -1,8 +1,8 @@
 # Free hosting decision and conversion checklist
 
-Researched October 24, 2026. **Status: Vercel/Supabase production deployment is running; live inference remains locked pending spending-ledger cutover.** Local SQLite remains the default. See the [deployment runbook](../docs/operations/VERCEL_SUPABASE.md) and [environment template](../deploy/vercel.env.example).
+Researched October 24, 2026. **Status: Vercel/Supabase production deployment is running; a fresh $24 cloud cap is active under explicit user authorization; two synthetic and two real hosted council cycles passed.** Local SQLite remains the default. See the [deployment runbook](../docs/operations/VERCEL_SUPABASE.md) and [environment template](../deploy/vercel.env.example).
 
-The user chose **Vercel + Supabase** after the comparison. See [Render versus Vercel](../docs/operations/FREE_HOSTING_COMPARISON.md), including current quotas and a real 512 MiB startup probe. Account setup, actual container deployment, HTTPS authentication and worker ownership checks passed. End-to-end council/storage/restart acceptance and spending-ledger cutover remain outstanding.
+The user chose **Vercel + Supabase** after the comparison. See [Render versus Vercel](../docs/operations/FREE_HOSTING_COMPARISON.md), including current quotas and a real 512 MiB startup probe. Account setup, actual container deployment, HTTPS authentication and worker ownership checks passed. Two synthetic hosted cycles, original replies, exports, event delivery and an actual private Storage blob round trip passed. The user explicitly chose a fresh $24 cloud allowance, with local paid inference disabled; two real same-chat cycles with collective search also passed. See [production acceptance](../docs/operations/PRODUCTION_ACCEPTANCE.md) for replacement-deployment checks.
 
 ## Preferred cloud route: Vercel and Supabase
 
@@ -66,23 +66,23 @@ Use the existing explicit hosted access behavior before exposing any endpoint. D
 - [x] Exclude private personal chats/documents from a judge instance unless explicitly intended. Migration defaults to ledger/settings only; history requires an explicit option. A shared director code is not multi-user isolation.
 - [x] Deploy the root container configuration on Vercel Hobby: one web Service and one council-worker Daemon in iad1. Production health/readiness and worker ownership passed; no paid upgrade or custom-domain purchase.
 - [x] Document exact Free account setup and server-secret names, including private-bucket access. All 15 Production settings are saved; actual deployment passed its initial health/authentication checks. No purchase was made.
-- [ ] Verify external HTTPS login, refresh/logout, shared search, complete answers, original-reply access and multiple review cycles.
+- [x] Verify actual HTTPS login/refresh/logout, collective search, complete answers, all originals, source import/export and two same-chat real review cycles. See [production acceptance](../docs/operations/PRODUCTION_ACCEPTANCE.md).
 
 ## Acceptance gates
 
 - [x] Existing local mode still passes its relevant regression suite: 75 targeted regressions. The broad run had 728 passes and one presentation-versus-storage assertion mismatch, corrected and covered by the targeted rerun.
 - [x] Real Postgres integration tests cover transaction rollback, ordering, idempotent API operations and concurrent admission.
-- [x] Storage adapter tests with an HTTP transport double cover upload, cache removal, re-download, integrity mismatch and unavailable responses. Actual Supabase server-key access and private bucket metadata passed; real blob round-trip verification remains pending.
+- [x] Storage adapter tests with an HTTP transport double cover upload, cache removal, re-download, integrity mismatch and unavailable responses. Actual Supabase server-key access and private bucket metadata passed; actual uploaded blob download/hash checks also passed.
 - [x] Two successive scripted council cycles survive destruction of API-local runtime files and creation of a replacement instance.
 - [x] Chat/source/export persistence, original public replies and monetary reservations are covered by integration tests.
 - [x] Unknown charged requests remain counted and are not automatically retried.
 - [ ] Host memory/startup tests pass at the actual Free resource limits.
 - [ ] Actual Vercel Hobby (or Render Free) and Supabase Free accounts/quotas are verified; model-credit availability covers judging through December 15, 2026.
 
-The [cloud container report](../docs/validation/cloud-container.json) records 24 passing integration checks in the Linux image at a 1 GiB limit, a real temporary Postgres 17 database, a Storage HTTP transport double and matching application source hashes. This includes complete large-response streaming, new/legacy Supabase key headers and the actual background executor wake/ownership path. The actual private bucket metadata, Vercel container deployment, HTTPS authentication and worker ownership passed. Blob round trips, streamed councils, restart/recovery and ledger cutover remain external acceptance gates.
+The [cloud container report](../docs/validation/cloud-container.json) records 24 passing integration checks in the Linux image at a 1 GiB limit, a real temporary Postgres 17 database, a Storage HTTP transport double and matching application source hashes. This includes complete large-response streaming, new/legacy Supabase key headers and the actual background executor wake/ownership path. The actual private bucket metadata, Vercel container deployment, HTTPS authentication and worker ownership passed. Actual blob round trips, streamed event delivery and two real same-chat councils passed. The user explicitly authorized the new cloud cap instead of a ledger import; replacement-deployment verification is recorded in [production acceptance](../docs/operations/PRODUCTION_ACCEPTANCE.md).
 
 ## Information needed to activate the cloud route
 
 The preferred route needs Vercel Hobby and Supabase Free accounts, one Supabase project and a private bucket. Render is needed only if the alternative is chosen. Exact host and server-secret configuration comes after the adapters and migration are ready. Save credentials in ignored environment files/provider secrets, not in chat or frontend code. No additional GPU, OpenRouter or LangSmith account is required.
 
-The user confirmed the app must work while the developer computer is off, and selected Vercel + Supabase. External credentials and initial deployment are complete. Production spending-ledger cutover and full council acceptance remain pending.
+The user confirmed the app must work while the developer computer is off, and selected Vercel + Supabase. External credentials and initial deployment are complete. The user explicitly authorized a fresh $24 cloud ledger rather than transferring prior spending. Local paid inference is disabled and its private history is retained. Two real same-chat cycles with collective search passed. See [production acceptance](../docs/operations/PRODUCTION_ACCEPTANCE.md) for replacement-deployment verification.

@@ -55,6 +55,6 @@ Hobby's Daemon allowance is finite: currently five active CPU hours per month; t
 
 ## 3. Before the first live model request
 
-The cloud app stays locked for paid inference until the existing local spending ledger is imported. **Do not initialize a fresh $24 allowance.** Keep the local server running normally until the explicit cutover is scheduled; cutover requires it to be stopped and its prior charges retained. The default migration excludes private conversations/documents.
+New deployments stay locked until an operator establishes their spending authority; configuring secrets alone grants no spending. The production instance was activated on October 24, 2026 under the user's explicit request for a fresh $24 cloud cap rather than an import. Local paid inference is disabled, its private history and old ledger are retained, and $0 additional payment remains authorized. Redeploys must reuse the same remote ledger and must never initialize another fresh allowance. The separate migration procedure remains available when transferring an existing aggregate ledger is the intended policy.
 
 After account setup, confirm that the four Supabase/origin fields are saved locally, and provide only the public Vercel URL in chat. The next steps are private connectivity/bucket checks, a ledger inventory/backup, explicit cutover, then an offline demo and a small live test within the existing cap. The detailed commands and recovery rules are in [VERCEL_SUPABASE.md](VERCEL_SUPABASE.md).
