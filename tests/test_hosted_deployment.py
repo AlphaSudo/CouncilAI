@@ -129,6 +129,33 @@ def test_hosted_origin_checks_work_behind_tls_termination(hosted_settings):
         assert browser.get("https://untrusted.example/api/health").status_code == 400
 
 
+def test_vercel_cron_host_is_allowed_only_for_the_public_get_health_route(hosted_settings, monkeypatch):
+    monkeypatch.setenv('VERCEL_ENV', 'production')
+    monkeypatch.setenv('VERCEL_URL', 'council-deployment-owner.vercel.app')
+    app = create_app(hosted_settings, run_worker=False)
+    with TestClient(app, base_url='https://council.example') as browser:
+        target = 'https://council-deployment-owner.vercel.app'
+        assert browser.get(target + '/api/operations/status').status_code == 200
+        assert browser.get(target + '/api/chats/bootstrap').status_code == 400
+        assert browser.get(target + '/api/session').status_code == 400
+        assert browser.post(target + '/api/operations/status', headers=HEADERS).status_code == 400
+        assert browser.get('https://other-deployment.vercel.app/api/operations/status').status_code == 400
+        assert browser.get('/api/chats/bootstrap').status_code == 401
+
+
+@pytest.mark.parametrize('environment,host', [
+    ('preview', 'council-deployment-owner.vercel.app'),
+    ('production', '*.vercel.app'),
+    ('production', 'https://council-deployment-owner.vercel.app'),
+])
+def test_public_health_does_not_trust_preview_or_malformed_hosts(hosted_settings, monkeypatch, environment, host):
+    monkeypatch.setenv('VERCEL_ENV', environment)
+    monkeypatch.setenv('VERCEL_URL', host)
+    app = create_app(hosted_settings, run_worker=False)
+    with TestClient(app, base_url='https://council.example') as browser:
+        assert browser.get('https://council-deployment-owner.vercel.app/api/operations/status').status_code == 400
+
+
 def test_hosted_startup_rejects_missing_frontend(hosted_settings, tmp_path):
     hosted_settings.frontend = tmp_path / "missing-ui"
     with (

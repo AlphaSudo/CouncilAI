@@ -81,7 +81,19 @@ Use the existing explicit hosted access behavior before exposing any endpoint. D
 
 The [cloud container report](../docs/validation/cloud-container.json) records 27 passing integration checks in the Linux image at a 1 GiB limit, a real temporary Postgres 17 database, a Storage HTTP transport double and matching application source hashes. This includes complete large-response streaming, new/legacy Supabase key headers and the actual background executor wake/ownership path. The actual private bucket metadata, Vercel container deployment, HTTPS authentication and worker ownership passed. Actual blob round trips, streamed event delivery and two real same-chat councils passed. The user explicitly authorized the new cloud cap instead of a ledger import; replacement-deployment verification is recorded in [production acceptance](../docs/operations/PRODUCTION_ACCEPTANCE.md).
 
-## Information needed to activate the cloud route
+## Judging availability supplement — October 26
+
+- [x] Add read-only health checks for the real database, exclusive worker, heartbeat and durable-file mirror.
+- [x] Publish a daily GitHub schedule and extra hourly checks for November 30 and December 1–15; the actual runner test passed.
+- [x] Register an enabled daily Vercel cron inside the Hobby scheduling limit.
+- [x] Reduce idle queue/ownership/mirror queries while preserving immediate notification wake-up and delayed retry deadlines.
+- [x] Add advisory process-CPU observations and sanitized failure reports without provider requests or financial writes.
+- [x] Preserve existing production replies and exports; complete two further synthetic hosted cycles; confirm the paid ledger is unchanged.
+- [x] Document failure recovery and the limits of free hosting in the [availability runbook](../docs/operations/JUDGING_AVAILABILITY.md).
+
+The manual Vercel cron test identified an immutable-deployment host mismatch. The production health route has a narrow, regression-tested exception for its exact deployment host; repeat that manual check after publishing the fix. Model answering, output lengths and the $24 authority are unchanged.
+
+## Account setup reference
 
 The preferred route needs Vercel Hobby and Supabase Free accounts, one Supabase project and a private bucket. Render is needed only if the alternative is chosen. Exact host and server-secret configuration comes after the adapters and migration are ready. Save credentials in ignored environment files/provider secrets, not in chat or frontend code. No additional GPU, OpenRouter or LangSmith account is required.
 

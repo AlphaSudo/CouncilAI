@@ -15,7 +15,6 @@ from fastapi import Depends, FastAPI, Request
 from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.concurrency import run_in_threadpool
-from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .artifacts import Artifacts
 from .budget import Budget
@@ -52,6 +51,7 @@ from .durable_files import DurableFiles, SupabaseObjects
 from .executor import Executor
 from .fixtures import demo_brief
 from .free_limits import DAILY_ATTEMPTS
+from .hosting import PublicHealthHostMiddleware
 from .provider import Provider
 from .reports import export_pack
 from .service import Research
@@ -109,7 +109,8 @@ def create_app(settings=None, run_worker=None):
     app.state.research = research
     app.state.executor = executor
     app.add_middleware(
-        TrustedHostMiddleware, allowed_hosts=settings.hosting.allowed_hosts
+        PublicHealthHostMiddleware, allowed_hosts=settings.hosting.allowed_hosts,
+        hosted=settings.hosting.hosted,
     )
 
     @app.exception_handler(DomainError)

@@ -1,7 +1,7 @@
 {
-  "image": "5ea527cc7b4b6dee410248432f7cdcd0adec4d4fb9238ca556caeafbb2e7b9b9",
+  "image": "f7d80d5ac774b4ce804fcdb1bb32604a1d2c26e14928a1f25192810f6980e97d",
   "memory_limit_mib": 1024,
-  "result": "...........................                                              [100%]\n27 passed in 15.06s",
+  "result": "...........................                                              [100%]\n27 passed in 19.78s",
   "source_sha256": {
     "src/zerowall/__init__.py": "3e10738ed7a307f6a2ef86a2c496df04dc4a76c1105c725150572aa6acf67cba",
     "src/zerowall/accounting.py": "908edd0e60a5b8c383c07e2478b162c59800e903d6ce405d64657af6daa9036d",
@@ -9,7 +9,7 @@
     "src/zerowall/answer_budget.py": "7477dde57d4bdb23c76e8ccaa42f31291f0b497bb34620562104d3d2420cf549",
     "src/zerowall/answer_contracts.py": "785ac0f93c8b3c345511f527ce2fc202aebb9278161e65c9c62a9fbcdd513199",
     "src/zerowall/answer_delivery.py": "24ead9b369be6715355de19f6133b5bdc444ac430a1e9f2b8775b92e1a52619b",
-    "src/zerowall/api.py": "9c0c49d0c781e77dd97eaa38b157eb238739d091ce6305351be154b08417710a",
+    "src/zerowall/api.py": "2893bb10dd3d5e3ded38c113fe46ee6c75804f84d01681ee06abf0f74723bb85",
     "src/zerowall/artifacts.py": "9444d3a45fdd33f328b1a5f3494d46cd45cf7db70ad9f05f5174637445f7e14a",
     "src/zerowall/beam_request.py": "2208a719a2789ea864ad4c3958388e8d7c9c6533a185dd3cd47d9af3acd32e26",
     "src/zerowall/benchmark.py": "2bcd7e18650a34fa9e0eecd868d0fb2726f2dd4ee4bbb47143c12d40abb6b072",
@@ -44,7 +44,7 @@
     "src/zerowall/free_errors.py": "0c47a31b076d6ad29629f9c5cb204631d0a8757bb9a2fb7e94ecf953a5c234c8",
     "src/zerowall/free_limits.py": "3998c47c18b8162cac7a987ea9ff25575ee51df7aa559c6691b232b2b01a67dc",
     "src/zerowall/free_provider.py": "17283280d587adfc1ed5ed53568309a1bd8ae728c6496986428308dd445fe8c9",
-    "src/zerowall/hosting.py": "31df88935a432b50b17200179dba22b3eab5d65d4fe97e6df90f84da61d1c96e",
+    "src/zerowall/hosting.py": "3722b5030e720d6bc5eb5d292a36e2ca4e3667111a15ebeefb5b281ab9005212",
     "src/zerowall/memory.py": "15b964d60e9b3ab380870d95288bf29737334b680977f3c6c7532c05369d2cb3",
     "src/zerowall/output_recovery.py": "b79c38953d55be9b2cf18b204bd275986cc1e9a77caba0bed9352e0982e2f226",
     "src/zerowall/postgres.py": "801d2ab565a70fba0a05df10609eeefd223ecf4c52f15e9d9b1742671d10e00a",

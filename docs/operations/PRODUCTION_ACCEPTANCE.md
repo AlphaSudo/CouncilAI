@@ -40,4 +40,6 @@ The operator records immutable message hashes and an export hash before replacin
 
 ## Remaining release work
 
-Judge-access instructions and funded access through judging, free-plan quota monitoring, video/demo selection and final submission remain release tasks. A basic hosted acceptance check does not certify unlimited traffic or guarantee future provider availability. Redeployments must keep the current database and allowance; no fresh initialization may run on startup.
+October 26 availability work added lightweight cloud schedules, quieter idle workers and sanitized CPU/worker observations. The actual GitHub runner check and two additional synthetic hosted cycles passed without inference/search requests or changes to the paid ledger. Saved originals and exports survived replacement. See [judging availability](JUDGING_AVAILABILITY.md) for schedules, validation evidence and recovery instructions.
+
+Judge-access instructions and funded access through judging, actual free-plan usage review, video/demo selection and final submission remain release tasks. Cloud health checks are configured separately from the human recovery steps. A basic hosted acceptance check does not certify unlimited traffic or guarantee future provider availability. Redeployments must keep the current database and allowance; no fresh initialization may run on startup.

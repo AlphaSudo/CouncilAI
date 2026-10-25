@@ -1,12 +1,36 @@
 """Opt-in single-director hosting. Local entry and spending policy stay separate."""
 
 import os
+import re
 import sqlite3
 import tempfile
 from contextlib import closing
 from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlsplit
+
+from starlette.datastructures import Headers
+from starlette.middleware.trustedhost import TrustedHostMiddleware
+
+
+class PublicHealthHostMiddleware(TrustedHostMiddleware):
+    """Vercel cron uses this deployment's host; other routes keep canonical hosts."""
+
+    def __init__(self, app, *, allowed_hosts, hosted=False):
+        super().__init__(app, allowed_hosts=allowed_hosts)
+        candidate = os.environ.get('VERCEL_URL', '').lower()
+        self.deployment_host = candidate if (
+            hosted and os.environ.get('VERCEL_ENV') == 'production'
+            and re.fullmatch(r'[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.vercel\.app', candidate)
+        ) else None
+
+    async def __call__(self, scope, receive, send):
+        if (self.deployment_host and scope['type'] == 'http'
+                and scope['method'] == 'GET' and scope['path'] == '/api/operations/status'
+                and Headers(scope=scope).get('host', '').lower() == self.deployment_host):
+            await self.app(scope, receive, send)
+            return
+        await super().__call__(scope, receive, send)
 
 
 @dataclass(frozen=True)
