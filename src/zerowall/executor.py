@@ -4,7 +4,7 @@ import json
 import platform
 import threading
 import time
-from datetime import datetime
+from datetime import UTC, datetime
 
 from pydantic import ValidationError
 
@@ -34,6 +34,8 @@ class Executor:
         self.mirror = None
         self.last_owner_check = 0
         self.owner_ok = True
+        self.busy = threading.Event()
+        self.next_wakeup = None
 
     def start(self):
         self.ownership.acquire()
@@ -63,14 +65,28 @@ class Executor:
 
     def close(self):
         self.stop.set()
+        self.wake()
         if self.thread:
             self.thread.join(timeout=2)
         if self.mirror:
             self.mirror.close()
 
+    def wake(self):
+        if self.store.remote and self.thread and self.thread.is_alive():
+            try:
+                self.ownership.wake()
+            except DomainError:
+                pass  # Reconciliation remains bounded if the database is down.
+
+    def drain(self):
+        self.draining.set()
+        self.wake()
+
     def ownership_lost(self):
         if not self.store.remote:
             return False
+        if self.ownership.disconnected:
+            return True
         if time.monotonic() - self.last_owner_check >= 1:
             self.owner_ok = self.ownership.healthy()
             self.last_owner_check = time.monotonic()
@@ -82,16 +98,24 @@ class Executor:
             try:
                 if not self.run_once():
                     if self.store.remote:
-                        self.ownership.wait()
+                        timeout = 60
+                        if self.next_wakeup:
+                            timeout = min(timeout, max(0.05, (self.next_wakeup - datetime.now(UTC)).total_seconds()))
+                        channel = self.ownership.wait(timeout=timeout)
+                        if channel == 'zerowall_files' and self.mirror:
+                            self.mirror.wake()
                     else:
                         self.stop.wait(idle)
                 else:
                     idle = 0.25
+                    if self.mirror:
+                        self.mirror.wake()
             except Exception:  # noqa: BLE001 - durable worker boundary; never log provider content
                 # Do not log exception bodies that could contain provider content or credentials.
                 self.stop.wait(0.5)
 
     def claim(self):
+        self.next_wakeup = None
         if self.draining.is_set() or self.ownership_lost():
             return None
         with self.store.tx() as c:
@@ -115,6 +139,8 @@ class Executor:
                 if row["kind"] == "chat":
                     not_before = json.loads(row["body"]).get("not_before")
                     if not_before and not_before > now():
+                        due = datetime.fromisoformat(not_before)
+                        self.next_wakeup = min(self.next_wakeup, due) if self.next_wakeup else due
                         continue
                 step = self.store.get(c, record["step_id"], "step")
                 if step["paused"]:
@@ -154,6 +180,13 @@ class Executor:
         job = self.claim()
         if not job:
             return False
+        self.busy.set()
+        try:
+            return self.run_claimed(job)
+        finally:
+            self.busy.clear()
+
+    def run_claimed(self, job):
         try:
             if job["kind"] == "chat":
                 self.research.chat.run_turn(job, lambda: self.stop.is_set() or self.ownership_lost())

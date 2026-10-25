@@ -116,6 +116,7 @@ class DurableFiles:
                     "INSERT INTO blob_files(path,sha256,size,data) VALUES(?,?,?,?) ON CONFLICT(path) DO UPDATE SET data=excluded.data,deleted=false WHERE blob_files.deleted=true",
                     (key, sha, len(data), data),
                 )
+                c.execute("SELECT pg_notify('zerowall_files','')")
         try:
             self.cache(path, data)
         except OSError:
@@ -191,6 +192,7 @@ class DurableFiles:
                 c.execute(
                     "UPDATE blob_files SET deleted=true,data=NULL WHERE path=?", (key,)
                 )
+                c.execute("SELECT pg_notify('zerowall_files','')")
         path.unlink(missing_ok=True)
 
     def flush(self, limit=4):
@@ -228,21 +230,26 @@ class FileMirror:
         self.files, self.stop = files, threading.Event()
         self.thread = None
         self.last_error = None
+        self.wakeup = threading.Event()
+
+    def wake(self):
+        self.wakeup.set()
 
     def start(self):
         def loop():
             delay = 5
             while not self.stop.is_set():
+                self.wakeup.clear()
                 try:
                     pending = self.files.flush()
                     self.last_error = None
-                    delay = 0.1 if pending else 5
+                    delay = 0.1 if pending else min(60, max(5, delay * 2))
                 except Exception:  # noqa: BLE001 -- durable mirror boundary; no secret exception URLs in logs
                     self.last_error = (
                         "Private file mirroring deferred; bytes remain in Postgres"
                     )
                     delay = min(300, max(5, delay * 2))
-                self.stop.wait(delay)
+                self.wakeup.wait(delay)
 
         self.thread = threading.Thread(
             target=loop, daemon=True, name="zerowall-file-mirror"
@@ -251,5 +258,6 @@ class FileMirror:
 
     def close(self):
         self.stop.set()
+        self.wake()
         if self.thread:
             self.thread.join(timeout=35)

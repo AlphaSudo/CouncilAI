@@ -221,6 +221,22 @@ def create_app(settings=None, run_worker=None):
             "local_entry": not settings.hosting.hosted,
         }
 
+    operations_cache, operations_lock = {}, threading.Lock()
+
+    @app.get('/api/operations/status')
+    def operations_status():
+        from .cloud_operations import snapshot
+        # A public status check reveals no history, keys or spending amounts.
+        with operations_lock:
+            if time.monotonic() >= operations_cache.get('expires', 0):
+                operations_cache.update(
+                    body=snapshot(store, (settings.frontend / 'index.html').is_file()),
+                    expires=time.monotonic() + 30,
+                )
+            body = operations_cache['body']
+        return JSONResponse(body, status_code=200 if body['status'] == 'ready' else 503,
+                            headers={'Cache-Control': 'no-store'})
+
     def session_response():
         response = JSONResponse({"authenticated": True})
         response.set_cookie(

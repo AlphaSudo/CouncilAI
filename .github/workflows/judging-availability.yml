@@ -1,0 +1,35 @@
+name: Council availability
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 07:23 UTC, outside the busiest top-of-hour scheduling window.
+    - cron: '23 7 * * *'
+    # Extra hourly checks for the preflight day and December judging.
+    - cron: '23 0-6,8-23 30 11 *'
+    - cron: '23 0-6,8-23 1-15 12 *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: council-availability
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Check API, Supabase and the dedicated worker
+        env:
+          SCHEDULED_RUN: ${{ github.event_name == 'schedule' }}
+        run: |
+          if [ "$SCHEDULED_RUN" = "true" ]; then
+            python3 scripts/check_hosted_availability.py --scheduled
+          else
+            python3 scripts/check_hosted_availability.py
+          fi

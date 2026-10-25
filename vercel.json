@@ -18,5 +18,6 @@
       "terminationGracePeriodSeconds": 3600
     }
   },
-  "rewrites": [{"source": "/(.*)", "destination": {"service": "web"}}]
+  "rewrites": [{"source": "/(.*)", "destination": {"service": "web"}}],
+  "crons": [{"path": "/api/operations/status", "schedule": "23 7 * * *"}]
 }

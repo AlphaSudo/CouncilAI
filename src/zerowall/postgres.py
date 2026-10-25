@@ -215,6 +215,7 @@ class WorkerLock:
                 raise DomainError("Another council worker owns the shared queue", 503)
             self.connection = connection
             self.connection.execute("LISTEN zerowall_jobs")
+            self.connection.execute("LISTEN zerowall_files")
         except psycopg.Error:
             if connection is not None:
                 connection.close()
@@ -231,14 +232,23 @@ class WorkerLock:
         except psycopg.Error:
             return False
 
+    @property
+    def disconnected(self):
+        return self.connection is None or bool(self.connection.closed)
+
+    def wake(self):
+        # A separate pooled session wakes LISTEN without cancelling an answer.
+        with self.store.tx() as c:
+            c.execute("SELECT pg_notify('zerowall_jobs','')")
+
     def release(self):
         if self.connection is not None:
             self.connection.close()
             self.connection = None
 
-    def wait(self):
+    def wait(self, timeout=60):
         try:
-            for _ in self.connection.notifies(timeout=10, stop_after=1):
-                break
+            for notification in self.connection.notifies(timeout=timeout, stop_after=1):
+                return notification.channel
         except psycopg.Error:
             raise StorageUnavailable() from None

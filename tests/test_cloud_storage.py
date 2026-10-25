@@ -8,6 +8,7 @@ import hashlib
 import json
 import shutil
 from concurrent.futures import ThreadPoolExecutor
+from datetime import UTC, datetime
 
 import httpx
 import pytest
@@ -192,3 +193,39 @@ def test_worker_ownership_and_unknown_recovery_do_not_replay(pg):
             assert c.execute("SELECT COUNT(*) FROM jobs").fetchone()[0] == 0
     finally:
         second.release()
+
+
+def test_queue_and_file_notifications_wake_a_long_idle_wait(pg, tmp_path):
+    owner = WorkerLock(pg)
+    owner.acquire()
+    try:
+        with ThreadPoolExecutor(1) as executor:
+            waiting = executor.submit(owner.wait, 60)
+            owner.wake()
+            assert waiting.result(timeout=3) == 'zerowall_jobs'
+            waiting = executor.submit(owner.wait, 60)
+            DurableFiles(tmp_path, pg).write('source-blobs/notify', b'complete document')
+            assert waiting.result(timeout=3) == 'zerowall_files'
+    finally:
+        owner.release()
+
+
+def test_operational_health_checks_the_worker_without_changing_the_ledger(pg):
+    from zerowall.cloud_operations import snapshot
+    owner = WorkerLock(pg)
+    owner.acquire()
+    try:
+        with pg.tx() as c:
+            pg.set_setting(c, 'cloud_ledger_ready', {'mode': 'test'})
+            pg.set_setting(c, 'worker_runtime', {'observed_at': datetime.now(UTC).isoformat()})
+            pg.set_setting(c, 'private', {'secret': 'not-public'})
+        status = snapshot(pg, True)
+        assert status['status'] == 'ready'
+        assert status['checks']['worker'] == 'ready'
+        assert 'not-public' not in json.dumps(status)
+        with pg.tx() as c:
+            assert c.execute('SELECT COUNT(*) FROM reservations').fetchone()[0] == 0
+        owner.release()
+        assert snapshot(pg, True)['checks']['worker'] == 'unavailable'
+    finally:
+        owner.release()

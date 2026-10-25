@@ -288,10 +288,47 @@ def test_background_worker_wakes_for_an_api_job_and_releases_ownership(pg, tmp_p
         assert current["chat"]["status"] == "completed", current["chat"].get("error")
         assert not app.state.executor.thread
     finally:
-        executor.draining.set()
+        executor.drain()
         executor.thread.join(timeout=15)
         executor.close()
         assert not executor.thread.is_alive()
+        client.close()
+        for value in (app, worker):
+            value.state.research.store.close()
+            value.state.research.artifacts.files.objects.close()
+
+
+def test_scheduled_retry_deadline_wakes_before_the_idle_reconciliation_interval(pg, tmp_path):
+    from datetime import UTC, datetime, timedelta
+    app = instance(tmp_path / 'deadline-api', pg.dsn)
+    worker = instance(tmp_path / 'deadline-worker', pg.dsn)
+    client = login(app)
+    executor = worker.state.executor
+    created = post(client, '/api/chats', {
+        'prompt': 'Compare approaches and identify a practical recommendation.',
+        'provider': 'fixture', 'models': ['demo/analyst', 'demo/critic', 'demo/builder'],
+        'review_protocol': 'reviewed_v4',
+    }, 'deferred-council')
+    cid = created['chat']['id']
+    with pg.tx() as c:
+        row = c.execute("SELECT id,body FROM jobs WHERE state='queued' LIMIT 1").fetchone()
+        body = json.loads(row['body'])
+        body['not_before'] = (datetime.now(UTC) + timedelta(seconds=1)).isoformat()
+        c.execute('UPDATE jobs SET body=? WHERE id=?', (json.dumps(body), row['id']))
+    worker.state.research.artifacts.files.objects.put = lambda *args: None
+    executor.start()
+    try:
+        deadline = time.monotonic() + 8
+        while time.monotonic() < deadline:
+            view = client.get('/api/chats/' + cid).json()
+            if any(m['phase'] == 'opening' for m in view['messages']):
+                break
+            time.sleep(0.1)
+        assert any(m['phase'] == 'opening' for m in view['messages'])
+    finally:
+        executor.drain()
+        executor.thread.join(timeout=15)
+        executor.close()
         client.close()
         for value in (app, worker):
             value.state.research.store.close()
