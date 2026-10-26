@@ -1,46 +1,34 @@
-# External release and submission checklist
+# Final release and submission checklist
 
-Updated October 24, 2026. See the [release/hosting assessment](RELEASE_READINESS.md) and [2:50 video script](DEMO_SCRIPT.md). Checked boxes describe the stated software/publication evidence, not a submitted hackathon entry.
+Updated October 26, 2026. Implementation is frozen. [Demo video — 2:48](https://youtu.be/IOy6m_5ZwuM) · [Hosted app](https://web-mu-weld-26.vercel.app/) · [Testing guide](TESTING.md) · [Release status](RELEASE_READINESS.md).
 
-## Local baseline
+## Published project
 
-- [x] Current default lineup is Nemotron Super VL (lead), Reflection Beam and DeepSeek V4 Flash 0731 on Token Factory.
-- [x] Search On, collective Tavily research, shared sources, Simple/Explain, Compare, thinking selection and context display are implemented.
-- [x] Public-answer preservation and recoverable annotation handling are implemented.
-- [x] Root MIT license and third-party notices exist.
-- [x] Local records include completed Token Factory calls for the current three models, including NVIDIA Nemotron. No new inference was dispatched for this assessment.
-- [x] Recent regression register records 96 backend and 28 browser cases; the subsequent navigation cleanup passed its focused browser case and build.
-- [x] Submission description and video draft now describe the current council rather than the legacy experiment workspace.
+- [x] Publish the current council source at [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI), with an MIT license and developer setup instructions.
+- [x] Link the uploaded demo prominently in the README and submission documents; observe its 2:48 duration in the YouTube player.
+- [x] Add a public testing guide that clearly states the hosted access code is required and distinguishes it from provider API keys.
+- [x] Explain access for hackathon judges, invited testers and other visitors.
+- [x] Correct stale statements that cloud deployment and video upload were still pending.
+- [x] Record the October 26 release freeze and preserve a named submission snapshot.
 
-## Release candidate and repository
+## Working access and evidence
 
-- [ ] Choose one complete genuine council and one same-chat follow-up; inspect every shown answer, source and synthesis.
-- [ ] Select scrubbed Token Factory receipts and actual Tavily query/extraction evidence for that run.
-- [x] Audit the Git publication set for configured secrets, credential patterns and private/generated files; exclude local data, internal screenshots and runtime traces. Third-party notices are included. Raw demo receipts/footage still need their own audit before publication.
-- [ ] Replace credentials previously exposed in chat before external deployment; keep replacements only in local/server secrets.
-- [ ] Refresh the source/test-build archive and checksums; inspect its contents before publication.
-- [ ] Verify setup, demo mode, assets, tokenizers and instructions from a fresh extraction without existing data.
-- [x] Publish the first reviewed Git commit and configured remote under [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI), on `main`, initial commit `e5b3d98`.
-- [x] Check the repository and setup instructions signed out (HTTP 200) and confirm GitHub reports MIT.
+- [x] Deploy Vercel/Supabase with durable Postgres/private Storage and one coordinated worker.
+- [x] Complete two real same-chat hosted cycles with collective search, originals and Storage checks; complete two further synthetic cycles after the availability changes.
+- [x] Preserve saved conversations, originals, exports and the existing paid ledger across replacement deployments.
+- [x] Pass 100 targeted local regressions and 27 Linux/Postgres integration checks for the availability release.
+- [x] Verify actual Vercel cron HTTP 200 and a successful external GitHub runner check; activate daily and judging-period schedules.
+- [x] Preserve the shared $24 cloud cap and $0 additional-payment authority; leave local paid inference disabled.
+- [x] Keep provider keys, the actual access code and private runtime evidence out of the public repository.
 
-## Working access and budget
+## Entrant's Devpost handoff
 
-- [x] Deploy the working Vercel/Supabase backend and worker; two synthetic and two real same-chat councils, collective search, originals and private Storage round trips passed. See [production acceptance](../operations/PRODUCTION_ACCEPTANCE.md).
-- [ ] Provide setup/login/testing instructions permitting free judging access through December 15, 2026.
-- [ ] Confirm usable credit and expiry extend through judging, or arrange funded access without additional personal payment. Historical trial screenshots do not prove December availability.
-- [x] Activate the fresh $24 cloud cap explicitly authorized by the user on October 24; disable local paid inference and retain its old ledger/history. Additional-payment authorization remains $0. Never reset the cloud ledger for a deployment or visitor.
-- [x] Configure actual public origin and HTTPS authentication. Production health/readiness, secure HttpOnly session cookies, session persistence and logout passed; hosted mode reports local entry disabled. Private local conversations have not been migrated.
-- [ ] If hosting the current backend: persist SQLite/financial state, artifacts, sources and tokenizer assets; retain one executor per data directory and test restart/recovery.
-- [ ] Test final access outside the developer browser session. Label any saved replay; do not imply it supplies fresh inference.
+- [ ] Put the actual production access code in the **private Devpost testing instructions**. The website requires it before a judge can proceed; the public README deliberately does not contain the code.
+- [ ] Confirm the uploaded YouTube video's **Public** visibility and playback while signed out. Duration observed: **2:48**.
+- [ ] Fill source, working-app, video and testing-instruction fields. A separate downloadable build is optional for this hosted submission.
+- [ ] Select **Best Apps and Agents** and highlight collective research for **Best Use of Tavily** where applicable.
+- [ ] Confirm entrant/team details, eligibility, ownership/permissions and any required development-period disclosure.
+- [ ] Submit before **October 30, 2026, 17:00 UTC / 19:00 Cairo** and retain the confirmation.
+- [ ] Retain the judged release and free testing access through **December 15, 2026, 20:00 UTC / 22:00 Cairo**.
 
-## Entry and video
-
-- [ ] Select **Best Apps and Agents**; highlight collective research for **Best Use of Tavily** where the form permits.
-- [ ] Finalize the description with a real example, architecture, platform use, limits and observed feedback.
-- [ ] Record and upload the English video as **Public** on YouTube below three minutes; verify duration and signed-out playback.
-- [ ] Entrant confirms eligibility, representation, ownership/permissions and development-period disclosure.
-- [ ] Fill required fields with the public source, working access, video and testing instructions.
-- [ ] Submit before **October 30, 2026, 17:00 UTC / 19:00 Cairo**; preserve confirmation. Aim for October 29 to allow final checks.
-- [ ] Retain the judged release and free testing access until **December 15, 2026, 12:00 Pacific Time**.
-
-Dates and requirements were checked against the [official rules](https://nebiusglobalaihackathon.devpost.com/rules). Runtime calls to Token Factory satisfy the platform-use definition; a separate Nebius GPU deployment is not required.
+Unchecked items are submission/account confirmations, not unfinished council implementation. This repository update does not assert that a Devpost entry has been submitted. [Official rules](https://nebiusglobalaihackathon.devpost.com/rules).

@@ -2,9 +2,23 @@
 
 A human-directed model council: research together, compare independent answers, follow the debate and review a final synthesis. Shared Tavily search and extracted source passages stay with the conversation.
 
+## Demo and testing
+
+- **[Watch the demo — 2:48](https://youtu.be/IOy6m_5ZwuM)**
+- **[Open the hosted council](https://web-mu-weld-26.vercel.app/)**
+- **[Testing instructions for judges and invited testers](docs/submission/TESTING.md)**
+
+**The hosted website requires an access code (director token) before you can proceed.** Hackathon judges should use the code supplied privately with the Devpost testing instructions. Invited testers should obtain it from the project owner, [AlphaSudo](https://github.com/AlphaSudo). Enter it in **Access code**, then select **Open council**. The code itself is kept out of this public repository.
+
+Hosted testers need no installation, provider API key, Nebius/Tavily account or payment details. The access code opens a shared judging workspace; it is not a Token Factory API key. [Developer setup](#run-locally) is available below for running your own copy.
+
+**Release freeze:** October 26, 2026. This is the final hackathon documentation update; runtime behavior and model settings are frozen. The video and hosted app are the entry points for evaluation.
+
+## Council features
+
 **Current baseline:** NVIDIA Nemotron 3.5 Super VL leads Reflection Beam and DeepSeek V4 Flash 0731 through Nebius Token Factory. Search is on by default; Simple/Explain, Compare, thinking selection and the context indicator are available in the same chat. Lightning is optional and unselected; GLM is retired from the council selector. See the [baseline register](docs/operations/COUNCIL_BASELINE.md).
 
-**Hosted council:** [open ZeroWall](https://web-mu-weld-26.vercel.app/). Vercel and Supabase production acceptance passed; see [the hosted results](docs/operations/PRODUCTION_ACCEPTANCE.md) and [judging availability checks](docs/operations/JUDGING_AVAILABILITY.md). Release materials: [readiness and hosting](docs/submission/RELEASE_READINESS.md), [final checklist](docs/submission/FINAL_CHECKLIST.md), [project description](docs/submission/PROJECT_DESCRIPTION.md), and [2:50 video script](docs/submission/DEMO_SCRIPT.md). The legacy experiment workflow remains available for existing missions but is not the current product demo.
+**Hosted council:** Vercel and Supabase production acceptance passed; see [the hosted results](docs/operations/PRODUCTION_ACCEPTANCE.md) and [judging availability checks](docs/operations/JUDGING_AVAILABILITY.md). Release materials: [release status](docs/submission/RELEASE_READINESS.md), [submission checklist](docs/submission/FINAL_CHECKLIST.md), [project description](docs/submission/PROJECT_DESCRIPTION.md), and [recording script](docs/submission/DEMO_SCRIPT.md). The legacy experiment workflow remains available for existing missions but is not the current product demo.
 
 **Answer-first Council is implemented:** [1.06 release record](docs/releases/COUNCIL_1.06.md), [plan](plans/12_ANSWER_FIRST_COUNCIL_1.06.md) and [checklist](plans/12_ANSWER_FIRST_COUNCIL_1.06_CHECKLIST.md). Public answers save before review; incomplete annotations do not require paid formatting retries or a new chat. New councils use the enhanced baseline. Historical publications retain their original rules, with adoption on an explicit follow-up. See [state and recovery operations](docs/operations/ANSWER_FIRST_COUNCIL_106.md).
 
@@ -180,7 +194,7 @@ $env:ZEROWALL_DATA_DIR = (Resolve-Path data-restored)
 
 Restore verifies every file, generates a new local director token at startup and clears live billing authorization. It preserves reservations; restart marks unresolved dispatched attempts unknown. Never automatically replay an interrupted paid operation.
 
-`python scripts/package_release.py` creates a source/test-build ZIP with a built UI and checksums and checks for configured credentials. Inspect the archive for private working evidence before publishing it. Public source is available at [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI). A published downloadable build, independent operator check, scrubbed NVIDIA runtime evidence, YouTube video and Devpost submission remain release requirements. Preserve the judged snapshot and access instructions through December 15, 2026.
+`python scripts/package_release.py` optionally creates a source/test-build ZIP with a built UI and checksums and checks for configured credentials. Inspect any archive for private working evidence before publishing it. Public source is available at [AlphaSudo/CouncilAI](https://github.com/AlphaSudo/CouncilAI); the hosted application and [demo video](https://youtu.be/IOy6m_5ZwuM) are the submitted-project entry points. A separate downloadable build is optional for this hosted route. The entrant still needs to complete the Devpost form and supply the access code privately. Preserve the judged snapshot and access instructions through December 15, 2026.
 
 ## Architecture and implementation evidence
 

@@ -1,5 +1,7 @@
 # ZeroWall — 2:50 council demonstration
 
+**Published demo:** [ZeroWall — A Council of AI Models](https://youtu.be/IOy6m_5ZwuM), **2:48**. Linked October 26, 2026. The script below is the recording plan retained for reference; [testing instructions](TESTING.md) describe access to the deployed app.
+
 Recording draft updated October 24, 2026. Target **Best Apps and Agents**, with collective research presented for **Best Use of Tavily**. Use actual application footage and the current Token Factory lineup: Nemotron Super VL (lead), Reflection Beam, and DeepSeek V4 Flash 0731.
 
 ## Prepare the recording
@@ -35,4 +37,4 @@ Read the narration aloud during rehearsal and shorten it to fit the real footage
 - [ ] Final links resolve, YouTube visibility is Public, duration is under 3:00, and captions are readable.
 - [ ] No claim of measured answer-quality improvement, universal thinking-budget enforcement or full-page reading exceeds collected evidence.
 
-Requirements checked against the [official rules](https://nebiusglobalaihackathon.devpost.com/rules). This is a script; recording, upload and submission remain outstanding.
+Requirements checked against the [official rules](https://nebiusglobalaihackathon.devpost.com/rules). The uploaded video is linked above. This script does not certify its contents, visibility settings or completion of the Devpost submission.
