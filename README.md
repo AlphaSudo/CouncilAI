@@ -12,7 +12,19 @@ A human-directed model council: research together, compare independent answers, 
 
 Hosted testers need no installation, provider API key, Nebius/Tavily account or payment details. The access code opens a shared judging workspace; it is not a Token Factory API key. [Developer setup](#run-locally) is available below for running your own copy.
 
-**Release freeze:** October 26, 2026. This is the final hackathon documentation update; runtime behavior and model settings are frozen. The video and hosted app are the entry points for evaluation.
+**Release freeze:** October 26, 2026. Runtime behavior and model settings are frozen. The video, hosted app and screenshots below show that baseline.
+
+## Gallery
+
+The hosted interface and a saved live SQLite/PostgreSQL demo. Click any image to view it at full size.
+
+| Ask the council | Compare model perspectives |
+| :---: | :---: |
+| [![ZeroWall prompt screen with web search, thinking level and source attachment controls](docs/images/gallery/01-council-home.jpg)](docs/images/gallery/01-council-home.jpg) | [![Nemotron Super, Reflection Beam and DeepSeek opening answers displayed side by side](docs/images/gallery/02-compare-models.jpg)](docs/images/gallery/02-compare-models.jpg) |
+| Start with one question, optional documents and Search On. | Read independent answers and inspect the council's review flow. |
+| **Research together** | **Shared source library** |
+| [![Collective research showing each model's query and contributions to the shared library](docs/images/gallery/03-shared-research.jpg)](docs/images/gallery/03-shared-research.jpg) | [![Conversation source library with saved links, documents and reusable passages](docs/images/gallery/04-source-library.jpg)](docs/images/gallery/04-source-library.jpg) |
+| Models contribute complementary searches and pool their discoveries. | Reopen sources and distinguish search excerpts from saved page content. |
 
 ## Council features
 
